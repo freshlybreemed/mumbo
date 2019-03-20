@@ -1,0 +1,5 @@
+node_modules
+.next
+terraform/terraform.tfvars
+terraform/freshly
+terraform/freshly.pub
