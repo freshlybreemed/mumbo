@@ -15,7 +15,6 @@ export default class MyDocument extends Document {
         return (
             <html lang="en">
               <Head>
-                  dfd
                 {/* <link rel="icon" type="image/x-icon" href="/static/img/freshly_144.ico" /> */}
                 {/* <link rel="shortcut icon" href="/static/img/freshy_144.ico"/> */}
                 <link rel="stylesheet" href="/static/css/styles.css" />
