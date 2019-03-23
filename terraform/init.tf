@@ -13,7 +13,7 @@ resource "aws_key_pair" "freshly" {
 }
 resource "aws_instance" "example" {
   ami           = "ami-035be7bafff33b6b6"
-  instance_type = "t1.micro"
+  instance_type = "t2.micro"
   key_name = "freshly"
   user_data = "${file("user-data.sh")}"
 }

@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nextein"
+    "start dev": "nextein",
+    "start prod": "nextein -p 80"
   },
   "keywords": [],
   "author": "",

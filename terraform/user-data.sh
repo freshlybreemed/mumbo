@@ -22,7 +22,7 @@
 
 yum groupinstall -y "Web Server" "PHP Support"
  yum install -y gcc-c++ make
-curl -sL https://rpm.nodesource.com/setup_6.x | sudo -E bash -
+curl --silent --location https://rpm.nodesource.com/setup_10.x | bash -
 yum install -y nodejs openssl-devel sqlite-devel libevent-devel httpd git
 
 # Create a group for the Web content and add the default user to it
@@ -32,11 +32,14 @@ usermod -a -G www ec2-user
 
 # Pull the latest sample server contents so we have a starting point
 
-git clone https://github.com/freshlybreemed/crank-karaoke /var/www/html
+mkdir /var/www/html/crank-karaoke
+ 
+git clone --progress --verbose https://github.com/freshlybreemed/crank-karaoke /var/www/html/crank-karaoke
 
-npm install --prefix /var/www/html
+cd /var/www/html/crank-karaoke
+npm install 
 
-npm run --prefix /var/www/html
+npm start
 # Allow only root to access the .git directory - DISABLED
 # WHILE TRYING HTACCESS INSTEAD.
 

@@ -3,3 +3,7 @@ node_modules
 terraform/terraform.tfvars
 terraform/freshly
 terraform/freshly.pub
+
+# .tfstate files
+terraform/*.tfstate
+terraform/*.tfstate.*
