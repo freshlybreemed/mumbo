@@ -8,7 +8,7 @@ export default withPosts( ({ posts }) => {
     <div class="wrapper">
       <link rel="stylesheet" href="/static/css/styles.css" />
 
-      <img src="static/img/FLYER-TRANS.png" class="responsive"/>
+      {/* <img src="static/img/FLYER-TRANS.png" class="responsive"/> */}
       <img src="static/img/logocrank.png" class="flyerimage" />
       <img src="static/img/cash.png" class="flyerimage"/>
       <div class="features"> 
@@ -18,10 +18,26 @@ export default withPosts( ({ posts }) => {
         <img class="yellow-star" src="static/img/yellowstar.png"></img>
         <div class="item">JAM SESSION</div>
       </div>
-      <div class="info">
-        <div class="title">BIG CHIEF</div>
+      <div class="row">
+        <div class="title">BIG CHIEF</div><br></br>
       </div>
-      <img src="static/img/mumbogifblk.gif" class="responsive" id="logos"/>
+      <div class="row">
+        <div class="lineup">HOSTED BY: WALK LIKE WALT</div>
+      </div>
+      <div class="row">
+        <div class="lineup">DJ SETS: MALCOLM XAVIER + FRESHLY BREEMED</div>
+      </div>
+      <div class="row">
+        <div class="date">THURS. APRIL 11th</div>
+      </div>
+      <div class="row">
+        <div class="date">9PM - 2AM</div>
+      </div>
+      <div class="row">
+        <div class="lineup">2002 FENWICK ST NW DC </div>
+      </div>
+
+      <img src="static/img/mumbogifblk.gif" class="gif" id="logos"/>
       
       <button>RSVP</button>
 

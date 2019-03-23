@@ -3,6 +3,9 @@
 }
 html{
     box-sizing: border-box;
+    font-family: "Helvetica";
+    font-weight: bold;
+
 }
 *,
 *:before,
@@ -10,7 +13,7 @@ html{
     box-sizing: inherit;
 }
 .flyerimage{
-    width: 60%;
+    width: 50%;
     align-content: center;
 }
 #img {
@@ -22,7 +25,7 @@ html{
     width: 100%;
     height: auto;
   }
-  .item {
+.item {
     width: 25em;
 }.item {
     width: 50em;
@@ -31,14 +34,93 @@ html{
     width: 10em;
     /* height: auto; */
 }
-
+.gif {
+  width: 200px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
 .features {
-    font-family: "Helvetica Neue LT Std";
     color: greenyellow;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
 
+}
+.flyerimage {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.title {
+    color: yellow;
+    position: relative;
+    font-family: 'Helvetica Neue LT Std';
+    text-align: center;
+    font-size: 8vw;
+
+}
+.row::after {
+    content:"";
+    display: table;
+    clear:both;
+    margin-bottom: 2%;
+} 
+.lineup {
+    color: white;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+    font-size: 3vw;
+}
+.date {
+    color: white;
+    text-align: center;
+    font-family: '00222';
+    font-size: 6vw;
+
+}
+/* Mobile Landscape Screen Sizes */
+@media only screen and (min-width: 480px)  {
+	[class*='col-'] {
+		margin-right: 0;
+		min-height: 1px;
+		float: left;
+	}
+	.col-1-2,
+	.col-2 {
+		width: 44%;
+	}
+	.col-1-4,
+	.col-3,
+	.col-4 {
+		width: 92%;
+    }
+    .lineup {
+		width: 92%;
+	}
+
+}
+
+/* Desktop screen Sizes */
+@media only screen and (min-width: 768px) {
+	.col-1-2, 
+	.col-1-4 {
+		width: 20%;
+	}
+	.col-2 {
+		width: 44%;
+	}
+	.col-3 {
+		width: 68%;
+	}
+	.col-4 {
+		width: 92%;
+	}
 }
 .button {
 -webkit-transition-duration: 0.4s; /* Safari */
@@ -57,4 +139,10 @@ color: white;
     url("//db.onlinewebfonts.com/t/126bec8bf668f672701e22744c9b634d.woff") format("woff"),
     url("//db.onlinewebfonts.com/t/126bec8bf668f672701e22744c9b634d.ttf") format("truetype"),
     url("//db.onlinewebfonts.com/t/126bec8bf668f672701e22744c9b634d.svg#Helvetica Neue LT Std") format("svg");
+}
+@font-face {
+    font-family: '00222';
+    src: url('a0222.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
