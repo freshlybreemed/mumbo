@@ -9,7 +9,7 @@ provider "aws" {
 }
 
 
-resource "aws_key_pair" "freshly" {
+resource "aws_key_pair" "freshly-key" {
   key_name   = "freshly"
   public_key = "${var.public_key}"
 }
@@ -20,10 +20,6 @@ resource "aws_instance" "crank" {
   user_data = "${file("user-data.sh")}"
 }
 
-# resource "aws_s3_bucket" "selected" {
-#   bucket = "bucket.test.com"
-#   acl = "private"
-# }
 
 resource "aws_eip" "crank" {
   instance = "${aws_instance.crank.id}"
