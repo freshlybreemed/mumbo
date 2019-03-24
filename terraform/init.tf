@@ -7,9 +7,6 @@ provider "aws" {
   region     = "us-east-1"
 }
 
-resource "aws_" "name" {
-  
-}
 
 resource "aws_key_pair" "freshly" {
   key_name   = "freshly"

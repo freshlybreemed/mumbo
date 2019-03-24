@@ -39,7 +39,7 @@ git clone --progress --verbose https://github.com/freshlybreemed/crank-karaoke /
 cd /var/www/html/crank-karaoke
 npm install 
 
-npm start
+npm run start-prod
 # Allow only root to access the .git directory - DISABLED
 # WHILE TRYING HTACCESS INSTEAD.
 
