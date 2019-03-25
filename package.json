@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nextein",
-    "start prod": "nextein -p 80"
+    "prod": "nextein -p 80"
   },
   "keywords": [],
   "author": "",

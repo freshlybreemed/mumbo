@@ -7,3 +7,11 @@ terraform/freshly.pub
 # .tfstate files
 terraform/*.tfstate
 terraform/*.tfstate.*
+terraform/*backup
+terraform/\.terraform/plugins/darwin_amd64/
+
+\.DS_Store
+
+*.tfstate
+*idk
+
