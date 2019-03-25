@@ -10,7 +10,7 @@ export default withPosts( ({ posts }) => {
 
       {/* <img src="static/img/FLYER-TRANS.png" class="responsive"/> */}
       <img src="static/img/logocrank.png" class="flyerimage" />
-      <img src="static/img/cash.png" class="flyerimage"/>
+      <img src="static/img/cash.png" class="cash"/>
       <div class="features"> 
         <div class="item">LIVE BAND</div> 
         <img class="yellow-star" src="static/img/yellowstar.png"></img>
@@ -36,10 +36,27 @@ export default withPosts( ({ posts }) => {
       <div class="row">
         <div class="lineup">2002 FENWICK ST NW DC </div>
       </div>
-
+      <div class="row">
+      <br></br>
+        <form action="" method="get" class="rsvp-form">
+          <div class="rsvp-form">
+            <label for="name">Enter your name: </label>
+            <input type="text" name="name" id="name" required/>
+          </div>
+          <div class="rsvp-form">
+            <label for="email">Enter your email: </label>
+            <input type="email" name="email" id="email" required/>
+          </div>
+          <div class="rsvp-form">
+            <input type="submit" value="Subscribe!"/>
+          </div>
+        </form>
+      </div>
       <img src="static/img/mumbogifblk.gif" class="gif" id="logos"/>
       
       <button>RSVP</button>
+
+
 
       {
         posts.map(post => <Content {...post} />)

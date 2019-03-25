@@ -1,10 +1,18 @@
 .wrapper {
+    background-image: url("../img/starts1.png");
     background-color:black;
+    background-repeat:repeat;
+    background-size:contain;
+    background-position: top;
 }
 html{
     box-sizing: border-box;
     font-family: "Helvetica";
     font-weight: bold;
+
+}
+.body {
+    background-color:black;
 
 }
 *,
@@ -15,6 +23,8 @@ html{
 .flyerimage{
     width: 50%;
     align-content: center;
+    margin-top: 10%;
+    margin-bottom: 4%;
 }
 #img {
     width: 50%;
@@ -25,14 +35,23 @@ html{
     width: 100%;
     height: auto;
   }
-.item {
-    width: 25em;
-}.item {
-    width: 50em;
-}
+
 .yellow {
     width: 10em;
     /* height: auto; */
+}
+.yellow-star {
+    margin-left: 2%;
+    margin-right: 2%;
+}
+.cash {
+    margin-top: 4%;
+    width: 50%;
+    align-content: center;
+    margin-bottom: 4%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 .gif {
   width: 200px;
@@ -49,10 +68,24 @@ html{
     width: 100%;
 
 }
+.item {
+    font-size: 3vw;
+
+}
+.rsvp-form{
+    color: white;
+
+}
 .flyerimage {
+    margin-top: 0%;
+    width: 50%;
+    align-content: center;
+    margin-bottom: 4%;
     margin-left: auto;
     margin-right: auto;
     display: block;
+
+
 }
 .title {
     color: yellow;
@@ -68,12 +101,14 @@ html{
     clear:both;
     margin-bottom: 2%;
 } 
+.title {
+    margin-top: 3%
+}
 .lineup {
     color: white;
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    display: block;
     text-align: center;
     font-size: 3vw;
 }
