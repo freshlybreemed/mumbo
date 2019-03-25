@@ -15,8 +15,8 @@ export default class MyDocument extends Document {
         return (
             <html lang="en">
               <Head>
-                {/* <link rel="icon" type="image/x-icon" href="/static/img/freshly_144.ico" /> */}
-                {/* <link rel="shortcut icon" href="/static/img/freshy_144.ico"/> */}
+              <title>Crank Karaoke</title>
+                <link rel="icon" type="image/x-icon" href="/static/img/drum_WjI_icon.ico" />
                 <link rel="stylesheet" href="/static/css/styles.css" />
                 {/* <link rel="stylesheet" href="/static/css/normalize.css" /> */}
               </Head>
