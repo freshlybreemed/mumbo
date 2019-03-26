@@ -38,29 +38,35 @@ export default withPosts( ({ posts }) => {
       </div>
       <div class="row">
       <br></br>
+      <div class="row">
+        <div class="title">TICKETS</div><br></br>
+      </div>
         <form action="" method="get" class="rsvp-form">
-          <div class="rsvp-form">
-            <label for="name">Enter your name: </label>
-            <input type="text" name="name" id="name" required/>
+          <div class="rsvp-form" action="https://chickenandmumbosauce.us13.list-manage.com/subscribe/post?u=ed6d4b4a06108687ea3bb3473&amp;id=66bc11430c" method="post">
+            <label for="name">First Name: </label>
+            <input type="text" name="name" id="name" placeholder="Name" required/>
           </div>
+          <br></br>
           <div class="rsvp-form">
-            <label for="email">Enter your email: </label>
-            <input type="email" name="email" id="email" required/>
+            <label for="name">Last Name: </label>
+            <input type="text" name="name" id="name" placeholder="Name" required/>
           </div>
+          <br></br>
           <div class="rsvp-form">
-            <input type="submit" value="Subscribe!"/>
+            <label for="email">Email Address: </label>
+            <input type="email" name="email" id="email" placeholder="Email" required/>
+          </div>
+          <br></br>
+          <div class="rsvp-form">
+            <input type="submit" value="RSVP!"/>
           </div>
         </form>
-      </div>
-      <img src="static/img/mumbogifblk.gif" class="gif" id="logos"/>
-      
-      <button>RSVP</button>
-
-
-
-      {
-        posts.map(post => <Content {...post} />)
-      }
+      {/* <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css"/> */}
     </div>
+    <img src="static/img/mumbogifblk.gif" class="gif" id="logos"/>	
+    {
+      posts.map(post => <Content {...post} />)
+    }
+  </div>
   )
 })
