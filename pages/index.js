@@ -39,7 +39,7 @@ export default withPosts( ({ posts }) => {
       <div class="row">
       <br></br>
       <div class="row">
-        <div class="title">TICKETS</div><br></br>
+        <div class="tickets">TICKETS</div><br></br>
       </div>
         <form action="" method="get" class="rsvp-form">
           <div class="rsvp-form" action="https://chickenandmumbosauce.us13.list-manage.com/subscribe/post?u=ed6d4b4a06108687ea3bb3473&amp;id=66bc11430c" method="post">
