@@ -4,6 +4,7 @@
     background-repeat:repeat;
     background-size:contain;
     background-position: top;
+    text-align: center;
 }
 html{
     box-sizing: border-box;
@@ -20,6 +21,13 @@ html{
 *:after{
     box-sizing: inherit;
 }
+
+.section {
+   visibility: visible; 
+   opacity: 1; 
+   transition: opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0s;
+}
+
 .flyerimage{
     width: 50%;
     align-content: center;
@@ -30,15 +38,75 @@ html{
     width: 50%;
     height: auto
 }
+
+.mailchimp {
+    position: absolute; left: -5000px;
+}
 .responsive {
     /* scale:  */
     width: 100%;
     height: auto;
+    display:none;
   }
+button,.button {
+    padding: 10px 15px;
+    border: 2px solid #000;
+    color: #000;
+    cursor: pointer;
+    -o-transition: .5s;
+    -ms-transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    transition: .5s; 
+}
+button:hover,
+.button:hover {
+    background: #000;
+    color: #fff; 
+}
 
+input {
+    background: transparent;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-family: "Poppins", Helvetica, Arial, Sans-Serif;
+    border-radius: 0;
+    -webkit-appearance: none;
+    font-weight: bold; 
+}
+input:focus {
+    outline: none; 
+}
+input[type=email], input[type=text] {
+    color: #fff;
+    width: 100%;
+    max-width: 500px;
+    padding: 10px 0px;
+    border: 2px solid #fff;
+    border-top: none;
+    border-left: none;
+    border-right: none; 
+}
+input[type=email]::placeholder, input[type=text]::placeholder {
+    color: #000; 
+}
+input[type=submit] {
+    padding: 10px 15px;
+    border: 2px solid #fff;
+    color: #fff;
+    cursor: pointer;
+    -o-transition: .5s;
+    -ms-transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    transition: .5s; 
+}
+input[type=submit]:hover {
+    background: #fff;
+    color: #000; 
+}
 .yellow {
     width: 10em;
-    /* height: auto; */
 }
 .yellow-star {
     margin-left: 2%;
@@ -74,7 +142,15 @@ html{
 }
 .rsvp-form{
     color: white;
+    margin-bottom: 2%;
+    /* margin-left: auto;
+    margin-right: auto; */
+    display: inline-block;
+    text-align: center;
 
+}
+#mc_embed_signup{
+    background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif;
 }
 .flyerimage {
     margin-top: 0%;
@@ -84,8 +160,6 @@ html{
     margin-left: auto;
     margin-right: auto;
     display: block;
-
-
 }
 .title {
     color: yellow;
@@ -93,6 +167,15 @@ html{
     font-family: 'Helvetica Neue LT Std';
     text-align: center;
     font-size: 8vw;
+
+}
+
+.title {
+    color: yellow;
+    position: relative;
+    font-family: 'Helvetica Neue LT Std';
+    text-align: center;
+    font-size: 4vw;
 
 }
 .row::after {
