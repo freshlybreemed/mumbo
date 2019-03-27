@@ -6,9 +6,6 @@ import { Content } from 'nextein/post'
 export default withPosts( ({ posts }) => {
   return (
     <div class="wrapper">
-      <link rel="stylesheet" href="/static/css/styles.css" />
-
-      {/* <img src="static/img/FLYER-TRANS.png" class="responsive"/> */}
       <img src="static/img/logocrank.png" class="flyerimage" />
       <img src="static/img/cash.png" class="cash"/>
       <div class="features"> 
