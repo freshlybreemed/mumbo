@@ -40,21 +40,21 @@ export default withPosts( ({ posts }) => {
       <br></br>
       <div class="row">
         <div class="tickets">TICKETS</div><br></br>
-      </div>
-        <form action="" method="get" class="rsvp-form">
-          <div class="rsvp-form" action="https://chickenandmumbosauce.us13.list-manage.com/subscribe/post?u=ed6d4b4a06108687ea3bb3473&amp;id=66bc11430c" method="post">
+      </div> 
+        <form action="https://chickenandmumbosauce.us13.list-manage.com/subscribe/post?u=ed6d4b4a06108687ea3bb3473&amp;id=66bc11430c" method="post" class="rsvp-form">
+          <div class="rsvp-form" >
             <label for="name">First Name: </label>
-            <input type="text" name="name" id="name" placeholder="Name" required/>
+            <input type="text" name="FNAME" id="name" placeholder="Name" required/>
           </div>
           <br></br>
           <div class="rsvp-form">
             <label for="name">Last Name: </label>
-            <input type="text" name="name" id="name" placeholder="Name" required/>
+            <input type="text" name="LNAME" id="name" placeholder="Name" required/>
           </div>
           <br></br>
           <div class="rsvp-form">
             <label for="email">Email Address: </label>
-            <input type="email" name="email" id="email" placeholder="Email" required/>
+            <input type="email" name="EMAIL" id="email" placeholder="Email" required/>
           </div>
           <br></br>
           <div class="rsvp-form">
