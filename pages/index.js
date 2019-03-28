@@ -10,7 +10,7 @@ export default withPosts( ({ posts }) => {
         <div class="lineup">CHICKEN & MUMBO SAUCE PRESENTS</div><br></br>
       </div>
       <img src="static/img/logocrank.png" class="flyerimage" />
-      <img src="static/img/cash.png" class="cash"/>
+      <img src="static/img/cash.gif" class="cash"/>
       <div class="features"> 
         <div class="item">LIVE BAND</div> 
         <img class="yellow-star" src="static/img/yellowstar.png"></img>
@@ -39,12 +39,19 @@ export default withPosts( ({ posts }) => {
       <div class="row">
       <br></br>
       <div class="row">
-        <div class="tickets">ABOUT</div><br></br>
+        <div class="tickets"><img class="yellow-star" src="static/img/yellowstar.png"/>
+              THIS IS YOUR NIGHT 
+          <img class="yellow-star" src="static/img/yellowstar.png"/>
+        </div>
+        <div class="tickets">
+          <img class="yellow-star" src="static/img/yellowstar.png"/>
+          TO BE LEAD MIC
+          <img class="yellow-star" src="static/img/yellowstar.png"/>
+        </div>
       </div> 
       <div class="row">
         <div class="about">
-          Crank Karaoke is a one of a kind, improv jam session and open mic where the funky sounds of go-go meet local musicians, singers, songwriters, rappers, poets, dancers and more to experience music together and express themselves freely. Featuring a rotating house band of certified local musical talent, look forward to a karaoke-inspired experience with a not-so-shy audience singing popular covers and renditions of culturally relevant songs. Essentially, it’s a kickback where beginners and experts can share the stage to learn and create together. We know the power of music and we want to use it to restore not exploit.
-        </div>
+        Crank Karaoke is a one of a kind, improv jam session and open mic where the funky sounds of go-go collide with community to experience music together and express themselves freely. Featuring a live band of former go-go band musicians, look forward to a karaoke-inspired experience with a not-so-shy audience singing popular covers and renditions of culturally relevant songs. Essentially, it’s a party where beginners and experts can share the stage to learn and create together. We know the power of go-go music and we want to use it to restore the culture not exploit it.        </div>
         <br></br>
         <img src="static/img/onstage.gif"/>
       </div>
