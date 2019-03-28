@@ -169,7 +169,6 @@ input[type=submit]:hover {
     font-family: 'Helvetica Neue LT Std';
     text-align: center;
     font-size: 8vw;
-
 }
 
 .tickets {
@@ -177,10 +176,17 @@ input[type=submit]:hover {
     position: relative;
     font-family: 'Helvetica Neue LT Std';
     text-align: center;
-    font-size: 4vw;
-    margin-top: 5%
+    font-size: 3vw;
+    /* margin-top: 1% */
+}
 
-
+.tickets {
+    color: yellow;
+    position: relative;
+    font-family: 'Helvetica Neue LT Std';
+    text-align: center;
+    font-size: 3vw;
+    /* margin-top: 1% */
 }
 .row::after {
     content:"";
@@ -207,6 +213,16 @@ input[type=submit]:hover {
     text-align: center;
     font-size: 2vw;
     width: 60%;
+    margin-bottom: 4%;
+}
+.tagline {
+    color: white;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 3vw;
+    width: 70%;
 }
 .date {
     color: white;
