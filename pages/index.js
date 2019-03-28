@@ -34,17 +34,13 @@ export default withPosts( ({ posts }) => {
         <div class="date">9PM - 2AM</div>
       </div>
       <div class="row">
-        <div class="lineup">2002 FENWICK ST NW DC 20002</div>
+        <div class="lineup">2002 FENWICK ST NE DC 20002</div>
       </div>
       <div class="row">
       <br></br>
       <div class="row">
         <div class="tickets"><img class="yellow-star" src="static/img/yellowstar.png"/>
               THIS IS YOUR NIGHT 
-          <img class="yellow-star" src="static/img/yellowstar.png"/>
-        </div>
-        <div class="tickets">
-          <img class="yellow-star" src="static/img/yellowstar.png"/>
           TO BE LEAD MIC
           <img class="yellow-star" src="static/img/yellowstar.png"/>
         </div>
@@ -54,9 +50,11 @@ export default withPosts( ({ posts }) => {
         Crank Karaoke is a one of a kind, improv jam session and open mic where the funky sounds of go-go collide with community to experience music together and express themselves freely. Featuring a live band of former go-go band musicians, look forward to a karaoke-inspired experience with a not-so-shy audience singing popular covers and renditions of culturally relevant songs. Essentially, it’s a party where beginners and experts can share the stage to learn and create together. We know the power of go-go music and we want to use it to restore the culture not exploit it.        </div>
         <br></br>
         <img src="static/img/onstage.gif"/>
+        {/* Its not a hit until a go-go band remakes it! */}
       </div>
+      <br></br>
       <div class="row">
-        <div class="tickets">TICKETS</div><br></br>
+        <div class="tickets">SIGN UP NOW</div><br></br>
       </div> 
         <form action="https://chickenandmumbosauce.us13.list-manage.com/subscribe/post?u=ed6d4b4a06108687ea3bb3473&amp;id=66bc11430c" method="post" class="rsvp-form">
           <div class="rsvp-form" >
@@ -73,6 +71,12 @@ export default withPosts( ({ posts }) => {
             <label for="email">Email Address: </label>
             <input type="email" name="EMAIL" id="email" required/>
           </div>
+          <br></br>
+          <div class="rsvp-form">
+            <label for="song">Favorite Song: </label>
+            <input type="text" name="SONG" id="song"/>
+          </div>
+          <br></br>
           <br></br>
           <div class="rsvp-form">
             <input type="submit" value="RSVP"/>

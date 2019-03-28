@@ -101,6 +101,7 @@ input[type=submit] {
     -moz-transition: .5s;
     -webkit-transition: .5s;
     transition: .5s; 
+    font-size: 3vw;
 }
 input[type=submit]:hover {
     background: #fff;
@@ -177,16 +178,7 @@ input[type=submit]:hover {
     font-family: 'Helvetica Neue LT Std';
     text-align: center;
     font-size: 3vw;
-    /* margin-top: 1% */
-}
-
-.tickets {
-    color: yellow;
-    position: relative;
-    font-family: 'Helvetica Neue LT Std';
-    text-align: center;
-    font-size: 3vw;
-    /* margin-top: 1% */
+    margin-top: 3%
 }
 .row::after {
     content:"";
@@ -211,7 +203,7 @@ input[type=submit]:hover {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    font-size: 2vw;
+    font-size: 3vw;
     width: 60%;
     margin-bottom: 4%;
 }
