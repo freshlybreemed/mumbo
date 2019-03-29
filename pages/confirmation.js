@@ -7,7 +7,7 @@ export default withPost( ({ post }) => {
         // <div class="wrapper">
 
             <div class="row">
-                <img src="static/img/cash.png" class="cash"/>
+                <img src="static/img/cash.gif" class="cash"/>
                 <div class="tickets">RSVP Confirmed!</div><br></br>
             </div>
         // </div>
