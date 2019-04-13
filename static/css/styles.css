@@ -65,21 +65,41 @@ html{
     height: auto;
     display:none;
   }
-button,.button {
+a.button {
     padding: 10px 15px;
-    border: 2px solid #000;
+    border: 2px solid #fff;
     color: #000;
     cursor: pointer;
     -o-transition: .5s;
     -ms-transition: .5s;
     -moz-transition: .5s;
     -webkit-transition: .5s;
+    text-decoration: none;
+    /* color: initial; */
     transition: .5s; 
+    background: transparent;
+    margin-bottom: 10px;
+    font-size: 25px;
+    font-family: "Poppins", Helvetica, Arial, Sans-Serif;
+    border-radius: 0;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    font-weight: bold; 
 }
-button:hover,
-.button:hover {
+a.button:hover {
     background: #000;
     color: #fff; 
+}
+.recap-form{
+    color: white;
+    margin-bottom: 2%;
+    /* margin-left: auto;
+    margin-right: auto; */
+    display: inline-block;
+    text-align: center;
+    font-size:  4vw;
+
 }
 
 input {
@@ -133,6 +153,15 @@ input[type=submit]:hover {
 .cash {
     margin-top: 4%;
     width: 50%;
+    align-content: center;
+    margin-bottom: 4%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.recap {
+    margin-top: 4%;
+    width: 80%;
     align-content: center;
     margin-bottom: 4%;
     margin-left: auto;
@@ -218,7 +247,7 @@ input[type=submit]:hover {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    font-size: 3vw;
+    font-size: 2.5vw;
 }
 .about {
     color: white;
