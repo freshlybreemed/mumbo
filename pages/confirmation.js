@@ -4,13 +4,10 @@ import withPost from 'nextein/post'
 
 export default withPost( ({ post }) => { 
     return(
-        // <div class="wrapper">
-
-            <div class="row">
-                <img src="static/img/cash.png" class="cash"/>
-                <div class="tickets">RSVP Confirmed!</div><br></br>
-            </div>
-        // </div>
+    <div class="row">
+        <img src="static/img/cash.gif" class="cash"/>
+        <div class="tickets">Email Confirmed!</div><br></br>
+    </div>
     )
     
 } )
