@@ -11,26 +11,8 @@ export default withPosts( ({ posts }) => {
         <div class="lineup">CHICKEN & MUMBO SAUCE PRESENTS</div><br></br>
       </div>
       <img src="static/img/logocrank.png" class="flyerimage" />
-      
- 
-      {/* <div class="row">
-        <div class="lineup">DJ SETS: MALCOLM XAVIER + FRESHLY BREEMED</div>
-      </div>
-      <div class="row">
-        <div class="date">THURS. APRIL 11th</div>
-      </div>
-      <div class="row">
-        <div class="date">9PM - 2AM</div>
-      </div> */}
       <div class="row">
       <br></br>
-      {/* <div class="row">
-        <div class="tickets"><img class="yellow-star" src="static/img/yellowstar.png"/>
-              THIS IS YOUR NIGHT 
-          TO BE LEAD MIC
-          <img class="yellow-star" src="static/img/yellowstar.png"/>
-        </div>
-      </div>  */}
       <div class="row">
         <div class="about">
           First and foremost we’d like to thank the people for showing up and showing out last night! We stood and rocked out in solidarity as we shook the city up with #crankkaraoke. You can’t replicate it or mute DC. We R One and we’re here to stay. 
@@ -41,7 +23,6 @@ export default withPosts( ({ posts }) => {
               <input type="submit" value="PHOTO RECAP" />
           </form>
       </div>
-
         {/* Its not a hit until a go-go band remakes it! */}
       </div>
       <br></br>
@@ -59,7 +40,6 @@ export default withPosts( ({ posts }) => {
             <input type="submit" value="STAMP"/>
           </div>
         </form>
-      {/* <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css"/> */}
     </div>
     <img src="static/img/mumbogifblk.gif" class="gif" id="logos"/>	
     {
