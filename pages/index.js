@@ -8,7 +8,7 @@ export default withPosts( ({ posts }) => {
     <div class="wrapper">
     {/* <img class="background" src="/static/img/starts1.png" /> */}
      <div class="row">
-        <div class="lineup">CHICKEN & MUMBO SAUCE PRESENTS</div><br></br>
+        <div class="lineup">CHICKEN & MUMBO SAUCE PRESENTS...</div><br></br>
       </div>
       <img src="static/img/logocrank.png" class="flyerimage" />
       <div class="row">
