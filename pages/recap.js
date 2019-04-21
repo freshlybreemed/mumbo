@@ -5,7 +5,6 @@ import withPost from 'nextein/post'
 export default withPost( ({ post }) => { 
     return(
         <div class="wrapper">
-
             <div class="row"> 
                 <img src="static/img/logocrank.png" class="cash"/>
                 {/* <div class="row">
