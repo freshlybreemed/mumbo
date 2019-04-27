@@ -2,10 +2,12 @@ import React from 'react'
 
 import withPosts from 'nextein/posts'
 import { Content } from 'nextein/post'
+import Navigation from '../components/Navigation'
 
 export default withPosts( ({ posts }) => {
   return (
     <div class="wrapper">
+      <Navigation />
     {/* <img class="background" src="/static/img/starts1.png" /> */}
      <div class="row">
         <div class="lineup">CHICKEN & MUMBO SAUCE PRESENTS</div><br></br>
