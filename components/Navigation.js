@@ -14,12 +14,12 @@ const Navigation = () => (
         {/* <HeaderWrapper> */}
             <Link href="/">
                 <br/>
-                {/* <a href="/"><img src="/static/img/cash.png" alt="Hoist x OATW Bottle" title="Hoist x OATW Bottle" class="header" /></a> */}
             </Link>
-            <Link href="/">Home</Link>
-
-            <Link href="/about">About</Link>
-            <Link href="/events">Events</Link>
+            <Link href="/about">ABOUT</Link>
+            <Link href="/events">EVENTS</Link>
+            <Link><img class="menu" src="static/img/ChickenMumbo_LogoWords.png" /></Link>
+            <Link href="/experience">EXPERIENCE</Link>
+            <Link href="/crank">CRANK KARAOKE</Link>
         {/* </HeaderWrapper> */}
     </div>
 )
