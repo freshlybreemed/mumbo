@@ -9,8 +9,7 @@ const data = {
   };
 
 const content = `
-Chicken & Mumbo Sauce is an event-based collective founded by 
-DJ Breemz and Hav Mercy that specializes in producing unique and 
+Chicken & Mumbo Sauce is an event-based collective that specializes in producing unique and 
 authentic experiences and content that reflect the ever-growing 
 creative community and culture of the DMV onto the world.`
 
