@@ -49,8 +49,6 @@ html{
 .header{
     text-align: center;
     margin-bottom: 4%;
-    margin-top: -4%;
-    /* margin-left: 10% */
 
 }
 
@@ -65,13 +63,9 @@ html{
     display:none;
   }
 
-.about-container {
+.aboutpage {
     color: white;
-    /* padding: 5%; */
-}
-.about-container {
-    color: white;
-    display: block;
+    
 }
 .events {
     color: white;
@@ -86,17 +80,11 @@ html{
     padding: 5px;
 }
 
-img.menu{
-    margin-bottom: 2%
-}
 .menu {
-    width: 15%;
+    width: 10%;
     height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-
-    margin-top: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
 }
 
 a {
@@ -226,7 +214,7 @@ input[type=submit]:hover {
     display: block;
 }
 .gif {
-  width: 50%;
+  width: 200px;
   height: auto;
   margin-left: auto;
   margin-right: auto;
@@ -251,16 +239,6 @@ input[type=submit]:hover {
     font-size: 3vw;
 
 }
-.player .vp-video-wrapper{
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-color: #000;
-    overflow: hidden;
-}
-
 .rsvp-form{
     color: white;
     margin-bottom: 2%;
@@ -271,8 +249,6 @@ input[type=submit]:hover {
     font-size:  3vw;
 
 }
-
-
 #mc_embed_signup{
     background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif;
 }
@@ -301,15 +277,6 @@ input[type=submit]:hover {
     font-size: 3vw;
     margin-top: 3%
 }
-
-.yellow-text {
-    color: yellow;
-    position: relative;
-    font-family: 'Helvetica Neue LT Std';
-    text-align: center;
-    font-size: 3.4vw;
-    margin-top: 3%;
-}
 .row::after {
     content:"";
     display: table;
@@ -327,18 +294,6 @@ input[type=submit]:hover {
     text-align: center;
     font-size: 2.5vw;
 }
-.text-box {
-    color: white;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    font-size: 2vw;
-    font-weight: normal;
-    margin-bottom: 15%;
-    font-family: "Helvetica";
-
-}
 .about {
     color: white;
     position: relative;
@@ -346,7 +301,7 @@ input[type=submit]:hover {
     margin-right: auto;
     text-align: center;
     font-size: 3vw;
-    width: 70%;
+    width: 60%;
     margin-bottom: 4%;
 }
 .tagline {

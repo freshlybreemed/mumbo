@@ -17,7 +17,8 @@ export default withPosts( ({ posts }) => {
       <br></br>
       <div class="row">
         <div class="about">
-        Crank Karaoke is an improv jam session and open mic where the funky sounds of go-go collide with the community to experience something that has never been done before musically. Essentially, it's karaoke-inspired experience featuring a live band of former go-go band musicians. Pair that up with a not-so-shy audience singing to timeless go-go records, hip-hop/r&b covers and renditions. Join the party where beginners and experts can share the stage to learn and create together. We know the power of go-go music and we want to use it to restore the culture not exploit it.        </div>
+          First and foremost we’d like to thank the people for showing up and showing out last night! We stood and rocked out in solidarity as we shook the city up with #crankkaraoke. You can’t replicate it or mute DC. We R One and we’re here to stay. 
+        </div>
         <br></br>
         <div class="rsvp-form">
           <form action="/recap">
@@ -42,7 +43,7 @@ export default withPosts( ({ posts }) => {
           </div>
         </form>
     </div>
-    <img src="static/img/karaokepooh.gif" class="gif" id="logos"/>	
+    <img src="static/img/mumbogifblk.gif" class="gif" id="logos"/>	
     {
       posts.map(post => <Content {...post} />)
     }

@@ -17,7 +17,7 @@ export default class MyDocument extends Document {
               <Head>
               <title>Crank Karaoke</title>
                 <meta property="og:image" content="/static/img/graph.png" />
-                <link rel="icon" type="image/x-icon" href="/static/img/mumbo.ico" />
+                <link rel="icon" type="image/x-icon" href="/static/img/drum_WjI_icon.ico" />
                 <link rel="stylesheet" href="/static/css/styles.css" />
                 {/* <link rel="stylesheet" href="/static/css/normalize.css" /> */}
               </Head>
