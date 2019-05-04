@@ -49,6 +49,8 @@ html{
 .header{
     text-align: center;
     margin-bottom: 4%;
+    margin-top: -4%;
+    /* margin-left: 10% */
 
 }
 
@@ -80,11 +82,17 @@ html{
     padding: 5px;
 }
 
+img.menu{
+    margin-bottom: 2%
+}
 .menu {
-    width: 10%;
+    width: 15%;
     height: auto;
-    margin-left: 2%;
-    margin-right: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+
+    margin-top: 2%;
 }
 
 a {
@@ -214,7 +222,7 @@ input[type=submit]:hover {
     display: block;
 }
 .gif {
-  width: 200px;
+  width: 50%;
   height: auto;
   margin-left: auto;
   margin-right: auto;
@@ -277,6 +285,15 @@ input[type=submit]:hover {
     font-size: 3vw;
     margin-top: 3%
 }
+
+.yellow-text {
+    color: yellow;
+    position: relative;
+    font-family: 'Helvetica Neue LT Std';
+    text-align: center;
+    font-size: 3.4vw;
+    margin-top: 3%;
+}
 .row::after {
     content:"";
     display: table;
@@ -294,6 +311,18 @@ input[type=submit]:hover {
     text-align: center;
     font-size: 2.5vw;
 }
+.text-box {
+    color: white;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 2vw;
+    font-weight: normal;
+    margin-bottom: 15%;
+    font-family: "Helvetica";
+
+}
 .about {
     color: white;
     position: relative;
@@ -301,7 +330,7 @@ input[type=submit]:hover {
     margin-right: auto;
     text-align: center;
     font-size: 3vw;
-    width: 60%;
+    width: 70%;
     margin-bottom: 4%;
 }
 .tagline {

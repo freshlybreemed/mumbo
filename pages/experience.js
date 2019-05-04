@@ -9,14 +9,14 @@ export default withPost( ({ post }) => {
         <Navigation />
         <div class="lineup">Here's What Happened Last Time...</div><br></br>
         <center>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/nfpqSqiFJYc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/NRSTNqa9om4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="60%" height="400" src="https://www.youtube.com/embed/nfpqSqiFJYc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="60%" height="400" src="https://www.youtube.com/embed/NRSTNqa9om4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </center>
-        <div class="tickets">
+        <div class="yellow-text">
         BOOK CHICKEN & MUMBO SAUCE
         </div>
         <br></br>
-        <div class="lineup">
+        <div class="text-box">
             Sponsored Events    |  Music Festivals  |   Colleges/Universities 
             <br></br>            <br></br>
 
