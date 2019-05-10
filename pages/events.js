@@ -18,13 +18,18 @@ export default withPosts(() => {
     return(
         <div class="events">
             <Navigation />
+            {/* <script src="https://www.paypalobjects.com/api/checkout.js"></script> */}
             <br></br>
             <br></br>
             <div class="event"> 
                 {content} 
+
             </div>
-           
-            <br></br>
+            {/* <script src="https://www.paypal.com/sdk/js?client-id=sb"></script> */}
+            {/* <script src="static/js/paypal.js"></script> */}
+
+            {/* <br></br>  <div id="paypal-button-container"/> */}
+
             <div class="row">
                 <div class="tickets">STAY HIP TO NEXT EVENT</div><br></br>
             </div> 

@@ -154,7 +154,24 @@ a.button:hover {
     text-align: center;
     font-size:  4vw;
 }
-
+/* #paypal-button-container {
+    margin-top: 20px;
+    width: 300px;
+    display: inline-block;
+} */
+button{
+    padding: 10px 15px;
+    background-color: #000;
+    border: 2px solid #fff;
+    color: #fff;
+    cursor: pointer;
+    -o-transition: .5s;
+    -ms-transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    transition: .5s; 
+    font-size: 3vw;
+}
 input {
     background: transparent;
     margin-bottom: 10px;
@@ -163,6 +180,13 @@ input {
     border-radius: 0;
     -webkit-appearance: none;
     font-weight: bold; 
+}
+input[type="radio" i] {
+    background-color: initial;
+    cursor: default;
+    margin: 3px 0.5ex;
+    padding: initial;
+    border: initial;
 }
 input:focus {
     outline: none; 

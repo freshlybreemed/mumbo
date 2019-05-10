@@ -2,47 +2,95 @@ import React from 'react'
 
 import withPosts from 'nextein/posts'
 import { Content } from 'nextein/post'
-import Navigation from '../components/Navigation'
+import StripeCheckout from '../components/StripeCheckout'
+// var stripe = Stripe('pk_test_KJ6mPZxJuMvOl8yqmsCtdM9J00bx9VCCpE');
+// var elements = stripe.elements();
 
 export default withPosts( ({ posts }) => {
   return (
     <div class="wrapper">
-      <Navigation />
-    {/* <img class="background" src="/static/img/starts1.png" /> */}
      <div class="row">
-        {/* <div class="lineup">CHICKEN & MUMBO SAUCE PRESENTS</div><br></br> */}
+        <div class="lineup">CHICKEN & MUMBO SAUCE PRESENTS</div><br></br>
       </div>
       <img src="static/img/logocrank.png" class="flyerimage" />
+      <img src="static/img/cash.gif" class="cash"/>
+      <div class="features"> 
+        <div class="item">LIVE BAND</div> 
+        <img class="yellow-star" src="static/img/yellowstar.png"></img>
+        <div class="item">GO-GO KARAKOKE </div>
+        <img class="yellow-star" src="static/img/yellowstar.png"></img>
+        <div class="item">JAM SESSION</div>
+      </div>
+      <div class="row">
+        <div class="title">HOWARD THEATRE</div><br></br>
+      </div>
+      <div class="row">
+        <div class="lineup">HOSTED BY: WALK LIKE WALT</div>
+      </div>
+      <div class="row">
+        <div class="lineup">DJ SETS: MALCOLM XAVIER + FRESHLY BREEMED</div>
+      </div>
+      <div class="row">
+        <div class="date">FRI. JUNE 14th</div>
+      </div>
+      <div class="row">
+        <div class="date">9PM - 3AM</div>
+      </div>
+      <div class="row">
+        <div class="lineup">620 T ST NW DC 20001</div>
+      </div>
       <div class="row">
       <br></br>
       <div class="row">
+        <div class="tickets"><img class="yellow-star" src="static/img/yellowstar.png"/>
+              THIS IS YOUR NIGHT 
+          TO BE LEAD MIC
+          <img class="yellow-star" src="static/img/yellowstar.png"/>
+        </div>
+      </div> 
+      <div class="row">
         <div class="about">
-        Crank Karaoke is an improv jam session and open mic where the funky sounds of go-go collide with the community to experience something that has never been done before musically. Essentially, it's karaoke-inspired experience featuring a live band of former go-go band musicians. Pair that up with a not-so-shy audience singing to timeless go-go records r&b covers and renditions. Join the party where beginners and experts can share the stage to learn and create together. We know the power of go-go music and we want to use it to restore the culture not exploit it.        </div>
+        Crank Karaoke is a one of a kind, improv jam session and open mic where the funky sounds of go-go collide with community to experience music together and express themselves freely. Featuring a live band of former go-go band musicians, look forward to a karaoke-inspired experience with a not-so-shy audience singing popular covers and renditions of culturally relevant songs. Essentially, it’s a party where beginners and experts can share the stage to learn and create together. We know the power of go-go music and we want to use it to restore the culture not exploit it.        </div>
         <br></br>
-        <div class="rsvp-form">
-          <form action="/recap">
-              <input type="submit" value="PHOTO RECAP" />
-          </form>
-      </div>
+        <img src="static/img/karaokepooh.gif" class="gif" id="logos"/>	
         {/* Its not a hit until a go-go band remakes it! */}
       </div>
       <br></br>
       <div class="row">
-        <div class="tickets">SIGN UP NOW FOR THE NEXT ONE</div><br></br>
+        <div class="tickets">TICKETS</div><br></br>
       </div> 
-        <form action="https://chickenandmumbosauce.us13.list-manage.com/subscribe/post?u=ed6d4b4a06108687ea3bb3473&amp;id=a4855a812b" method="post" class="rsvp-form">
+        <form action="https://chickenandmumbosauce.us13.list-manage.com/subscribe/post?u=ed6d4b4a06108687ea3bb3473&amp;id=66bc11430c" method="post" class="rsvp-form">
+          <div class="rsvp-form" >
+            <label for="name">First Name: </label>
+            <input type="text" name="FNAME" id="name" required/>
+          </div>
+          <br></br>
+          <div class="rsvp-form">
+            <label for="name">Last Name: </label>
+            <input type="text" name="LNAME" id="name" required/>
+          </div>
+          <br></br>
           <div class="rsvp-form">
             <label for="email">Email Address: </label>
             <input type="email" name="EMAIL" id="email" required/>
           </div>
           <br></br>
+          <div class="rsvp-form">
+            <label for="song">Favorite Song: </label>
+            <input type="text" name="SONG" id="song"/>
+          </div>
+          <br></br>
           <br></br>
           <div class="rsvp-form">
-            <input type="submit" value="STAMP"/>
+            {/* <input type="submit" value="BUY TICKETS"/> */}
+            <StripeCheckout />
           </div>
         </form>
+        <form action="/tickets">
+          <input type="submit" value="TICKETS"/>
+        </form>
+      {/* <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css"/> */}
     </div>
-    <img src="static/img/karaokepooh.gif" class="gif" id="logos"/>	
     {
       posts.map(post => <Content {...post} />)
     }
