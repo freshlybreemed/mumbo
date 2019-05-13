@@ -1,0 +1,6 @@
+{
+  "builds": [
+    { "src": "routes/index.js", "use": "@now/node" },
+    { "src": "package.json", "use": "@now/static-build", "config": { "distDir": "build" }}
+  ]
+}

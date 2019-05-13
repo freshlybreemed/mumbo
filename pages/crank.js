@@ -3,14 +3,14 @@ import React from 'react'
 import withPosts from 'nextein/posts'
 import { Content } from 'nextein/post'
 import StripeCheckout from '../components/StripeCheckout'
-// var stripe = Stripe('pk_test_KJ6mPZxJuMvOl8yqmsCtdM9J00bx9VCCpE');
-// var elements = stripe.elements();
+import Navigation from '../components/Navigation'
 
 export default withPosts( ({ posts }) => {
   return (
     <div class="wrapper">
+    <Navigation />
      <div class="row">
-        <div class="lineup">CHICKEN & MUMBO SAUCE PRESENTS</div><br></br>
+        <div class="lineup"> </div><br></br>
       </div>
       <img src="static/img/logocrank.png" class="flyerimage" />
       <img src="static/img/cash.gif" class="cash"/>
@@ -59,37 +59,14 @@ export default withPosts( ({ posts }) => {
       <div class="row">
         <div class="tickets">TICKETS</div><br></br>
       </div> 
-        <form action="https://chickenandmumbosauce.us13.list-manage.com/subscribe/post?u=ed6d4b4a06108687ea3bb3473&amp;id=66bc11430c" method="post" class="rsvp-form">
-          <div class="rsvp-form" >
-            <label for="name">First Name: </label>
-            <input type="text" name="FNAME" id="name" required/>
-          </div>
-          <br></br>
-          <div class="rsvp-form">
-            <label for="name">Last Name: </label>
-            <input type="text" name="LNAME" id="name" required/>
-          </div>
-          <br></br>
-          <div class="rsvp-form">
-            <label for="email">Email Address: </label>
-            <input type="email" name="EMAIL" id="email" required/>
-          </div>
-          <br></br>
-          <div class="rsvp-form">
-            <label for="song">Favorite Song: </label>
-            <input type="text" name="SONG" id="song"/>
-          </div>
-          <br></br>
           <br></br>
           <div class="rsvp-form">
             {/* <input type="submit" value="BUY TICKETS"/> */}
             <StripeCheckout />
           </div>
-        </form>
         <form action="/tickets">
           <input type="submit" value="TICKETS"/>
         </form>
-      {/* <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css"/> */}
     </div>
     {
       posts.map(post => <Content {...post} />)

@@ -1,6 +1,7 @@
 import React from 'react';
 import withPosts from 'nextein/posts';
 import Navigation from '../components/Navigation'
+import Event from '../components/Event'
 
 
 const data = {
@@ -21,9 +22,8 @@ export default withPosts(() => {
             {/* <script src="https://www.paypalobjects.com/api/checkout.js"></script> */}
             <br></br>
             <br></br>
-            <div class="event"> 
-                {content} 
-
+            <div class="event">  
+                <Event />
             </div>
             {/* <script src="https://www.paypal.com/sdk/js?client-id=sb"></script> */}
             {/* <script src="static/js/paypal.js"></script> */}

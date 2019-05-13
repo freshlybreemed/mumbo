@@ -1,9 +1,11 @@
 .env
-node_modules
+node_modules/*
+!node_modules/react-stripe-checkout/dist/main.js
 .next
 terraform/terraform.tfvars
 terraform/freshly
 terraform/freshly.pub
+
 
 # .tfstate files
 terraform/*.tfstate
