@@ -60,10 +60,6 @@ export default withPosts( ({ posts }) => {
         <div class="tickets">TICKETS</div><br></br>
       </div> 
           <br></br>
-          <div class="rsvp-form">
-            {/* <input type="submit" value="BUY TICKETS"/> */}
-            <StripeCheckout />
-          </div>
         <form action="/tickets">
           <input type="submit" value="TICKETS"/>
         </form>

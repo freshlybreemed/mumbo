@@ -4,11 +4,11 @@ const fs = require('fs');
 const stripe = require("stripe")("sk_test_JBNJTNK46jdUvLLug42ez1hW00eL4QQdjU");
 
 
-const stripeChargeCallback = res => (stripeErr, stripeRes) => {
+const stripeChargeCallback = (res, token) => (stripeErr, stripeRes) => {
   if (stripeErr) {
     res.status(500).send({ error: stripeErr });
   } else {
-    res.status(200).send({ success: stripeRes });
+    res.status(200).send({ success: stripeRes, token: token });
   }
 };
 
@@ -40,7 +40,8 @@ const ticketApi = app => {
             currency: "usd",
         };
         console.log(req.body)
-        stripe.charges.create(body, stripeChargeCallback(res));
+        // res.
+        stripe.charges.create(body, stripeChargeCallback(res, req.body.token));
         readHTMLFile(__dirname + '/crank.html', function(err, html) {
             var template = handlebars.compile(html);
             var replacements = {
@@ -60,8 +61,17 @@ const ticketApi = app => {
             transporter.sendMail(mailOptions, function (err, info) {
                 if(err)
                 console.log(err)
-                else
-                console.log(info);
+                else{
+                    console.log(info);
+                    console.log("sending-")
+                    res.send('/confirmation')
+                    // res.writeHead(302, {
+                    //     'Location': 'http://localhost:8000/confirmation',
+                    //     'Content-Type': 'text/html'
+                    // });
+                    // res.end();
+                    console.log("sent")
+                }
             })
         })
 
@@ -86,9 +96,18 @@ const ticketApi = app => {
             transporter.sendMail(mailOptions, function (err, info) {
                 if(err)
                 console.log(err)
-                else
+                else{
                 console.log(info);
-                res.send(true)
+                console.log("sending")
+                // res.redirect('/confirmation')
+                res.writeHead(302, {
+                    'Location': 'http://localhost:8000/confirmation',
+                    'Content-Type': 'text/html'
+                });
+                res.end();
+                console.log("sent")
+            }
+
             })
         })
 

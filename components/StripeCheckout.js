@@ -11,27 +11,28 @@ export default class Checkout extends React.Component {
         token: token
     }
     axios.post('http://localhost:8000/ticket', body).then(response => {
+        window.location = '/confirmation?email='+response.data.token.email
         console.log(response)
-      // res.send({})
     }).catch(error =>{
         console.log("Payment Error: ", error);
         alert("Payment Error")
-        // res.send
     })
   };
 
   render() {
+    console.log(this.props.price)
     return (
       <StripeCheckout
         stripeKey="pk_test_KJ6mPZxJuMvOl8yqmsCtdM9J00bx9VCCpE"
         token={this.onToken}
-        amount="2500"
+        amount={this.props.price ? parseInt(this.props.price): 1110}
         billingAddress={true}
         description="Crank Karaoke"
-        // image="https://yourdomain.tld/images/logo.svg"
+        image="http://localhost:3000/static/img/graph.png"
         locale="auto"
         name="Chicken & Mumbo Sauce"
       />
-    )
+    ) 
+
   }
 }

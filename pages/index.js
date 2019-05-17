@@ -6,7 +6,7 @@ import Navigation from '../components/Navigation'
 
 export default withPosts(({ post }) => {
     return (
-        <div class="row">
+        <div class="grid">
             <Navigation />
         </div>
     )
