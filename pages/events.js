@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import withPosts from 'nextein/posts';
 import Navigation from '../components/Navigation'
 import Event from '../components/Event'
@@ -15,8 +15,7 @@ DJ Breemz and Hav Mercy that specializes in producing unique and
 authentic experiences and content that reflect the ever-growing 
 creative community and culture of the DMV onto the world.`
 
-export default withPosts(() => {
-    return(
+const Events = () => (
         <div class="events">
             <Navigation />
             {/* <script src="https://www.paypalobjects.com/api/checkout.js"></script> */}
@@ -46,5 +45,5 @@ export default withPosts(() => {
             </form>
 
         </div>
-    )
-})
+)
+export default Events

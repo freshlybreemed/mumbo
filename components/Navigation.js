@@ -10,13 +10,11 @@ import Link from 'next/link';
 import { HeaderWrapper } from '../static/css/navbar'
 
 const Navigation = () => (
-<div >
-        {/* <HeaderWrapper> */}
-        <div class="row">
+<div class="nav-bar">
+        <div class="logo-header" >
             <Link href="/"><img class="menu" src="static/img/ChickenMumbo_LogoWords.png" /></Link>
         </div>
-        <div class="header">
-
+        {/* <div class="header">
             <Link href="/">
                 <br/>
             </Link>
@@ -24,8 +22,7 @@ const Navigation = () => (
             <Link href="/events">EVENTS</Link>
             <Link href="/experience">MUMBO</Link>
             <Link href="/crank">CRANK KARAOKE</Link>
-        {/* </HeaderWrapper> */}
-        </div>
+        </div> */}
 </div>
 )
 

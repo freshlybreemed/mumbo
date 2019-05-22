@@ -13,8 +13,7 @@ Chicken & Mumbo Sauce is an event-based collective that specializes in producing
 authentic experiences and content that reflect the ever-growing 
 creative community and culture of the DMV onto the world.`
 
-export default withPosts(() => {
-    return(
+const About = () => (
         <div class="aboutpage">
             <Navigation />
             <br></br>
@@ -27,5 +26,7 @@ export default withPosts(() => {
             <img src="static/img/fresco.jpg" class="aboutcolumn" />
 
         </div>
-    )
-})
+    
+)
+
+export default About

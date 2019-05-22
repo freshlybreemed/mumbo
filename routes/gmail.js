@@ -1,116 +1,73 @@
 const nodemailer = require('nodemailer');
 const handlebars = require('handlebars');
 const fs = require('fs');
-const stripe = require("stripe")("sk_test_JBNJTNK46jdUvLLug42ez1hW00eL4QQdjU");
-
-
+const {json, send} = require('micro');
+const stripe = require("stripe")(process.env.STRIPE_SECRET_PRO);
+const {google} = require('googleapis');
+const axios = require('axios');
 const stripeChargeCallback = (res, token) => (stripeErr, stripeRes) => {
   if (stripeErr) {
-    res.status(500).send({ error: stripeErr });
+    send(res, 500, { error: stripeErr });
   } else {
-    res.status(200).send({ success: stripeRes, token: token });
+    send(res, 200, { success: stripeRes, token: token });
   }
 };
 
-const transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-           user: process.env.GMAIL_USER,
-           pass: process.env.GMAIL_PASS
-       }
-});
-
-const readHTMLFile = function(path, callback) {
-    fs.readFile(path, {encoding: 'utf-8'}, function (err, html) {
-        if (err) {
-            throw err;
-            callback(err);
-        }
-        else {
-            callback(null, html);
-        }
-    });
-};
-const ticketApi = app => {   
-    
-    app.post("/ticket",  (req,res) => {
-        const body = {
-            source: req.body.token.id,
-            amount: req.body.amount,
-            currency: "usd",
-        };
-        console.log(req.body)
-        // res.
-        stripe.charges.create(body, stripeChargeCallback(res, req.body.token));
-        readHTMLFile(__dirname + '/crank.html', function(err, html) {
-            var template = handlebars.compile(html);
-            var replacements = {
-                username: "John Doe"
-            };
-            var htmlToSend = template(replacements);
-            const mailOptions = {
-                to: req.body.token.email, // sender address
-                from: 'Chicken & Mumbo Sauce', // list of receivers
-                subject: 'Crank Credentials', // Subject line
-                html: htmlToSend,// plain text body
-                icalEvent: {
-                    method: 'PUBLISH',
-                    path: __dirname+'/event.ics'
-                }
-            };
-            transporter.sendMail(mailOptions, function (err, info) {
-                if(err)
-                console.log(err)
-                else{
-                    console.log(info);
-                    console.log("sending-")
-                    res.send('/confirmation')
-                    // res.writeHead(302, {
-                    //     'Location': 'http://localhost:8000/confirmation',
-                    //     'Content-Type': 'text/html'
-                    // });
-                    // res.end();
-                    console.log("sent")
-                }
-            })
-        })
-
-    })
-    app.post("/tickettest",  (req,res) => {
-        readHTMLFile(__dirname + '/crank.html', function(err, html) {
-            var template = handlebars.compile(html);
-            var replacements = {
-                username: "John Doe"
-            };
-            var htmlToSend = template(replacements);
-            const mailOptions = {
-                to: req.body.email, // sender address
-                from: 'Chicken & Mumbo Sauce', // list of receivers
-                subject: 'Crank Credentials', // Subject line
-                html: htmlToSend,// plain text body
-                icalEvent: {
-                    method: 'PUBLISH',
-                    path: __dirname+'/event.ics'
-                }
-            };
-            transporter.sendMail(mailOptions, function (err, info) {
-                if(err)
-                console.log(err)
-                else{
-                console.log(info);
-                console.log("sending")
-                // res.redirect('/confirmation')
-                res.writeHead(302, {
-                    'Location': 'http://localhost:8000/confirmation',
-                    'Content-Type': 'text/html'
-                });
-                res.end();
-                console.log("sent")
+const ticketApi = async (req, res)  => {  
+    console.log(req.url)
+    const data = await json(req);
+    const headers = {
+      'Authorization': 'Token 564db0117b8a65ddd60271eaf3298aa4',
+      'Content-Type': 'application/json'
+  }
+    if(data.ticket.dispatch){
+      axios({
+        method: 'post',
+        url: 'https://app.guestmanager.com/api/public/v2/tickets',
+        data: {
+            "ticket": { 
+                "event_ticket_type_id": 26926,
+                "name": data.ticket.name,
+                "email": data.ticket.email,
+                "dispatch": true
             }
+        },
+        headers: headers
+      }).then((res) => {
+        console.log("RESPONSE RECEIVED: ", res);
+      })
+      .catch((err) => {
+        console.log("AXIOS ERROR: ", err);
+      })
+    }
+    else {
+      console.log(data)  ;
+      const body = {
+          source: data.token.id,
+          amount: data.amount,
+          currency: "usd",
+      };
+      stripe.charges.create(body, stripeChargeCallback(res, data.token));
 
-            })
+      axios({
+          method: 'post',
+          url: 'https://app.guestmanager.com/api/public/v2/tickets',
+          data: {
+              "ticket": { 
+                  "event_ticket_type_id": 26926,
+                  "name": data.token.card.name,
+                  "email": data.token.email,
+                  "dispatch": true
+              }
+          },
+          headers: headers
+        }).then((res) => {
+          console.log("RESPONSE RECEIVED: ", res);
         })
+        .catch((err) => {
+          console.log("AXIOS ERROR: ", err);
+        })
+      }
+}
 
-    })
-};
 module.exports = ticketApi;

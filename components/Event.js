@@ -14,7 +14,7 @@ const Event = () => (
         <section class="ticketing">
           <div class="ticketing-row">
           < br></br>
-            <div class="ticketing-bold">EARLY BIRD</div>
+            <div class="ticketing-bold">Crank Karaoke</div>
             <div class="ticketing-bold">$15 + 2.15 FEE
             </div>
             {/* <div class="ticketing-bold">WASHINGTON, DC</div> */}

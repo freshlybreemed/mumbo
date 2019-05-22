@@ -1,16 +1,16 @@
 import React from 'react'
 import StripeCheckout from 'react-stripe-checkout';
 import axios from 'axios'
+require('now-env')
 
-import MyStoreCheckout from './MyStoreCheckout';
 
 export default class Checkout extends React.Component {
   onToken = (token, addresses) => {
     const body = {
-        amount: 2500,
+        amount: parseInt(this.props.price),
         token: token
     }
-    axios.post('http://localhost:8000/ticket', body).then(response => {
+    axios.post('/ticket', body).then(response => {
         window.location = '/confirmation?email='+response.data.token.email
         console.log(response)
     }).catch(error =>{
@@ -20,15 +20,14 @@ export default class Checkout extends React.Component {
   };
 
   render() {
-    console.log(this.props.price)
     return (
       <StripeCheckout
-        stripeKey="pk_test_KJ6mPZxJuMvOl8yqmsCtdM9J00bx9VCCpE"
+        stripeKey={process.env.STRIPE_CLIENT_PROD}
         token={this.onToken}
-        amount={this.props.price ? parseInt(this.props.price): 1110}
+        amount={this.props.price ? parseInt(this.props.price): 0}
         billingAddress={true}
         description="Crank Karaoke"
-        image="http://localhost:3000/static/img/graph.png"
+        image="/static/img/graph.png"
         locale="auto"
         name="Chicken & Mumbo Sauce"
       />

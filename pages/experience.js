@@ -3,8 +3,8 @@ import Navigation from '../components/Navigation'
 
 import withPost from 'nextein/post'
 
-export default withPost( ({ post }) => { 
-    return(
+const Experience = () => (    
+    
     <div class="row">
         <Navigation />
         <div class="lineup">Here's What Happened Last Time...</div><br></br>
@@ -23,6 +23,5 @@ export default withPost( ({ post }) => {
             <input type="submit" value="CONTACT US"/>
         </div>
     </div>
-    )
-    
-} )
+)
+export default Experience;
