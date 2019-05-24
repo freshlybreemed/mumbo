@@ -7,9 +7,9 @@ import Navigation from '../components/Navigation'
 import StripeCheckout from '../components/StripeCheckout'
 
 
-
 const Tickets = () => (
         <div class="row">
+          <title>Tickets</title>
           <Navigation />
           <img src="static/img/logocrank.png" class="cash"/>          
           <div class="features">

@@ -17,6 +17,7 @@ creative community and culture of the DMV onto the world.`
 
 const Events = () => (
         <div class="events">
+            <title>Events</title>
             <Navigation />
             {/* <script src="https://www.paypalobjects.com/api/checkout.js"></script> */}
             <br></br>

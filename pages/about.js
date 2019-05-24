@@ -15,6 +15,7 @@ creative community and culture of the DMV onto the world.`
 
 const About = () => (
         <div class="aboutpage">
+            <title>About</title>
             <Navigation />
             <br></br>
             <br></br>

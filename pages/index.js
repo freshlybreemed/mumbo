@@ -2,9 +2,17 @@ import React from 'react'
 import { Component } from "react";
 
 import Navigation from '../components/Navigation'
+import ReactGA from 'react-ga';
+ReactGA.initialize('UA-140796939-1');
+if (!typeof window == 'undefined'){
+  // console.log(ReactGA)
+  ReactGA.pageview(window.location.pathname + window.location.search);
+}
+
 
 const Crank = () => (
-      <div class="wrapper">
+    <div class="wrapper">
+      <title>Crank Karaoke</title>
       <Navigation />
        <div class="row">
           <div class="lineup"> </div><br></br>

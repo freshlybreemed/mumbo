@@ -5,6 +5,7 @@ import Navigation from '../components/Navigation'
 
 const Crank = () => (
       <div class="wrapper">
+      <title>Crank Karaoke</title>
       <Navigation />
        <div class="row">
           <div class="lineup"> </div><br></br>

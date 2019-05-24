@@ -6,6 +6,7 @@ import FreeCrank from '../components/FreeCrank'
 
 const Free = () => (
     <div class="wrapper">
+      <title>Crank Karaoke</title>
       <Navigation />
       Done
     </div>

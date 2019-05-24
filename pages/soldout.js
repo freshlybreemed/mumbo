@@ -9,6 +9,7 @@ const SoldOut = () => {
     return (
     
     <div class>
+        <title>Sold Out</title>
         <Navigation />
         <img src="static/img/cash.gif" class="cash"/>
         <div class="tickets">Free RSVPs Sold out</div><br></br>

@@ -67,6 +67,10 @@ html{
 .ticketing-drum {
     width: 10%;
 }
+
+.stripe-metrics{
+    text-align: center;
+}
 .StripeCheckout {
     /* grid-area: sidebar; */
     background: transparent;
@@ -394,6 +398,24 @@ input[type=submit]:hover {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    font-size: 2.5vw;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 5px;
+  }
+  th {
+    text-align: left;
+  }
+.ticket-count {
+    color: white;
+    position: relative;
+    margin-left: 40%;
+    margin-right: auto;
+    text-align: left;
     font-size: 2.5vw;
 }
 .logo-header{

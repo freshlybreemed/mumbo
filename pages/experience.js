@@ -6,6 +6,7 @@ import withPost from 'nextein/post'
 const Experience = () => (    
     
     <div class="row">
+        <title>The Experience</title>
         <Navigation />
         <div class="lineup">Here's What Happened Last Time...</div><br></br>
         <center>
