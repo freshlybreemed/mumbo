@@ -6,15 +6,36 @@ class Stripe extends Component {
     this.state = {
         balance: '',
         ticketCount: '',
-        tickets: []
+        tickets: [],
+        ticketDayCount: 0
     }
     this.getBalance = this.getBalance.bind(this)
     this.getTicketCount = this.getTicketCount.bind(this)
+    this.recentSales = this.recentSales.bind(this)
   }
   componentDidMount(){
     this.getBalance()
     this.getTicketCount()
+    // this.recentSales()
   }
+
+  recentSales(){
+    console.log('ticketsSold')
+    var date = new Date().getTime()/1000
+    var yesterday = date - 86400
+    var ticketsSold = 0
+    console.log(date + '  between '+ yesterday)
+    this.state.tickets.forEach((ticket)=>{
+      console.log(ticket.created)
+      if (ticket.created > yesterday && ticket.created < date)
+      {
+        ticketsSold++
+     }
+    })
+    this.setState({ticketDayCount: ticketsSold})
+    console.log(ticketsSold)
+  }
+
   getBalance(){
     axios({
       url: "https://api.stripe.com/v1/balance", 
@@ -24,9 +45,7 @@ class Stripe extends Component {
         "Authorization": "Bearer "+ process.env.STRIPE_SECRET_PROD
       }
   }).then((res)=>{
-      console.log(res.data)
       const bal = String(res.data.pending[0].amount)
-      console.log(typeof bal)
       const balance = "$"+ bal.slice(2) +"."+ bal.slice(-2)
       this.setState({
         balance: balance
@@ -49,13 +68,15 @@ class Stripe extends Component {
       if (!res.data.data[ticket].refunded)
         app.push(res.data.data[ticket])
       }
+      console.log(app)
       this.setState({
-        ticketCount: app.length,
+        ticketCount: parseInt(app.length),
         tickets: app
+      },()=>{
+        this.recentSales()
       })
   })
   }
-
 
   render(){
     let array = []
@@ -74,6 +95,9 @@ class Stripe extends Component {
         </ul>
         <ul>
           Tickets Sold: {this.state.ticketCount}
+        </ul>
+        <ul>
+          24 Hour Sales: {this.state.ticketDayCount}
         </ul>
         {/* {array} */}
       </div>
