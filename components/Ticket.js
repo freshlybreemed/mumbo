@@ -33,10 +33,10 @@ class Ticket extends Component {
             <br></br>
             <img class="ticketing-drum" src="static/img/drum.png"></img> 
               <div class="ticketing-bold">EARLY BIRD</div>
-              <div class="ticketing-bold">$15 + 2.15 FEE
+              <div class="ticketing-bold">$15 + 2.45 FEE
               </div>
               {/* <div class="ticketing-bold">WASHINGTON, DC</div> */}
-              <div class="ticketing-regular">SALE ENDS MAY 29th<StripeCheckout price={1715}/>
+              <div class="ticketing-regular">SALE ENDS MAY 29th<StripeCheckout price={1745}/>
               </div>
               
               {/* <div class="ticketing-regular">SALE ENDS JUNE 1</div><br></br> */}
@@ -45,10 +45,10 @@ class Ticket extends Component {
             < br></br>
             <img class="ticketing-drum" src="static/img/drum.png"></img> 
               <div class="ticketing-bold">GENERAL ADMISSION</div>
-              <div class="ticketing-bold">$25 + 3.15 FEE   
+              <div class="ticketing-bold">$25 + 3.75 FEE   
               </div>
               {/* <div class="ticketing-bold">WASHINGTON, DC</div> */}
-              <div class="ticketing-regular">WHILE SUPPLIES LAST<StripeCheckout price={2815}/>
+              <div class="ticketing-regular">WHILE SUPPLIES LAST<StripeCheckout price={2875}/>
               </div>
               
               {/* <div class="ticketing-regular">SALE ENDS JUNE 1</div><br></br> */}
@@ -57,9 +57,9 @@ class Ticket extends Component {
             < br></br>
             <img class="ticketing-drum" src="static/img/drum.png"></img> 
               <div class="ticketing-bold">LAST CALL</div>
-              <div class="ticketing-bold">$30 + 3.76 FEE</div>
+              <div class="ticketing-bold">$30 + 3.96 FEE</div>
               {/* <div class="ticketing-bold">WASHINGTON, DC</div> */}
-              <div class="ticketing-regular">WHILE SUPPLIES LAST<StripeCheckout price={3376}/>
+              <div class="ticketing-regular">WHILE SUPPLIES LAST<StripeCheckout price={3396}/>
               </div>
               
               {/* <div class="ticketing-regular">SALE ENDS JUNE 1</div><br></br> */}
