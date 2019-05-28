@@ -27,10 +27,10 @@ const Crank = () => (
           <div class="item">JAM SESSION</div>
         </div>
         <div class="row">
-          <div class="title">HOWARD THEATRE</div><br></br>
+          <div class="venue-title">HOWARD THEATRE</div><br></br>
         </div>
         <div class="row">
-          <div class="lineup">HOSTED BY: WALK LIKE WALT</div>
+          <div class="lineup-bigger">HOSTED BY: WALK LIKE WALT</div>
         </div>
         <div class="row">
           <div class="lineup">DJ SETS: FILET MIGNON & MALCOLM XAVIER </div>

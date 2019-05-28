@@ -96,9 +96,12 @@ html{
     -webkit-appearance: none;
     font-weight: bold; 
 }
-.ticketing {
+.ticketing-section {
     grid-area: content;
-    margin: 10%;
+    margin-top: 4%;
+    margin-right: 10%;
+    margin-bottom: 10%;
+    margin-left: 10%;
     display: grid;
     width: 80%;
     height: 60%;
@@ -332,6 +335,7 @@ input[type=submit]:hover {
     width: 100%;
 
 }
+
 .item {
     font-size: 3vw;
 
@@ -366,6 +370,14 @@ input[type=submit]:hover {
     font-size: 7vw;
 }
 
+.venue-title {
+    margin-top: 4%;
+    color: yellow;
+    position: relative;
+    font-family: 'Helvetica Neue LT Std';
+    text-align: center;
+    font-size: 7vw;
+}
 .tickets {
     color: yellow;
     position: relative;
@@ -374,7 +386,25 @@ input[type=submit]:hover {
     font-size: 3vw;
     margin-top: 3%
 }
-
+.tickets-subheader {
+    color: white;
+    position: relative;
+    font-family: 'Helvetica';
+    font-weight: 100;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 2vw;
+}
+.tickets-header {
+    margin-top: 4%;
+    margin-bottom: 5%;
+    color: white;
+    position: relative;
+    font-family: 'Helvetica Neue LT Std';
+    text-align: center;
+    font-size: 4vw;
+}
 .yellow-text {
     color: yellow;
     position: relative;
@@ -400,6 +430,14 @@ input[type=submit]:hover {
     text-align: center;
     font-size: 2.5vw;
 }
+.lineup-bigger{
+    color: white;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 4vw;
+}
 table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
@@ -413,10 +451,10 @@ table, th, td {
 .ticket-count {
     color: white;
     position: relative;
-    margin-left: 40%;
+    margin-left: 34%;
     margin-right: auto;
     text-align: left;
-    font-size: 2.5vw;
+    font-size: 4vw;
 }
 .logo-header{
     margin-bottom: 4%;
