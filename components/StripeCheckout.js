@@ -26,10 +26,10 @@ export default class Checkout extends React.Component {
         token={this.onToken}
         amount={this.props.price ? parseInt(this.props.price): 0}
         billingAddress={true}
-        description="Crank Karaoke"
+        description="Chicken & Mumbo Sauce"
         image="/static/img/graph.png"
         locale="auto"
-        name="Chicken & Mumbo Sauce"
+        name="Crank Karaoke"
       />
     ) 
 
