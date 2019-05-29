@@ -65,7 +65,7 @@ class Stripe extends Component {
       console.log(res.data)
       var app=[];
       for (var ticket in res.data.data){
-      if (!res.data.data[ticket].refunded)
+      if (!res.data.data[ticket].refunded && res.data.data[ticket].captured)
         app.push(res.data.data[ticket])
       }
       console.log(app)
@@ -97,7 +97,11 @@ class Stripe extends Component {
           Tickets Sold: {this.state.ticketCount}
         </ul>
         <ul>
-          24 Hour Sales: {this.state.ticketDayCount}
+        Total Ticket Count: {this.state.ticketCount? this.state.ticketCount+64:''}
+        </ul>
+        <ul>
+        24 Hour Sales: {this.state.ticketDayCount}
+
         </ul>
         {/* {array} */}
       </div>
