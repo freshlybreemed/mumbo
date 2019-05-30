@@ -16,7 +16,6 @@ class Stripe extends Component {
   componentDidMount(){
     this.getBalance()
     this.getTicketCount()
-    // this.recentSales()
   }
 
   recentSales(){
@@ -90,7 +89,7 @@ class Stripe extends Component {
       <div class="ticket-count">
         <ul>
           <ul>
-          Balance: {"$"+ ((this.state.ticketCount)*15)+'.00'}
+          Balance: {"$"+ (this.state.ticketCount? (780 + ((this.state.ticketCount-52)*20))+'.00': 0)}
           </ul>
         </ul>
         <ul>
