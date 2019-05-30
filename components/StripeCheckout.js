@@ -15,7 +15,7 @@ export default class Checkout extends React.Component {
         console.log(response)
     }).catch(error =>{
         console.log("Payment Error: ", error);
-        alert("Payment Error")
+        alert("There was an issue with your payment. Please try again later")
     })
   };
 
