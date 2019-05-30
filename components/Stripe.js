@@ -41,7 +41,7 @@ class Stripe extends Component {
       method: "get",
       headers:{
         "Stripe-Version":"2019-05-16",
-        "Authorization": "Bearer "+ process.env.STRIPE_SECRET_PROD
+        "Authorization": "Bearer "+ process.env.STRIPE_SECRET_DEV
       }
   }).then((res)=>{
       const bal = String(res.data.pending[0].amount)
@@ -89,7 +89,7 @@ class Stripe extends Component {
       <div class="ticket-count">
         <ul>
           <ul>
-          Balance: {"$"+ (this.state.ticketCount? (780 + ((this.state.ticketCount-52)*20))+'.00': 0)}
+          Balance: {"$"+ (this.state.ticketCount? (780 + ((this.state.ticketCount-52)*25))+'.00': 0)}
           </ul>
         </ul>
         <ul>
