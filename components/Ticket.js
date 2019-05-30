@@ -36,7 +36,7 @@ class Ticket extends Component {
               <div class="ticketing-bold">$15 + 2.45 FEE
               </div>
               {/* <div class="ticketing-bold">WASHINGTON, DC</div> */}
-              <div class="ticketing-regular">SALE ENDS MAY 29th<StripeCheckout price={1745}/>
+              <div class="ticketing-regular">SOLD OUT!
               </div>
               
               {/* <div class="ticketing-regular">SALE ENDS JUNE 1</div><br></br> */}
@@ -44,7 +44,18 @@ class Ticket extends Component {
           <div class="ticketing-row">
             < br></br>
             <img class="ticketing-drum" src="static/img/drum.png"></img> 
-              <div class="ticketing-bold">GENERAL ADMISSION</div>
+              <div class="ticketing-bold">GENERAL ADMISSION I</div>
+              <div class="ticketing-bold">$20 + 3.05 FEE   
+              </div>
+              {/* <div class="ticketing-bold">WASHINGTON, DC</div> */}
+              <div class="ticketing-regular">WHILE SUPPLIES LAST<StripeCheckout price={2305}/>
+              </div>
+              {/* <div class="ticketing-regular">SALE ENDS JUNE 1</div><br></br> */}
+          </div> 
+          <div class="ticketing-row">
+            < br></br>
+            <img class="ticketing-drum" src="static/img/drum.png"></img> 
+              <div class="ticketing-bold">GENERAL ADMISSION II</div>
               <div class="ticketing-bold">$25 + 3.75 FEE   
               </div>
               {/* <div class="ticketing-bold">WASHINGTON, DC</div> */}
