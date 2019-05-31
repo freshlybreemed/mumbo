@@ -19,13 +19,19 @@ const dispatchTicket = token => {
       }
     },
     headers: headers
-  });
+  }).then((ticket)=>{
+    console.log(ticket.data)
+  }).catch((err)=>{
+    console.log(err)
+  })
 };
 const stripeChargeCallback = (res, token) => async (err, charge) => {
   if (err) {
+    console.log(err)
     send(res, 500, { error: err });
   } else {
     // TODO: handle flow of dispatch ticket failing
+    console.log(token)
     await dispatchTicket(token);
     send(res, 200, { success: charge, token: token });
   }
@@ -37,6 +43,7 @@ const ticketApi = async (req, res) => {
     amount: data.amount,
     currency: "usd"
   };
+  console.log(data.token)
   stripe.charges.create(body, stripeChargeCallback(res, data.token));
 };
 

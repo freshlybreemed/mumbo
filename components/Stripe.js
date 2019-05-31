@@ -93,7 +93,10 @@ class Stripe extends Component {
           </ul>
         </ul>
         <ul>
-          Tickets Sold: {this.state.ticketCount}
+          $15 Tickets Sold: {this.state.ticketCount? 52:0}
+        </ul>
+        <ul>
+         $25  Tickets Sold: {this.state.ticketCount? this.state.ticketCount-52:0}
         </ul>
         <ul>
         Total Ticket Count: {this.state.ticketCount? this.state.ticketCount+64:''}
