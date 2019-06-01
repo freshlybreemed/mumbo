@@ -4,27 +4,55 @@
  *
  */
 
-import React from 'react';
+import React, {Component} from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
 import { HeaderWrapper } from '../static/css/navbar'
+import ReactGA from 'react-ga';
 
-const Navigation = () => (
-<div class="nav-bar">
-        <div class="logo-header" >
-            <Link href="/"><img class="menu" src="static/img/ChickenMumbo_LogoWords.png" /></Link>
+if (!typeof window == 'undefined'){
+  // console.log(ReactGA)
+  ReactGA.pageview(window.location.pathname + window.location.search);
+}
+
+class Navigation extends Component {
+    constructor(props){
+        super(props);
+        this.init = this.init.bind(this)
+        this.logPageView = this.logPageView.bind(this)
+    }
+    componentDidMount(){
+        this.init()
+        this.logPageView()
+    }
+    init(){
+        console.log('ga init')
+        ReactGA.initialize('UA-140796939-1');
+    }
+    logPageView(){
+        ReactGA.set({page:window.location.pathname})
+        ReactGA.pageview(window.location.pathname);
+
+    }
+    render(){
+       return (
+        <div class="nav-bar">
+                <div class="logo-header" >
+                    <Link href="/"><img class="menu" src="static/img/ChickenMumbo_LogoWords.png" /></Link>
+                </div>
+                {/* <div class="header">
+                    <Link href="/">
+                        <br/>
+                    </Link>
+                    <Link href="/about">ABOUT</Link>
+                    <Link href="/events">EVENTS</Link>
+                    <Link href="/experience">MUMBO</Link>
+                    <Link href="/crank">CRANK KARAOKE</Link>
+                </div> */}
         </div>
-        {/* <div class="header">
-            <Link href="/">
-                <br/>
-            </Link>
-            <Link href="/about">ABOUT</Link>
-            <Link href="/events">EVENTS</Link>
-            <Link href="/experience">MUMBO</Link>
-            <Link href="/crank">CRANK KARAOKE</Link>
-        </div> */}
-</div>
-)
+        )
+    }
+}
 
 
 export default Navigation;
