@@ -20,16 +20,44 @@ const Events = () => (
             <title>Events</title>
             <Navigation />
             {/* <script src="https://www.paypalobjects.com/api/checkout.js"></script> */}
-            <br></br>
-            <br></br>
-            <div class="event">  
-                <Event />
+            
+
+            <div class="events-wrapper">
+                <div class="media">
+                    <div class="asset-crank">
+                        {/* <img src="static/img/CRANK-event.png" alt="hot air balloons"/> */}
+                    </div>
+                    <div class="content">
+                        <h2 class="event-list__item__text--title" itemprop="performer">Crank Karaoke</h2>          
+                        <p class="event-list__item__text--support">Live Band, Go-Go Karaoke and Jam Session</p>          
+                        <p class="event-list__item__text--info"></p>          
+                        <p>9:00pm<meta itemprop="doorTime" content="9:00PM"/> ET / 21+ </p>                      
+                        <p><meta itemprop="location" content="The Fillmore"/>Howard Theatre, Washington, DC<meta itemprop="addressLocality" content="Silver Spring, MD"/></p>
+                        <a href="https://concerts1.livenation.com/event/150056A7FEEF5B59" title="Tickets for Pouya" target="_blank">
+                            <button class="btn btn--right btn--tickets">TICKETS</button>
+                        </a>
+                        {/* <div class="events-ticket-button" >
+                            <input type="submit" value="TICKETS"/>
+                        </div> */}
+                    </div>
+                </div>
+                <div class="media">
+                    <div class="asset-mumbo">
+                        {/* <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/12005/harbour1.jpg" alt="hot air balloons"/>     */}
+                    </div>
+                    <div class="content">
+                        <h2 class="event-list__item__text--title" itemprop="performer">Chicken & Mumbo Sauce</h2>          
+                        <p class="event-list__item__text--support">Mista Selecta, Dylan The Gypsy, CCB & more</p>          
+                        <p class="event-list__item__text--info"></p>          
+                        <p>10:00pm<meta itemprop="doorTime" content="10:00PM"/> ET / 21+ </p>                      
+                        <p><meta itemprop="location" content="The Fillmore"/>9:30 Club, Washington, DC<meta itemprop="addressLocality" content="Silver Spring, MD"/></p>
+                        <a href="https://concerts1.livenation.com/event/150056A7FEEF5B59" title="Tickets for Pouya" target="_blank">
+                            <button class="btn btn--right btn--tickets">TICKETS</button>
+                        </a>
+                    </div>
+                </div>
             </div>
-            {/* <script src="https://www.paypal.com/sdk/js?client-id=sb"></script> */}
-            {/* <script src="static/js/paypal.js"></script> */}
-
-            {/* <br></br>  <div id="paypal-button-container"/> */}
-
+            <br></br>
             <div class="row">
                 <div class="tickets">STAY HIP TO NEXT EVENT</div><br></br>
             </div> 
