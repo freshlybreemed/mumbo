@@ -55,6 +55,16 @@ html{
     /* margin-left: 10% */
 
 }
+@media screen and (max-width: 500px) {
+    .header a {
+      float: none;
+      display: block;
+      text-align: center;
+    }
+    .header-right {
+      float: none;
+    }
+  }
 .ticketing-regular { 
     font-family: "Helvetica";
     font-weight: 100;
@@ -127,7 +137,7 @@ html{
 .asset-crank {
     height: 17rem;
     overflow: hidden;
-    background: url("../img/CRANK-event-1.png") no-repeat center;;
+    background: url("../img/CRANK-event-3.png") no-repeat center;;
     background-size: cover;
 }
 .asset-mumbo {
@@ -138,6 +148,15 @@ html{
 }
 .content{
     text-align: left;
+}
+.event-title {
+    margin-top: 4%;
+    color: yellow;
+    position: relative;
+    font-family: 'Helvetica Neue LT Std';
+    text-align: center;
+    font-size: 6vw;
+    margin: 5%;
 }
 .event-list__item__text--title {
     text-transform: uppercase;
@@ -158,6 +177,8 @@ html{
     margin-right: 10%;
     display: flex;
     flex-wrap: wrap;
+    border-top: 1px solid white;
+
     border-bottom: 1px solid white;
     /* border: 5px solid rgb(86,98,110); */
     border-radius: 5px;
@@ -168,12 +189,39 @@ html{
     flex: 1 1 250px;
     margin: 10px;
   }
-  
+  p {
+      margin: 1%;
+  }
+.btn--tickets {
+      margin-top: 4%;
+    padding: 10px 15px;
+    border: 2px solid #fff;
+    color: #fff;
+    cursor: pointer;
+    -o-transition: .5s;
+    -ms-transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    transition: .5s; 
+    font-size: 3vw;
+}
+.btn--tickets:hover {
+    background: #fff;
+    color: #000; 
+}
   .events-wrapper {
     /* width: 450px; */
     /* border: 2px dotted #999; */
   }
 
+.about-images {
+    display: flex;
+    flex-wrap: wrap;
+}
+.about-images > * {
+    flex: 1 1 250px;
+    margin: 10px;
+  }
 .mailchimp {
     position: absolute; 
     left: -5000px;
