@@ -30,6 +30,34 @@ html{
     box-sizing: inherit;
 }
 
+.signup-band {
+    color: yellow;
+    position: relative;
+    font-family: 'Helvetica Neue LT Std';
+    text-align: left;
+    margin-left: 4%;
+    font-size: 3vw;
+    margin-top: 3%
+}
+.signup-songs {
+    position: relative;
+    font-family: 'Helvetica Neue LT Std';
+    text-align: left;
+    margin-left: 5%;
+    font-size: 2.5vw;
+    margin-top: 1%
+}
+.shows-header{
+    align-content: left;
+    margin: 5%;
+    font-size: 2em;
+}
+.home-flag {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+
+}
 /* .section {
    visibility: visible; 
    opacity: 1; 

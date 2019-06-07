@@ -11,6 +11,7 @@ class SignUpForm extends Component {
             EMAIL: '',
             LNAME: '',
             HANDLE: '',
+            SONG: '',
             SONGS: [
               { 
                 "Backyard Band" : ["Keep It Gangsta (96 Dope Jam)", " 98 Dope Jam ", " Sick Of Being Lonely / T Shirt", " Skillet", " Unibomer", " Still Ray", " Fakin Like.."],
@@ -51,6 +52,7 @@ class SignUpForm extends Component {
         this.handleChange = this.handleChange.bind(this);
       }
       handleChange(e) {
+        console.log(e)
         if (e.target.name =='FNAME')
             this.setState({FNAME: e.target.value}, () =>{
                 console.log(this.state.FNAME)
@@ -62,6 +64,10 @@ class SignUpForm extends Component {
         if (e.target.name =='EMAIL')
         this.setState({EMAIL: e.target.value}, () =>{
             console.log(this.state.EMAIL)
+        });
+        if (e.target.name =='SONG')
+        this.setState({SONG: e.target.value}, () =>{
+            console.log(this.state.SONG)
         });
       }
     handleSubmit(e) {
@@ -106,11 +112,11 @@ class SignUpForm extends Component {
     //       )
     //     }
     // }
-
+    let content = ``
     return (
     <div>
       <div class="about">
-        <form onSubmit={this.handleSubmit} class="rsvp-form">
+      <form action="https://chickenandmumbosauce.us13.list-manage.com/subscribe/post?u=ed6d4b4a06108687ea3bb3473&amp;id=a4855a812b" method="post" class="rsvp-form">
           <div class="rsvp-form" >
             <label for="name">First Name: </label>
             <input type="text"  value={this.state.FNAME} onChange={this.handleChange} name="FNAME" id="name" required/>
@@ -132,27 +138,11 @@ class SignUpForm extends Component {
           </div>
           <br></br>
           <div class="rsvp-form">
-            <label for="email">What Song From The List Would You Like To Perform? </label>
-            <br></br><input type="radio" value={this.state.HANDLE} onChange={this.handleChange} name="HANDLE" id="handle"/>
-            <label for="huey">Huey</label>
-          </div>
-
-          <div>
-            <input type="radio" id="dewey" name="drone" value="dewey"/>
-            <label for="dewey">Dewey</label>
-          </div>
-
-          <div>
-            <input type="radio" id="louie" name="drone" value="louie"/>
-            <label for="louie">Louie</label>
+            <label for="name">What Song From The List Would You Like To Perform? </label>
+            <input type="text" value={this.state.SONG} onChange={this.handleChange} name="SONG" id="name" required/>
           </div>
           <br></br>
-          <br></br>
-          <div class="rsvp-form">
-            {/* <input type="submit" value="BUY TICKETS"/> */}
-            {/* <StripeCheckout /> */}
-          </div>
-          <input type="submit" value="SIGN UP"/>
+                <button class="btn btn--right btn--tickets">SIGN UP</button>
         </form>
       </div>
   </div>

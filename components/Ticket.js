@@ -45,10 +45,10 @@ class Ticket extends Component {
             < br></br>
             <img class="ticketing-drum" src="static/img/drum.png"></img> 
               <div class="ticketing-bold">GENERAL ADMISSION</div>
-              <div class="ticketing-bold">$25 + 3.75 FEE   
+              <div class="ticketing-bold">$25 + 3.16 FEE   
               </div>
               {/* <div class="ticketing-bold">WASHINGTON, DC</div> */}
-              <div class="ticketing-regular">WHILE SUPPLIES LAST<StripeCheckout price={2875}/>
+              <div class="ticketing-regular">WHILE SUPPLIES LAST<StripeCheckout price={2500+316}/>
               </div>
               
               {/* <div class="ticketing-regular">SALE ENDS JUNE 1</div><br></br> */}
