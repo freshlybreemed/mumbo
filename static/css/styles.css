@@ -35,16 +35,17 @@ html{
     position: relative;
     font-family: 'Helvetica Neue LT Std';
     text-align: left;
-    margin-left: 4%;
+    margin-left: 8%;
     font-size: 3vw;
     margin-top: 3%
+    margin-
 }
 .signup-songs {
     position: relative;
     font-family: 'Helvetica Neue LT Std';
     text-align: left;
     margin-left: 5%;
-    font-size: 2.5vw;
+    font-size: 1.7vw;
     margin-top: 1%
 }
 .shows-header{
@@ -118,6 +119,47 @@ html{
     width: 10%;
     grid-column:  1/3;
 }
+.ticket-quantity-input {
+    display: block;
+}
+
+.ticket-quantity-input span{
+    display: inherit;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    float: left;
+    -moz-border-radius: 30px; /* or 50% */
+    border-radius: 30px; /* or 50% */
+    background-color: white;
+    color: black;
+    text-align: center;
+    font-size: 2em;
+}
+.ticket-quantity-input {
+    /* display: inline-block; */
+    float: right;
+}
+.ticket-quantity-text {
+    display: inline-block;
+    float: right;
+}
+.ticket-quantity-input input {
+    padding: 5px;
+    text-align: center;
+    width: 25px;
+}
+input.quantity {
+    color: #fff;
+    width: 100%;
+    float: left;
+    max-width: 50px;
+    padding: 10px 0px;
+    border: 2px solid #fff;
+    border-top: none;
+    border-left: none;
+    border-right: none; 
+}
 
 .stripe-metrics{
     text-align: center;
@@ -165,8 +207,14 @@ html{
 .asset-crank {
     height: 17rem;
     overflow: hidden;
-    background: url("../img/CRANK-event-3.png") no-repeat center;;
+    background: url("../img/CRANK-event-4.png") no-repeat center;;
     background-size: cover;
+}
+.asset-drum {
+    height: 17rem;
+    overflow: hidden;
+    background: url("../img/drum.png") no-repeat center;;
+    background-size: 100px;
 }
 .asset-mumbo {
     height: 17rem;
@@ -174,8 +222,9 @@ html{
     background: url("../img/CRANK-event-2.png") no-repeat center;;
     background-size: cover;
 }
-.content{
-    text-align: left;
+.ticket-content{
+    float: right;
+    clear: both;
 }
 .event-title {
     margin-top: 4%;
@@ -196,17 +245,37 @@ html{
     margin: 0 0 .75rem;
 }
 .event-list__item__text--info {
-    color: #e93d78;
-    font-size: 20px;
+    color: #ffd800;
+    font-size: 1.05rem;
+}
+.ticket-list__item__text--title {
+    text-transform: uppercase;
+    margin: .75rem 0 0;
+    font-size: 1.6rem;
+    /* float: left; */
+
+
+}
+.ticket-list__item__text--support {
+    font-size: 1.0rem;
+    margin: 0 0 .75rem;
+    /* float: left; */
+
+}
+.ticket-list__item__text--info {
+    color: #ffd800;
+    font-size: 14px;
     font-size: 1.25rem;
+    float: left;
+    margin:0;
+
 }
 .media {
     margin-left: 10%;
     margin-right: 10%;
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     border-top: 1px solid white;
-
     border-bottom: 1px solid white;
     /* border: 5px solid rgb(86,98,110); */
     border-radius: 5px;
@@ -421,7 +490,8 @@ input[type="radio"]:checked:after {
 input:focus {
     outline: none; 
 }
-input[type=email], input[type=text] {
+
+.signup-input {
     color: #fff;
     width: 100%;
     max-width: 500px;
@@ -431,7 +501,7 @@ input[type=email], input[type=text] {
     border-left: none;
     border-right: none; 
 }
-input[type=email]::placeholder, input[type=text]::placeholder {
+.signup-input::placeholder, .signup-input::placeholder {
     color: #000; 
 }
 input[type=submit] {
@@ -525,7 +595,7 @@ input[type=submit]:hover {
     display: block;
 }
 .title {
-    color: yellow;
+    color: #ffd800;
     position: relative;
     font-family: 'Helvetica Neue LT Std';
     text-align: center;

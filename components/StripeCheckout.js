@@ -8,8 +8,10 @@ export default class Checkout extends React.Component {
   onToken = (token, addresses) => {
     const body = {
         amount: parseInt(this.props.price),
-        token: token
+        token: token,
+        quantity: this.props.quantity
     }
+    console.log(body)
     axios.post('/ticket', body).then(response => {
         window.location = '/confirmation?email='+response.data.token.email
         console.log(response)
@@ -24,6 +26,7 @@ export default class Checkout extends React.Component {
       <StripeCheckout
         stripeKey={process.env.STRIPE_CLIENT_PROD}
         token={this.onToken}
+        quantity={this.props.quantity}
         amount={this.props.price ? parseInt(this.props.price): 0}
         billingAddress={true}
         description="Chicken & Mumbo Sauce"
