@@ -53,8 +53,8 @@ const Events = () => (
                         <p>Fri. July 5<meta itemprop="doorTime" content="9:00PM"/> </p>                                
                         <p>10:00pm<meta itemprop="doorTime" content="10:00PM"/> / 21+ </p>                      
                         <p><meta itemprop="location" content="The Fillmore"/>9:30 Club, Washington, DC<meta itemprop="addressLocality" content="Silver Spring, MD"/></p>
-                        <a href="https://concerts1.livenation.com/event/150056A7FEEF5B59" title="Tickets for Pouya" target="_blank">
-                            <button class="btn btn--right btn--tickets">TICKETS</button>
+                        <a href="https://www.ticketfly.com/purchase/event/1868235" title="Tickets for Chicken & Mumbo Sauce" target="_blank">
+                            <button class="btn btn--right btn--tickets">ON SALE 7/13</button>
                         </a>
                     </div>
                 </div>
@@ -70,9 +70,7 @@ const Events = () => (
             </div>
             <br></br>
             <br></br>
-            <a href="https://concerts1.livenation.com/event/150056A7FEEF5B59" title="Tickets for Pouya" target="_blank">
                 <button class="btn btn--right btn--tickets">STAMP</button>
-            </a>
             </form>
 
         </div>

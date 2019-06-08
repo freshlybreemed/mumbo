@@ -40,7 +40,7 @@ class Navigation extends Component {
                 <div class="logo-header" >
                     <Link href="/"><img class="menu" src="static/img/ChickenMumbo_LogoWords.png" /></Link>
                 </div>
-                <div class="header">
+                {/* <div class="header">
                     <Link href="/">
                         <br/>
                     </Link>
@@ -48,7 +48,7 @@ class Navigation extends Component {
                     <Link href="/events">EVENTS</Link>
                     <Link href="/experience">MUMBO</Link>
                     <Link href="/crank">CRANK KARAOKE</Link>
-                </div>
+                </div> */}
         </div>
         )
     }

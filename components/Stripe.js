@@ -88,15 +88,16 @@ class Stripe extends Component {
     return (
       <div class="ticket-count">
         <ul>
-          <ul>
-          Balance: {"$"+ (this.state.ticketCount? (780 + ((this.state.ticketCount-52)*25))+'.00': 0)}
-          </ul>
+        Balance: {"$"+ (this.state.ticketCount? ((52*15)+(16*25)+((this.state.ticketCount -68)*20)) + '.00': 0)}
         </ul>
         <ul>
           $15 Tickets Sold: {this.state.ticketCount? 52:0}
         </ul>
         <ul>
-         $25  Tickets Sold: {this.state.ticketCount? this.state.ticketCount-52:0}
+          $20 Tickets Sold: {this.state.ticketCount? (this.state.ticketCount -68):0}
+        </ul>
+        <ul>
+         $25  Tickets Sold: {this.state.ticketCount? 16:0}
         </ul>
         <ul>
         Total Ticket Count: {this.state.ticketCount? this.state.ticketCount+64:''}

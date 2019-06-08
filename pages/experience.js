@@ -19,9 +19,10 @@ const Experience = () => (
         <br></br>
         <div class="text-box">
             Sponsored Events    |  Music Festivals  |   Colleges/Universities 
-            <br></br>            <br></br>
-
-            <input type="submit" value="CONTACT US"/>
+            <br></br>            
+            <a href="https://www.ticketfly.com/purchase/event/1868235" title="Tickets for Chicken & Mumbo Sauce" target="_blank">
+                <button class="btn btn--right btn--tickets">CONTACT US</button>
+            </a> 
         </div>
     </div>
 )
