@@ -4,29 +4,36 @@ import { Component } from "react";
 import Navigation from '../components/Navigation'
 
 
-const Crank = () => (
-    <div class="wrapper">
-      <title>Crank Karaoke</title>
+const Index = () => (
+    <div class="home">
+      <title>Chicken & Mumbo Sauce</title>
       <Navigation />
        <div class="row">
           <div class="lineup"> </div><br></br>
         </div>
-        <img src="static/img/logocrank.png" class="flyerimage" />
-        <img src="static/img/cash.gif" class="cash"/>
+        {/* <img src="static/img/logocrank.png" class="flyerimage" /> */}
+        {/* <img src="static/img/cash.gif" class="cash"/> */}
         <div class="features"> 
-          <div class="item">LIVE BAND</div> 
+          {/* <div class="item">LIVE BAND</div>  */}
+          <img class="home-flag" src="static/img/DMVflag.png"></img>
+          {/* <div class="item">GO-GO KARAKOKE </div>
           <img class="yellow-star" src="static/img/yellowstar.png"></img>
-          <div class="item">GO-GO KARAKOKE </div>
-          <img class="yellow-star" src="static/img/yellowstar.png"></img>
-          <div class="item">JAM SESSION</div>
+          <div class="item">JAM SESSION</div> */}
         </div>
-        <div class="row">
+        {/* <div class="row">
           <div class="venue-title">HOWARD THEATRE</div><br></br>
-        </div>
+        </div> */}
         <div class="row">
-          <div class="lineup-bigger">HOSTED BY: WALK LIKE WALT</div>
+          <div class="shows-header">OUR SHOWS:</div>
+          <div>
+            <a href="/crank">
+              <img src="static/img/crankxsmall.png" />
+            </a>
+
+            <img src="static/img/mumbo930.png" />
+          </div>
         </div>
-        <div class="row">
+        {/* <div class="row">
           <div class="lineup">DJ SETS: FILET MIGNON & MALCOLM XAVIER </div>
         </div>
         <div class="row">
@@ -54,15 +61,15 @@ const Crank = () => (
           <div class="about">
           Crank Karaoke is a one of a kind, improv jam session and open mic where the funky sounds of go-go collide with community to experience music together and express themselves freely. Featuring a live band of former go-go band musicians, look forward to a karaoke-inspired experience with a not-so-shy audience singing popular covers and renditions of culturally relevant songs. Essentially, it’s a party where beginners and experts can share the stage to learn and create together. We know the power of go-go music and we want to use it to restore the culture not exploit it.        </div>
           <br></br>
-          <img src="static/img/karaokepooh.gif" class="gif" id="logos"/>	
+          <img src="static/img/karaokepooh.gif" class="gif" id="logos"/>	 */}
           {/* Its not a hit until a go-go band remakes it! */}
-        </div>
-        <br></br>
+        {/* </div> / */}
+        {/* <br></br>
             <br></br>
   
-      </div>
+      </div> */}
   
     </div>
     )
-export default Crank;
+export default Index;
   
