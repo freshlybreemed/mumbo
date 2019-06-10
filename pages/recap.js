@@ -2,7 +2,7 @@ import React from 'react'
 
 import withPost from 'nextein/post'
 
-export default withPost( ({ post }) => { 
+const Recap = () => {
     return(
         <div class="wrapper">
             <title>Recap</title>
@@ -241,4 +241,5 @@ export default withPost( ({ post }) => {
          </div>
     )
     
-} )
+}
+export default Recap;

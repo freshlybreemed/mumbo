@@ -152,7 +152,7 @@ class Ticket extends Component {
 
               </div>
             </div>
-            <StripeCheckout quantity={this.state.quantity} price={this.state.total}/>
+            <StripeCheckout metadata={this.state} quantity={this.state.quantity} price={this.state.total}/>
             <br></br>
             <br></br>
             <div class="media">

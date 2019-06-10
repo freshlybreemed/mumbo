@@ -3,7 +3,6 @@ const stripe = require("stripe")(process.env.STRIPE_SECRET_PROD);
 const axios = require("axios");
 
 const dispatchTicket = (token, quantity) => {
-  console.log("quanity: "+quantity)
   const headers = {
     Authorization: "Token " + process.env.GUEST_PASS_KEY,
     "Content-Type": "application/json"
@@ -37,18 +36,19 @@ const stripeChargeCallback = (res, token, quantity) => async (err, charge) => {
     send(res, 500, { error: err });
   } else {
     // TODO: handle flow of dispatch ticket failing
-    console.log(token)
+    // console.log(token)
     await dispatchTicket(token, quantity);
     send(res, 200, { success: charge, token: token });
   }
 };
 const ticketApi = async (req, res) => {
   const data = await json(req);
-  // console.log(data)
+  console.log(data)
   const body = {
     source: data.token.id,
     amount: data.amount,
-    currency: "usd"
+    currency: "usd",
+    metadata: data.metadata
   };
   stripe.charges.create(body, stripeChargeCallback(res, data.token, data.quantity));
 };

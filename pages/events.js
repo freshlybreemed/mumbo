@@ -66,7 +66,7 @@ const Events = () => (
             <form action="https://chickenandmumbosauce.us13.list-manage.com/subscribe/post?u=ed6d4b4a06108687ea3bb3473&amp;id=a4855a812b" method="post" class="rsvp-form">
             <div class="rsvp-form">
                 <label for="email">Email Address: </label>
-                <input type="email" name="EMAIL" id="email" required/>
+                <input class="signup-input" type="email" name="EMAIL" id="email" required/>
             </div>
             <br></br>
             <br></br>

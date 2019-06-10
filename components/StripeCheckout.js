@@ -6,10 +6,12 @@ require('now-env')
 
 export default class Checkout extends React.Component {
   onToken = (token, addresses) => {
+    console.log("baby"+this.props.metadata)
     const body = {
         amount: parseInt(this.props.price),
         token: token,
-        quantity: this.props.quantity
+        quantity: this.props.quantity,
+        metadata: this.props.metadata
     }
     console.log(body)
     axios.post('/ticket', body).then(response => {
