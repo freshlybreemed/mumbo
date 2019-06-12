@@ -48,14 +48,15 @@ const Events = () => (
                     </div>
                     <div class="content">
                         <h2 class="event-list__item__text--title" itemprop="performer">Chicken & Mumbo Sauce</h2>          
-                        <p class="event-list__item__text--support">Mista Selecta, Dylan The Gypsy, CCB & more</p>          
+                        {/* <p class="event-list__item__text--support">Mista Selecta, Dylan The Gypsy, CCB & more</p>           */}
+                        <p class="event-list__item__text--support">Presales starts 6/16</p>          
                         <p class="event-list__item__text--info"></p>      
                         <p>Fri. July 5<meta itemprop="doorTime" content="9:00PM"/> </p>                                
-                        <p>10:00pm<meta itemprop="doorTime" content="10:00PM"/> / 21+ </p>                      
+                        <p>10:00pm<meta itemprop="doorTime" content="10:00PM"/> / 18+ </p>                      
                         <p><meta itemprop="location" content="The Fillmore"/>9:30 Club, Washington, DC<meta itemprop="addressLocality" content="Silver Spring, MD"/></p>
-                        <a href="https://www.ticketfly.com/purchase/event/1868235" title="Tickets for Chicken & Mumbo Sauce" target="_blank">
-                            <button class="btn btn--right btn--tickets">ON SALE 7/13</button>
-                        </a>
+                        {/* <a href="https://www.ticketfly.com/purchase/event/1868235" title="Tickets for Chicken & Mumbo Sauce" target="_blank">
+                            <button class="btn btn--right btn--tickets">PRESALE</button>
+                        </a> */}
                     </div>
                 </div>
             </div>
@@ -72,7 +73,15 @@ const Events = () => (
             <br></br>
                 <button class="btn btn--right btn--tickets">STAMP</button>
             </form>
+            <div>
+            <br></br>
+            <br></br>
 
+            © 2019 CHICKEN & MUMBO SAUCE. All Rights Reserved.
+            <br></br>
+            <br></br>
+            DESIGN + CODE: @FRESHLYBREEMED
+            </div>
         </div>
 )
 export default Events

@@ -81,6 +81,8 @@ html{
     text-align: center;
     margin-bottom: 4%;
     margin-top: -4%;
+    overflow: hidden;
+
     /* margin-left: 10% */
 
 }
@@ -255,8 +257,6 @@ input.quantity {
     margin: .75rem 0 0;
     font-size: 1.45rem;
     /* float: left; */
-
-
 }
 .ticket-list__item__text--support {
     font-size: .75rem;
@@ -269,8 +269,8 @@ input.quantity {
     font-size: 1 rem;
     float: left;
     margin:0;
-
 }
+
 .media {
     margin-left: 10%;
     margin-right: 10%;
@@ -334,8 +334,8 @@ p {
 
 .aboutpage { 
     color: white;
-    padding: inherit;
-    margin: 10%;
+    /* padding: 2%; */
+    margin: 3%;
 }
 .events {
     color: white;
@@ -353,10 +353,22 @@ p {
 img.menu{
     margin-bottom: 2%
 }
+.home__photo_feed {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+}
+
+.home__photo_feed img:hover {
+    -webkit-filter: grayscale(100%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+    filter: grayscale(100%); /* FF 35+ */
+  }
 .menu {
     width: 15%;
     height: auto;
-    margin-left: 40%;
+    margin-left: auto;
     margin-right: auto;
     display: block;
 
@@ -684,16 +696,30 @@ table, th, td {
   th {
     text-align: left;
   }
-.ticket-count {
-    color: white;
-    position: relative;
-    margin-left: 34%;
-    margin-right: auto;
-    text-align: left;
-    font-size: 4vw;
+.manage-list__item__text--info {
+    color: #ffd800;
+    font-size: 2rem;
+    float: right;
+    margin:0;
 }
 .logo-header{
-    margin-bottom: 4%;
+    margin-bottom: 3%;
+    margin-left: 2%;
+
+}
+.videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+}
+.home__sizzle-video-bg {
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    opacity: 1;
+    width: 100%;
+    height: 100%;
 }
 .text-box {
     color: white;
