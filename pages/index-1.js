@@ -11,27 +11,20 @@ const Index = () => (
        <div class="row">
           <div class="lineup"> </div><br></br>
         </div>
-        {/* style="opacity: 1;" */}
-        <video id="home__sizzle-video-bg" class="home__sizzle-video-bg" data-keepplaying autoPlay playsinline muted loop preload="auto" poster="static/img/domyen.png" >
-            <source src="static/video/mumbo-ceej.mp4" type="video/mp4"/>
-          </video>
+        {/* <img src="static/img/logocrank.png" class="flyerimage" /> */}
         {/* <img src="static/img/cash.gif" class="cash"/> */}
-        <div class="home__photo_feed"> 
-          <div class="venue-title">Walt. GoldLink. Marauder. Ciscero </div>
-          <img src="static/img/goldlink.jpg" class="flyerimage" />
-        </div>      
-        <div class="home__photo_feed">
-          <img src="static/img/vaughn.jpg" class="flyerimage" />
-          < div class="venue-title">NOT YOUR AVERAGE PARTY MOE</div>
-
+        <div class="features"> 
+          {/* <div class="item">LIVE BAND</div>  */}
+          <img class="home-flag" src="static/img/DMVflag.png"></img>
+          {/* <div class="item">GO-GO KARAKOKE </div>
+          <img class="yellow-star" src="static/img/yellowstar.png"></img>
+          <div class="item">JAM SESSION</div> */}
         </div>
-        <div class="home__photo_feed">
-          < div class="venue-title">Ayyyyeeee TJ!</div>
-          <img src="static/img/tj-2.jpg" class="flyerimage" />
-
-        </div>  
+        {/* <div class="row">
+          <div class="venue-title">HOWARD THEATRE</div><br></br>
+        </div> */}
         <div class="row">
-          <div class="shows-header">UPCOMING SHOWS:</div>
+          <div class="shows-header">OUR SHOWS:</div>
           <div>
             <a href="/crank">
               <img src="static/img/crankxsmall.png" />

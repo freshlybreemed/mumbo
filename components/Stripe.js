@@ -99,23 +99,9 @@ class Stripe extends Component {
       <div>
         <div class="media">
           <div class="ticket-content">
-              <h2 class="ticket-list__item__text--title" itemprop="performer">TOTAL TIX COUNT</h2>          
-              {/* <p class="ticket-list__item__text--support">$30 + 3.98 FEE</p>           */}
-              <p class="manage-list__item__text--info"> {this.state.ticketCount? this.state.ticketCount+78:0}</p>  
-          </div>
-        </div>
-        <div class="media">
-          <div class="ticket-content">
               <h2 class="ticket-list__item__text--title" itemprop="performer">BALANCE</h2>          
               {/* <p class="ticket-list__item__text--support">$30 + 3.98 FEE</p>           */}
               <p class="manage-list__item__text--info"> {"$"+ (this.state.ticketCount? ((52*15)+(16*25)+((this.state.ticketCount -56)*20)) + '.00': 0)}</p>  
-          </div>
-        </div>
-        <div class="media">
-          <div class="ticket-content">
-              <h2 class="ticket-list__item__text--title" itemprop="performer">24-HOUR SALES</h2>          
-              {/* <p class="ticket-list__item__text--support">$30 + 3.98 FEE</p>           */}
-              <p class="manage-list__item__text--info"> {this.state.ticketDayCount? this.state.ticketDayCount:0}</p>  
           </div>
         </div>
         <div class="media">
@@ -138,7 +124,13 @@ class Stripe extends Component {
               <p class="manage-list__item__text--info"> {this.state.ticketCount? 16:0}</p>  
           </div>
         </div>
-
+        <div class="media">
+          <div class="ticket-content">
+              <h2 class="ticket-list__item__text--title" itemprop="performer">TOTAL TIX COUNT</h2>          
+              {/* <p class="ticket-list__item__text--support">$30 + 3.98 FEE</p>           */}
+              <p class="manage-list__item__text--info"> {this.state.ticketCount? this.state.ticketCount+78:0}</p>  
+          </div>
+        </div>
       </div>
     )
   }
