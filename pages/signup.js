@@ -17,7 +17,6 @@ const Free = () => (
               Here's how you can be the lead mic for the night.
           </p>          
           <div >
-
               <p class="signup-songs">Slots are limited, so move FAST. First come, first serve. There are limited slots and hundreds of people trying to sign up, the sign up list will fill up quick. Once a song has been chosen, you will not see that song on our site, it means all the slots have already been claimed. </p>
           </div>
       
