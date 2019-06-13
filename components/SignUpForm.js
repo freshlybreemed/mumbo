@@ -9,47 +9,72 @@ class SignUpForm extends Component {
         this.state = {
             FNAME: '',
             EMAIL: '',
-            LNAME: '',
+            CITY: '',
             HANDLE: '',
             SONG: '',
-            SONGS: [
-              { 
-                "Backyard Band" : ["Keep It Gangsta (96 Dope Jam)", " 98 Dope Jam ", " Sick Of Being Lonely / T Shirt", " Skillet", " Unibomer", " Still Ray", " Fakin Like.."],
-                "New Impressions" : [ "Take My Breath Away", " Found Myself A Clappa", " Pick It Up", " Strip Girl", " Pop Your P****y"],
-                "Reaction Band" : ["Gucci Bandana", " Clapping Song", " Feels Good", " Snap Ya Fingerz", " Shawty ", "She can get it"],
-                "UCB" : ["Sexy Lady", " VSOP", " Splash Girl"],
-                "CCB" : ["Bazooka Bottom", " Hennessy", " Smiley Girl ( Can You Handle It)", " My Phatty", " Roll Call"],
-                "TCB" : ["Chiggy Bum", " I Want A Girl", " Ass Clap", " Bust It Wide Open ", "Pole Party", "  2005 ( Wipe Me Down)"],
-                "MOB" : ["Bring Em Out", " Don’t Be mad","100 Guns 100 Clips"], 
-                "ABM" : ["Knock It Out", " Shawty Bop/ Chop ", " Can't Feel My Face", " Slow Bounce Time"],
-                "TOB" : ["Bouncing To Dis ", " Before I Let Go", " Take Me There"],
-                "XIB" : ["Booty Bounce ", " Whoo Lawd ", " Super Freak", " Im In The Kitchen"],
-              },
-              {
-                "New Impressions": ["Whistle", "Don't Say You Will", "Comfortable"],
-                "TCB": ["Bait"],
-                "Renegade": ["Jamaica", "Superstar Lady"],
-                "CCB": ["Fight Anthem"],
-                "Black Liberty": ["Telephone Luv"],
-                "XIB" : ["Panty Droppa", "My Last Words"],
-                "Nexx Level": ["Bounce", "Ladies Paradise", "Phat Booty"],
-                "Rare Essense": ["Overnight Scenario", "Pieces Of Me"],
-                "Backyard Band" : ["Thug Passion"],
-                "TOB": ["Bum Joint"],
-                "EU": ["Da B.U.T.T."],
-                "CIB": ["Backseat Action"],
-                "Reaction Band": ["Dump Truck"],
-                "Gameova Band": ["Nasty Time","Private Places"],
-                "UEB": ["Speeding", "Butt Cheeks"],
-                "All Starz" : ["Hands In The Air", "Reggaeton"],
-                "AAO": ["Clappin time", "Pop that pussy", "Shake That Ass"],
-                "New Vision": ["07 Boyshorts"],
-                "Dreamteam": ["All Back", "Wet","Sure Thing"]
-              }
-            ]
+            SELECTED_SONG: '',
+            ARTIST: 'Not set yet',
+            SONGS: []
+              // ,
+              // {
+              //   "New Impressions": ["Whistle", "Don't Say You Will", "Comfortable"],
+              //   "TCB": ["Bait"],
+              //   "Renegade": ["Jamaica", "Superstar Lady"],
+              //   "CCB": ["Fight Anthem"],
+              //   "Black Liberty": ["Telephone Luv"],
+              //   "XIB" : ["Panty Droppa", "My Last Words"],
+              //   "Nexx Level": ["Bounce", "Ladies Paradise", "Phat Booty"],
+              //   "Rare Essense": ["Overnight Scenario", "Pieces Of Me"],
+              //   "Backyard Band" : ["Thug Passion"],
+              //   "TOB": ["Bum Joint"],
+              //   "EU": ["Da B.U.T.T."],
+              //   "CIB": ["Backseat Action"],
+              //   "Reaction Band": ["Dump Truck"],
+              //   "Gameova Band": ["Nasty Time","Private Places"],
+              //   "UEB": ["Speeding", "Butt Cheeks"],
+              //   "All Starz" : ["Hands In The Air", "Reggaeton"],
+              //   "AAO": ["Clappin time", "Pop that pussy", "Shake That Ass"],
+              //   "New Vision": ["07 Boyshorts"],
+              //   "Dreamteam": ["All Back", "Wet","Sure Thing"]
+              // }
+            // ]
           }
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
+        this.getSongs = this.getSongs.bind(this);
+        this.renderSongs = this.renderSongs.bind(this);
+      }
+      componentDidMount(){
+        this.getSongs()
+      }
+      async getSongs(){
+        await axios.get('/songs').then((songs)=>{
+          console.log(songs)
+          var karaokeSongs = songs.data.users
+          karaokeSongs.sort(function(a, b) {
+            var nameA=a.artist.toLowerCase(), nameB=b.artist.toLowerCase()
+              if (nameA < nameB) //sort string ascending
+                  return -1 
+              if (nameA > nameB)
+                  return 1
+              return 0 //default return value (no sorting)
+          });
+          var availableSongs = karaokeSongs.filter(song=> typeof song.email === 'undefined')
+          this.setState({
+            SONGS: availableSongs
+          })
+        }).catch(err=>{
+          console.log(err)
+        })
+      }
+      renderSongs(){
+        var songRender = []
+        for (var track in this.state.SONGS){
+          var artist = this.state.SONGS[track]['artist']
+          var song  = this.state.SONGS[track]['song']
+          songRender.push(artist + ' - ' + song)
+        }
+        return songRender
       }
       handleChange(e) {
         console.log(e)
@@ -57,92 +82,91 @@ class SignUpForm extends Component {
             this.setState({FNAME: e.target.value}, () =>{
                 console.log(this.state.FNAME)
             });
-        if (e.target.name =='LNAME')
-        this.setState({LNAME: e.target.value}, () =>{
-            console.log(this.state.LNAME)
+        if (e.target.name =='CITY')
+        this.setState({CITY: e.target.value}, () =>{
+            console.log(this.state.CITY)
         });
         if (e.target.name =='EMAIL')
         this.setState({EMAIL: e.target.value}, () =>{
             console.log(this.state.EMAIL)
         });
+        if (e.target.name =='HANDLE')
+        this.setState({HANDLE: e.target.value}, () =>{
+            console.log(this.state.HANDLE)
+        });
         if (e.target.name =='SONG')
-        this.setState({SONG: e.target.value}, () =>{
+        this.setState({
+          SONG: e.target.value,
+          SELECTED_SONG: e.target.value.split(' - ')[1],
+          ARTIST: e.target.value.split(' - ')[0]
+        }, () =>{
+            // console.log()
             console.log(this.state.SONG)
         });
       }
-    handleSubmit(e) {
+    async handleSubmit(e) {
         e.preventDefault();
-        const headers = {
-            'Authorization': 'Token 564db0117b8a65ddd60271eaf3298aa4',
-            'Content-Type': 'application/json',
-        }
-        axios({
-                method: 'post',
-                url: '/ticket',
-                data: {
-                    "ticket": { 
-                        "event_ticket_type_id": 26926,
-                        "name": this.state.FNAME + ' ' + this.state.LNAME,
-                        "email": this.state.EMAIL,
-                        "dispatch": true
-                    }
-                },
-                headers: headers
-              }).then((res) => {
-                console.log("RESPONSE RECEIVED: ", res);
-              })
-              .catch((err) => {
-                console.log("AXIOS ERROR: ", err);
-              })
-              window.location.href = "/confirmation";
+        await axios({
+          method: 'post',
+          url: '/signup',
+          data: {
+            artist: this.state.ARTIST,
+            song: this.state.SONG,
+            email: this.state.EMAIL,
+            song: this.state.SELECTED_SONG,
+            firstName: this.state.FNAME,
+            city: this.state.CITY,
+            handle: this.state.HANDLE
+          }
+        }).then((res) => {
+          console.log("RESPONSE RECEIVED: ", res);
+          window.location.href = "/songconfirm";
+        })
+        .catch((err) => {
+          console.log("AXIOS ERROR: ", err);
+          window.location.href = "/signup";
+        })
       }
   
   
   render() {
-    // const songs = this.state.SONGS[0]
-    // let renderSongs = ''
-    // for (let [key, value] of Object.entries(songs)){
-    //   for (let [band, song] of Object.entries(value)){
-    //     console.log(key + ' ' + song)
-    //     return (
-    //       <div>
-    //         <input type="radio" id="dewey" name="drone" value={song}/>
-    //         <label for="dewey">{song}</label>
-    //       </div>
-    //       )
-    //     }
-    // }
-    let content = ``
+
     return (
     <div>
       <div class="about">
-      <form action="https://chickenandmumbosauce.us13.list-manage.com/subscribe/post?u=ed6d4b4a06108687ea3bb3473&amp;id=a4855a812b" method="post" class="rsvp-form">
+      <form class="rsvp-form">
           <div class="rsvp-form" >
-            <label for="name">First Name: </label>
-            <input type="text"  value={this.state.FNAME} onChange={this.handleChange} name="FNAME" id="name" required/>
-          </div>
-          <br></br>
-          <div class="rsvp-form">
-            <label for="name">Last Name: </label>
-            <input type="text" value={this.state.LNAME} onChange={this.handleChange} name="LNAME" id="name" required/>
+            <label for="name">First Name: </label><br></br>
+            <input class="signup-input"type="text"  value={this.state.FNAME} onChange={this.handleChange} name="FNAME" id="name" required/>
           </div>
           <br></br>
           <div class="rsvp-form">
             <label for="email">Email Address: </label>
-            <input type="email" value={this.state.EMAIL} onChange={this.handleChange} name="EMAIL" id="email" required/>
+            <input class="signup-input" type="email" value={this.state.EMAIL} onChange={this.handleChange} name="EMAIL" id="email" required/>
+          </div>
+
+          <br></br>
+          <div class="rsvp-form">
+            <label for="name">Where You From?: </label>
+            <input class="signup-input" type="text" value={this.state.CITY} onChange={this.handleChange} name="CITY" id="city" required/>
           </div>
           <br></br>
           <div class="rsvp-form">
-            <label for="email">Twitter/Instagram @'s': </label>
-            <input type="email" value={this.state.HANDLE} onChange={this.handleChange} name="HANDLE" id="handle"/>
+            <label for="email">IG or Twitter @: </label>
+            <input class="signup-input" type="text" value={this.state.HANDLE} onChange={this.handleChange} name="HANDLE" id="handle"/>
           </div>
           <br></br>
           <div class="rsvp-form">
-            <label for="name">What Song From The List Would You Like To Perform? </label>
-            <input type="text" value={this.state.SONG} onChange={this.handleChange} name="SONG" id="name" required/>
+            <label for="name">What Song Would You Like To Perform? </label>
+            <br></br>
+            <select value={this.state.SONG} name="SONG" id="name" onChange={this.handleChange} >
+              <option value="idk">Select Song</option>
+              {this.renderSongs().map(song=> <option value={song}>{song}</option>)}
+            </select>
+            {/* <input class="signup-input" type="text" onChange={this.handleChange} name="SONG" id="name" required/> */}
           </div>
           <br></br>
-                <button class="btn btn--right btn--tickets">SIGN UP</button>
+                <button onClick={this.handleSubmit} class="btn btn--right btn--tickets">SIGN UP</button>
         </form>
       </div>
   </div>
