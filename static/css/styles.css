@@ -29,24 +29,36 @@ html{
 *:after{
     box-sizing: inherit;
 }
-
+.signup {
+    color: white;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 3vw;
+    width: 80%;
+    margin-bottom: 4%;
+}
 .signup-band {
-    color: yellow;
+    color: #0e0c02;
     position: relative;
     font-family: 'Helvetica Neue LT Std';
     text-align: left;
-    margin-left: 8%;
+    padding-left: 4%;
+    padding-right: 4%;    
     font-size: 3vw;
     margin-top: 3%
-    margin-
+    /* margin- */
 }
 .signup-songs {
     position: relative;
-    font-family: 'Helvetica Neue LT Std';
+    font-family: 'Helvetica';
     text-align: left;
-    margin-left: 5%;
-    font-size: 1.7vw;
-    margin-top: 1%
+    /* margin-left: 10%; */
+    font-size: 20.5px;
+    margin-top: 2%;
+    padding-left: 4%;
+    padding-right: 4%;
 }
 .shows-header{
     align-content: left;
@@ -231,7 +243,7 @@ input.quantity {
 .event-title {
     margin-top: 4%;
     text-align: center;
-    color: yellow;
+    color: #ffd800;
     position: relative;
     font-family: 'Helvetica Neue LT Std';
     font-size: 6vw;
@@ -453,6 +465,16 @@ button{
     transition: .5s; 
     font-size: 3vw;
 }
+select {
+    /* background: transparent; */
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-family: "Poppins", Helvetica, Arial, Sans-Serif;
+    border-radius: 0;
+    width: 60%;
+    /* -webkit-appearance: none; */
+    font-weight: bold; 
+}
 input {
     background: transparent;
     margin-bottom: 10px;
@@ -591,7 +613,7 @@ input[type=submit]:hover {
     margin-bottom: 2%;
     /* margin-left: auto;
     margin-right: auto; */
-    display: inline-block;
+    display: block;
     text-align: center;
     font-size:  3vw;
 
@@ -618,14 +640,14 @@ input[type=submit]:hover {
 
 .venue-title {
     margin-top: 4%;
-    color: yellow;
+    color: #ffd800;
     position: relative;
     font-family: 'Helvetica Neue LT Std';
     text-align: center;
     font-size: 7vw;
 }
 .tickets {
-    color: yellow;
+    color: #ffd800;
     position: relative;
     font-family: 'Helvetica Neue LT Std';
     text-align: center;
