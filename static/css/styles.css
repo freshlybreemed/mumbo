@@ -29,24 +29,36 @@ html{
 *:after{
     box-sizing: inherit;
 }
-
+.signup {
+    color: white;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 3vw;
+    width: 80%;
+    margin-bottom: 4%;
+}
 .signup-band {
-    color: yellow;
+    color: #ffd800;
     position: relative;
     font-family: 'Helvetica Neue LT Std';
     text-align: left;
-    margin-left: 8%;
+    padding-left: 4%;
+    padding-right: 4%;    
     font-size: 3vw;
     margin-top: 3%
-    margin-
+    /* margin- */
 }
 .signup-songs {
     position: relative;
-    font-family: 'Helvetica Neue LT Std';
+    font-family: 'Helvetica';
     text-align: left;
-    margin-left: 5%;
-    font-size: 1.7vw;
-    margin-top: 1%
+    /* margin-left: 10%; */
+    font-size: 20.5px;
+    margin-top: 2%;
+    padding-left: 4%;
+    padding-right: 4%;
 }
 .shows-header{
     align-content: left;
@@ -81,6 +93,8 @@ html{
     text-align: center;
     margin-bottom: 4%;
     margin-top: -4%;
+    overflow: hidden;
+
     /* margin-left: 10% */
 
 }
@@ -229,7 +243,7 @@ input.quantity {
 .event-title {
     margin-top: 4%;
     text-align: center;
-    color: yellow;
+    color: #ffd800;
     position: relative;
     font-family: 'Helvetica Neue LT Std';
     font-size: 6vw;
@@ -255,8 +269,6 @@ input.quantity {
     margin: .75rem 0 0;
     font-size: 1.45rem;
     /* float: left; */
-
-
 }
 .ticket-list__item__text--support {
     font-size: .75rem;
@@ -269,8 +281,8 @@ input.quantity {
     font-size: 1 rem;
     float: left;
     margin:0;
-
 }
+
 .media {
     margin-left: 10%;
     margin-right: 10%;
@@ -334,8 +346,8 @@ p {
 
 .aboutpage { 
     color: white;
-    padding: inherit;
-    margin: 10%;
+    /* padding: 2%; */
+    margin: 3%;
 }
 .events {
     color: white;
@@ -353,10 +365,22 @@ p {
 img.menu{
     margin-bottom: 2%
 }
+.home__photo_feed {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+}
+
+.home__photo_feed img:hover {
+    -webkit-filter: grayscale(100%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+    filter: grayscale(100%); /* FF 35+ */
+  }
 .menu {
     width: 15%;
     height: auto;
-    margin-left: 40%;
+    margin-left: auto;
     margin-right: auto;
     display: block;
 
@@ -440,6 +464,16 @@ button{
     -webkit-transition: .5s;
     transition: .5s; 
     font-size: 3vw;
+}
+select {
+    /* background: transparent; */
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-family: "Poppins", Helvetica, Arial, Sans-Serif;
+    border-radius: 0;
+    width: 60%;
+    /* -webkit-appearance: none; */
+    font-weight: bold; 
 }
 input {
     background: transparent;
@@ -579,7 +613,7 @@ input[type=submit]:hover {
     margin-bottom: 2%;
     /* margin-left: auto;
     margin-right: auto; */
-    display: inline-block;
+    display: block;
     text-align: center;
     font-size:  3vw;
 
@@ -606,14 +640,14 @@ input[type=submit]:hover {
 
 .venue-title {
     margin-top: 4%;
-    color: yellow;
+    color: #ffd800;
     position: relative;
     font-family: 'Helvetica Neue LT Std';
     text-align: center;
     font-size: 7vw;
 }
 .tickets {
-    color: yellow;
+    color: #ffd800;
     position: relative;
     font-family: 'Helvetica Neue LT Std';
     text-align: center;
@@ -684,16 +718,30 @@ table, th, td {
   th {
     text-align: left;
   }
-.ticket-count {
-    color: white;
-    position: relative;
-    margin-left: 34%;
-    margin-right: auto;
-    text-align: left;
-    font-size: 4vw;
+.manage-list__item__text--info {
+    color: #ffd800;
+    font-size: 2rem;
+    float: right;
+    margin:0;
 }
 .logo-header{
-    margin-bottom: 4%;
+    margin-bottom: 3%;
+    margin-left: 2%;
+
+}
+.videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+}
+.home__sizzle-video-bg {
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    opacity: 1;
+    width: 100%;
+    height: 100%;
 }
 .text-box {
     color: white;

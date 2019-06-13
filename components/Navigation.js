@@ -37,18 +37,18 @@ class Navigation extends Component {
     render(){
        return (
         <div class="nav-bar">
-                <div class="logo-header" >
+                {/* <div class="logo-header" >
                     <Link href="/"><img class="menu" src="static/img/ChickenMumbo_LogoWords.png" /></Link>
-                </div>
-                {/* <div class="header">
-                    <Link href="/">
-                        <br/>
-                    </Link>
-                    <Link href="/about">ABOUT</Link>
-                    <Link href="/events">EVENTS</Link>
-                    <Link href="/experience">MUMBO</Link>
-                    <Link href="/crank">CRANK KARAOKE</Link>
                 </div> */}
+                <div class="header">
+                    {/* <br></br>
+                    <br></br> */}
+
+                    {/* <Link href="/">HOME</Link>
+                    <Link href="/events">EVENTS</Link> */}
+                    {/* <Link hxref="/experience">MUMBO</Link> */}
+                    {/* <Link href="/crank">CRANK KARAOKE</Link> */}
+                </div>
         </div>
         )
     }

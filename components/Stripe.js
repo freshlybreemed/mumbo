@@ -6,6 +6,9 @@ class Stripe extends Component {
     this.state = {
         balance: '',
         ticketCount: '',
+        weekendCount: 0,
+        gaCount: 0,
+        lastCount: 0,
         tickets: [],
         ticketDayCount: 0
     }
@@ -41,7 +44,7 @@ class Stripe extends Component {
       method: "get",
       headers:{
         "Stripe-Version":"2019-05-16",
-        "Authorization": "Bearer "+ process.env.STRIPE_SECRET_DEV
+        "Authorization": "Bearer "+ process.env.STRIPE_SECRET_PROD
       }
   }).then((res)=>{
       const bal = String(res.data.pending[0].amount)
@@ -54,18 +57,25 @@ class Stripe extends Component {
 
   getTicketCount(){
     axios({
-      url: "https://api.stripe.com/v1/charges?limit=100", 
+      url: "https://api.stripe.com/v1/charges?limit=1000", 
       method: "get",
       headers:{
         "Stripe-Version":"2019-05-16",
         "Authorization": "Bearer sk_live_r3BTZ88DeDWkSSFB7OG4Uotd00zHhoVag0"
       }
   }).then((res)=>{
-      console.log(res.data)
+      // console.log(res.data)
       var app=[];
       for (var ticket in res.data.data){
-      if (!res.data.data[ticket].refunded && res.data.data[ticket].captured)
-        app.push(res.data.data[ticket])
+        if (!res.data.data[ticket].refunded && res.data.data[ticket].captured){
+          app.push(res.data.data[ticket])
+          var tix = 0
+          while (res.data.data[ticket].metadata.quantity>tix){
+            app.push(res.data.data[ticket])
+            tix++
+          }
+          // console.log()
+        }
       }
       console.log(app)
       this.setState({
@@ -86,27 +96,41 @@ class Stripe extends Component {
     }
     console.log(array)
     return (
-      <div class="ticket-count">
-        <ul>
-        Balance: {"$"+ (this.state.ticketCount? ((52*15)+(16*25)+((this.state.ticketCount -68)*20)) + '.00': 0)}
-        </ul>
-        <ul>
-          $15 Tickets Sold: {this.state.ticketCount? 52:0}
-        </ul>
-        <ul>
-          $20 Tickets Sold: {this.state.ticketCount? (this.state.ticketCount -68):0}
-        </ul>
-        <ul>
-         $25  Tickets Sold: {this.state.ticketCount? 16:0}
-        </ul>
-        <ul>
-        Total Ticket Count: {this.state.ticketCount? this.state.ticketCount+64:''}
-        </ul>
-        <ul>
-        24 Hour Sales: {this.state.ticketDayCount}
-
-        </ul>
-        {/* {array} */}
+      <div>
+        <div class="media">
+          <div class="ticket-content">
+              <h2 class="ticket-list__item__text--title" itemprop="performer">BALANCE</h2>          
+              {/* <p class="ticket-list__item__text--support">$30 + 3.98 FEE</p>           */}
+              <p class="manage-list__item__text--info"> {"$"+ (this.state.ticketCount? ((52*15)+(16*25)+((this.state.ticketCount -56)*20)) + '.00': 0)}</p>  
+          </div>
+        </div>
+        <div class="media">
+          <div class="ticket-content">
+              <h2 class="ticket-list__item__text--title" itemprop="performer">$15 TIXS</h2>          
+              {/* <p class="ticket-list__item__text--support">$30 + 3.98 FEE</p>           */}
+              <p class="manage-list__item__text--info"> {this.state.ticketCount? 52:0}</p>  
+          </div>
+        </div><div class="media">
+          <div class="ticket-content">
+              <h2 class="ticket-list__item__text--title" itemprop="performer">$20 TIXS</h2>          
+              {/* <p class="ticket-list__item__text--support">$30 + 3.98 FEE</p>           */}
+              <p class="manage-list__item__text--info">  {this.state.ticketCount? (this.state.ticketCount -56):0}</p>  
+          </div>
+        </div>
+        <div class="media">
+          <div class="ticket-content">
+              <h2 class="ticket-list__item__text--title" itemprop="performer">$25 TIXS</h2>          
+              {/* <p class="ticket-list__item__text--support">$30 + 3.98 FEE</p>           */}
+              <p class="manage-list__item__text--info"> {this.state.ticketCount? 16:0}</p>  
+          </div>
+        </div>
+        <div class="media">
+          <div class="ticket-content">
+              <h2 class="ticket-list__item__text--title" itemprop="performer">TOTAL TIX COUNT</h2>          
+              {/* <p class="ticket-list__item__text--support">$30 + 3.98 FEE</p>           */}
+              <p class="manage-list__item__text--info"> {this.state.ticketCount? this.state.ticketCount+78:0}</p>  
+          </div>
+        </div>
       </div>
     )
   }
