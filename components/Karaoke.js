@@ -44,7 +44,7 @@ class Karaoke extends Component {
             <div class="media">
                 <div class="ticket-content">
                     <h2 class="ticket-list__item__text--title" itemprop="performer">{song.firstName + " from "+ song.city}</h2>          
-                    <p class="ticket-list__item__text--support">{"@"+song.handle}</p> 
+                    <p class="karaoke-list__item__text--support">{"@"+song.handle}</p> 
                     <p class="manage-list__item__text--info"> {song.artist + " - " + song.song}</p>  
                 </div>
             </div>

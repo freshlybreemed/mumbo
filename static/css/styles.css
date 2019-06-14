@@ -270,8 +270,20 @@ input.quantity {
     font-size: 1.45rem;
     /* float: left; */
 }
+.karaoke-list__item__text--title {
+    text-transform: uppercase;
+    margin: .75rem 0 0;
+    font-size: 1.75rem;
+    /* float: left; */
+}
 .ticket-list__item__text--support {
     font-size: .75rem;
+    margin: 0 0 .75rem;
+    /* float: left; */
+
+}
+.karaoke-list__item__text--support {
+    font-size: 1.35rem;
     margin: 0 0 .75rem;
     /* float: left; */
 
