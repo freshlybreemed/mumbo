@@ -26,16 +26,13 @@ class Stripe extends Component {
     var date = new Date().getTime()/1000
     var yesterday = date - 86400
     var ticketsSold = 0
-    console.log(date + '  between '+ yesterday)
     this.state.tickets.forEach((ticket)=>{
-      console.log(ticket.created)
       if (ticket.created > yesterday && ticket.created < date)
       {
         ticketsSold++
      }
     })
     this.setState({ticketDayCount: ticketsSold})
-    console.log(ticketsSold)
   }
 
   getBalance(){
@@ -50,37 +47,65 @@ class Stripe extends Component {
       const bal = String(res.data.pending[0].amount)
       const balance = "$"+ bal.slice(2) +"."+ bal.slice(-2)
       this.setState({
-        balance: balance
+        balance
       })
   })
   }
 
   getTicketCount(){
     axios({
-      url: "https://api.stripe.com/v1/charges?limit=1000", 
+      url: "https://api.stripe.com/v1/charges?limit=2000", 
       method: "get",
       headers:{
         "Stripe-Version":"2019-05-16",
-        "Authorization": "Bearer sk_live_r3BTZ88DeDWkSSFB7OG4Uotd00zHhoVag0"
+        "Authorization": "Bearer "+process.env.STRIPE_SECRET_PROD
       }
   }).then((res)=>{
-      // console.log(res.data)
+      console.log(res.data)
       var app=[];
+      var tix = 0;
+      var weekendCount= 0
+      var gaCount= 0
+      var lastCallCount = 0
+      var quantity
+      var orders = []
       for (var ticket in res.data.data){
         if (!res.data.data[ticket].refunded && res.data.data[ticket].captured){
-          app.push(res.data.data[ticket])
-          var tix = 0
-          while (res.data.data[ticket].metadata.quantity>tix){
-            app.push(res.data.data[ticket])
-            tix++
+          tix++
+          orders.push(res.data.data[ticket])
+          if (typeof res.data.data[ticket].metadata.quantity === "string"){
+            quantity = parseInt(res.data.data[ticket].metadata.quantity)
+            while(quantity>0){
+              orders.push(res.data.data[ticket])
+              tix++
+              quantity--;
+            }
           }
-          // console.log()
+          if(typeof res.data.data[ticket].metadata.type === "string" && typeof res.data.data[ticket].metadata.quantity === "string"){
+            quantity = parseInt(res.data.data[ticket].metadata.quantity)
+            var type = res.data.data[ticket].metadata.type
+            switch(type){
+              case "weekend":
+                weekendCount = weekendCount + quantity
+                break
+              case "ga":
+                  gaCount = gaCount + quantity
+                  break
+              case "lastCall":
+                  lastCallCount = lastCallCount + quantity
+                  break
+              default:
+                break
+            }
+          }
         }
       }
-      console.log(app)
       this.setState({
-        ticketCount: parseInt(app.length),
-        tickets: app
+        ticketCount: tix,
+        tickets: orders,
+        weekendCount,
+        gaCount,
+        lastCallCount
       },()=>{
         this.recentSales()
       })
@@ -128,14 +153,14 @@ class Stripe extends Component {
           <div class="ticket-content">
               <h2 class="ticket-list__item__text--title" itemprop="performer">$20 TIXS</h2>          
               {/* <p class="ticket-list__item__text--support">$30 + 3.98 FEE</p>           */}
-              <p class="manage-list__item__text--info">  {this.state.ticketCount? (this.state.ticketCount -56):0}</p>  
+              <p class="manage-list__item__text--info">  {this.state.ticketCount? (153+this.state.weekendCount):0}</p>  
           </div>
         </div>
         <div class="media">
           <div class="ticket-content">
               <h2 class="ticket-list__item__text--title" itemprop="performer">$25 TIXS</h2>          
               {/* <p class="ticket-list__item__text--support">$30 + 3.98 FEE</p>           */}
-              <p class="manage-list__item__text--info"> {this.state.ticketCount? 16:0}</p>  
+              <p class="manage-list__item__text--info"> {this.state.ticketCount? 16+this.state.lastCallCount:0}</p>  
           </div>
         </div>
 

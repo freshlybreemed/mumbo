@@ -16,6 +16,7 @@ class Ticket extends Component {
     this.state = {
       quantity: 0,
       weekendCount: 0,
+      type: '',
       gaCount: 0,
       lastCallCount: 0,
       weekendPrice: 2245,
@@ -33,21 +34,24 @@ class Ticket extends Component {
     if (type == 'lastCall')
       this.setState({ 
         lastCallCount: this.state.lastCallCount + 1,
-        total: this.state.total + this.state.lastCallPrice
+        total: this.state.total + this.state.lastCallPrice,
+        type
        },()=>{
         console.group(this.state)
       });
     if (type == 'ga')
       this.setState({ 
         gaCount: this.state.gaCount + 1,
-        total: this.state.total + this.state.gaPrice
+        total: this.state.total + this.state.gaPrice,
+        type
       },()=>{
         console.group(this.state)
       });
     if (type == 'weekend')
       this.setState({ 
         weekendCount: this.state.weekendCount + 1,
-        total: this.state.total + this.state.weekendPrice
+        total: this.state.total + this.state.weekendPrice,
+        type
        },()=>{
         console.group(this.state)
       });
@@ -152,7 +156,7 @@ class Ticket extends Component {
 
               </div>
             </div>
-            <StripeCheckout metadata={this.state} quantity={this.state.quantity} price={this.state.total}/>
+            <StripeCheckout metadata={{type:this.state.type,quantity:this.state.quantity}} quantity={this.state.quantity} price={this.state.total}/>
             <br></br>
             <br></br>
             <div class="media">
