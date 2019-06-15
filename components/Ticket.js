@@ -116,14 +116,14 @@ class Ticket extends Component {
                 <div class="ticket-list">
                   <h2 class="ticket-list__item__text--title" itemprop="performer">GA EARLY</h2>          
                   <p class="ticket-list__item__text--support">$20 + 2.94 FEE</p>         
-                  <p class="ticket-list__item__text--info">WHILE SUPPLIES LAST</p>
-                  <div class="ticket-quantity-input">
+                  <p class="ticket-list__item__text--info">SOLD OUT</p>
+                  {/* <div class="ticket-quantity-input">
                     <span onClick={(e) => this.handleDecrement(e,"weekend")}>-</span>
                     <input class="quantity" type="text" value={this.state.weekendCount}  onChange={(e) => this.handleChange(e, "weekend")} />
                     <span onClick={(e) => this.handleIncrement(e,"weekend")}>+</span>
                     <div class="input-group-button"></div>
                   </div>  
-                  <p class="ticket-quantity-text"> Quantity: &nbsp; &nbsp;</p> 
+                  <p class="ticket-quantity-text"> Quantity: &nbsp; &nbsp;</p>  */}
 
                 </div>
               </div>
@@ -132,13 +132,13 @@ class Ticket extends Component {
               <div class="ticket-content">
                 <h2 class="ticket-list__item__text--title" itemprop="performer">GA LATE</h2> 
                 <p class="ticket-list__item__text--support">$25 + 3.78 FEE</p>          
-                <p class="ticket-list__item__text--info">WHILE SUPPLIES LAST &nbsp; &nbsp;</p>  
-                <div class="ticket-quantity-input">
+                <p class="ticket-list__item__text--info">SOLD OUT &nbsp; &nbsp;</p>  
+                {/* <div class="ticket-quantity-input">
                   <span onClick={(e) => this.handleDecrement(e,"ga")}>-</span>
                   <input class="quantity" type="text" value={this.state.gaCount}  onChange={(e) => this.handleChange(e, "ga")} />
                   <span onClick={(e) => thSis.handleIncrement(e,"ga")}>+</span>
                 </div>  
-                <p class="ticket-quantity-text"> Quantity: &nbsp; &nbsp;</p> 
+                <p class="ticket-quantity-text"> Quantity: &nbsp; &nbsp;</p>  */}
               </div>
             </div>
             <div class="media">

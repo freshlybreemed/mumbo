@@ -38,12 +38,15 @@ class Karaoke extends Component {
         })
       }
       renderSongs(){
+        this.state.karaokeSongs.forEach(songs=>{
+          console.log(songs)
+        })
         var songRender = []
         this.state.karaokeSongs.forEach((song, ind)=>{
             songRender.push( 
             <div class="media">
                 <div class="ticket-content">
-                    <h2 class="ticket-list__item__text--title" itemprop="performer">{song.firstName + " from "+ song.city}</h2>          
+                    <h2 class="karaoke-list__item__text--title" itemprop="performer">{song.firstName + " from "+ song.city}</h2>          
                     <p class="karaoke-list__item__text--support">{"@"+song.handle}</p> 
                     <p class="manage-list__item__text--info"> {song.artist + " - " + song.song}</p>  
                 </div>
