@@ -60,9 +60,21 @@ html{
     padding-left: 4%;
     padding-right: 4%;
 }
+.recap-box {
+    padding-left: 9%;
+    padding-right: 9%;
+    width: 100%;
+}
+.shows-gallery {
+    padding-left: 9%;
+    padding-right: 9%;
+}
 .shows-header{
     align-content: left;
-    margin: 5%;
+    margin-bottom: 3%;
+    font-family: "Helvetica";
+    font-weight: bold;
+    color: white;
     font-size: 2em;
 }
 .home-flag {
@@ -92,17 +104,24 @@ html{
 .header{
     text-align: center;
     margin-bottom: 4%;
-    margin-top: -4%;
+    margin-top: 4%;
     overflow: hidden;
-
     /* margin-left: 10% */
-
+}
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }
 @media screen and (max-width: 500px) {
     .header a {
       float: none;
       display: block;
       text-align: center;
+    }
+    .menu-logo {
+        
     }
     .header-right {
       float: none;
@@ -299,7 +318,7 @@ input.quantity {
     margin-left: 10%;
     margin-right: 10%;
     display: flex;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
     border-top: 1px solid white;
     border-bottom: 1px solid white;
     /* border: 5px solid rgb(86,98,110); */
@@ -326,7 +345,7 @@ p {
     -moz-transition: .5s;
     -webkit-transition: .5s;
     transition: .5s; 
-    font-size: 3vw;
+    font-size: 2.5vw;
 }
 .btn--tickets:hover {
     background: #fff;
@@ -389,12 +408,19 @@ img.menu{
     -webkit-filter: grayscale(100%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
     filter: grayscale(100%); /* FF 35+ */
   }
+.menu-item {
+    float: right;
+    padding-right: 10%;
+}
+.menu-logo {
+    float: left;
+    padding-right: 10%;
+}
+
 .menu {
     width: 15%;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+    float: left;
+    display: inline-block;
 
     margin-top: 2%;
 }
@@ -404,6 +430,10 @@ a {
     padding: 10px 15px;
 }
 
+.instalink {
+    padding: 5px 5px;
+
+}
 a:link {
     color: white;
 }
@@ -564,6 +594,15 @@ input[type=submit] {
     transition: .5s; 
     font-size: 6vw;
 }
+
+input[type=email] {
+    padding: 10px 15px;
+    /* border: 2px solid #fff; */
+    color: #fff;
+    font: size 12vw;
+    width: 60%;
+}
+
 input[type=submit]:hover {
     background: #fff;
     color: #000; 
@@ -586,7 +625,7 @@ input[type=submit]:hover {
 }
 .recap {
     margin-top: 4%;
-    width: 80%;
+    width: 70%;
     align-content: center;
     margin-bottom: 4%;
     margin-left: auto;
