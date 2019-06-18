@@ -18,7 +18,6 @@ const Recap = () => {
                     <img src="static/img/capture/CAPTURE_3029-2.jpg" class="recap"/>
                     <img src="static/img/capture/CAPTURE_3072.jpg" class="recap"/>
                     <img src="static/img/capture/CAPTURE_3048.jpg" class="recap"/>
-                    <img src="static/img/capture/CAPTURE_2964.jpg" class="recap"/>
                     <img src="static/img/capture/CAPTURE_2976.jpg" class="recap"/>
                     <img src="static/img/capture/CAPTURE_3079.jpg" class="recap"/>
                     <img src="static/img/capture/CAPTURE_3043.jpg" class="recap"/>
@@ -40,7 +39,6 @@ const Recap = () => {
                     <img src="static/img/capture/CAPTURE_3142.jpg" class="recap"/>
                     <img src="static/img/capture/CAPTURE_3089.jpg" class="recap"/>
                     <img src="static/img/capture/CAPTURE_2999.jpg" class="recap"/>
-                    <img src="static/img/capture/CAPTURE_2961-2.jpg" class="recap"/>
                     <img src="static/img/capture/CAPTURE_2987.jpg" class="recap"/>
                     <img src="static/img/capture/CAPTURE_3022.jpg" class="recap"/>
                     <img src="static/img/capture/CAPTURE_3133.jpg" class="recap"/>
