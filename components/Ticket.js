@@ -16,6 +16,7 @@ class Ticket extends Component {
     this.state = {
       quantity: 0,
       weekendCount: 0,
+      type: '',
       gaCount: 0,
       lastCallCount: 0,
       weekendPrice: 2245,
@@ -33,21 +34,24 @@ class Ticket extends Component {
     if (type == 'lastCall')
       this.setState({ 
         lastCallCount: this.state.lastCallCount + 1,
-        total: this.state.total + this.state.lastCallPrice
+        total: this.state.total + this.state.lastCallPrice,
+        type
        },()=>{
         console.group(this.state)
       });
     if (type == 'ga')
       this.setState({ 
         gaCount: this.state.gaCount + 1,
-        total: this.state.total + this.state.gaPrice
+        total: this.state.total + this.state.gaPrice,
+        type
       },()=>{
         console.group(this.state)
       });
     if (type == 'weekend')
       this.setState({ 
         weekendCount: this.state.weekendCount + 1,
-        total: this.state.total + this.state.weekendPrice
+        total: this.state.total + this.state.weekendPrice,
+        type
        },()=>{
         console.group(this.state)
       });
@@ -112,14 +116,14 @@ class Ticket extends Component {
                 <div class="ticket-list">
                   <h2 class="ticket-list__item__text--title" itemprop="performer">GA EARLY</h2>          
                   <p class="ticket-list__item__text--support">$20 + 2.94 FEE</p>         
-                  <p class="ticket-list__item__text--info">WHILE SUPPLIES LAST</p>
-                  <div class="ticket-quantity-input">
+                  <p class="ticket-list__item__text--info">SOLD OUT</p>
+                  {/* <div class="ticket-quantity-input">
                     <span onClick={(e) => this.handleDecrement(e,"weekend")}>-</span>
                     <input class="quantity" type="text" value={this.state.weekendCount}  onChange={(e) => this.handleChange(e, "weekend")} />
                     <span onClick={(e) => this.handleIncrement(e,"weekend")}>+</span>
                     <div class="input-group-button"></div>
                   </div>  
-                  <p class="ticket-quantity-text"> Quantity: &nbsp; &nbsp;</p> 
+                  <p class="ticket-quantity-text"> Quantity: &nbsp; &nbsp;</p>  */}
 
                 </div>
               </div>
@@ -128,13 +132,13 @@ class Ticket extends Component {
               <div class="ticket-content">
                 <h2 class="ticket-list__item__text--title" itemprop="performer">GA LATE</h2> 
                 <p class="ticket-list__item__text--support">$25 + 3.78 FEE</p>          
-                <p class="ticket-list__item__text--info">WHILE SUPPLIES LAST &nbsp; &nbsp;</p>  
-                <div class="ticket-quantity-input">
+                <p class="ticket-list__item__text--info">SOLD OUT &nbsp; &nbsp;</p>  
+                {/* <div class="ticket-quantity-input">
                   <span onClick={(e) => this.handleDecrement(e,"ga")}>-</span>
                   <input class="quantity" type="text" value={this.state.gaCount}  onChange={(e) => this.handleChange(e, "ga")} />
                   <span onClick={(e) => thSis.handleIncrement(e,"ga")}>+</span>
                 </div>  
-                <p class="ticket-quantity-text"> Quantity: &nbsp; &nbsp;</p> 
+                <p class="ticket-quantity-text"> Quantity: &nbsp; &nbsp;</p>  */}
               </div>
             </div>
             <div class="media">
@@ -152,7 +156,7 @@ class Ticket extends Component {
 
               </div>
             </div>
-            <StripeCheckout metadata={this.state} quantity={this.state.quantity} price={this.state.total}/>
+            <StripeCheckout metadata={{type:this.state.type,quantity:this.state.quantity}} quantity={this.state.quantity} price={this.state.total}/>
             <br></br>
             <br></br>
             <div class="media">

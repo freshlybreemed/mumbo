@@ -141,18 +141,18 @@ class SignUpForm extends Component {
           </div>
           <br></br>
           <div class="rsvp-form">
-            <label for="email">Email Address: </label>
+            <label for="email">Email Address: </label><br></br>
             <input class="signup-input" type="email" value={this.state.EMAIL} onChange={this.handleChange} name="EMAIL" id="email" required/>
           </div>
 
           <br></br>
           <div class="rsvp-form">
-            <label for="name">Where You From?: </label>
+            <label for="name">Where You From?: </label><br></br>
             <input class="signup-input" type="text" value={this.state.CITY} onChange={this.handleChange} name="CITY" id="city" required/>
           </div>
           <br></br>
           <div class="rsvp-form">
-            <label for="email">IG or Twitter @: </label>
+            <label for="email">IG or Twitter @: </label><br></br>
             <input class="signup-input" type="text" value={this.state.HANDLE} onChange={this.handleChange} name="HANDLE" id="handle"/>
           </div>
           <br></br>

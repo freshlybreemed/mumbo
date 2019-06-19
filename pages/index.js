@@ -2,67 +2,143 @@ import React from 'react'
 import { Component } from "react";
 
 import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+class Index extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      images: [
+        "CAPTURE_2944.jpg",
+        "CAPTURE_2946.jpg",
+        "CAPTURE_2949.jpg",
+        "CAPTURE_2951.jpg",
+        "CAPTURE_2959.jpg",
+        "CAPTURE_2961-2.jpg",
+        "CAPTURE_2964.jpg",
+        "CAPTURE_2970.jpg",
+        "CAPTURE_2974.jpg",
+        "CAPTURE_2976.jpg",
+        "CAPTURE_2982.jpg",
+        "CAPTURE_2983.jpg",
+        "CAPTURE_2985.jpg",
+        "CAPTURE_2987.jpg",
+        "CAPTURE_2989.jpg",
+        "CAPTURE_2995.jpg",
+        "CAPTURE_2998.jpg",
+        "CAPTURE_2999.jpg",
+        "CAPTURE_3002.jpg",
+        "CAPTURE_3006.jpg",
+        "CAPTURE_3008.jpg",
+        "CAPTURE_3012.jpg",
+        "CAPTURE_3014-2.jpg",
+        "CAPTURE_3016.jpg",
+        "CAPTURE_3019.jpg",
+        "CAPTURE_3022.jpg",
+        "CAPTURE_3026.jpg",
+        "CAPTURE_3028.jpg",
+        "CAPTURE_3029-2.jpg",
+        "CAPTURE_3030.jpg",
+        "CAPTURE_3033.jpg",
+        "CAPTURE_3035.jpg",
+        "CAPTURE_3038.jpg",
+        "CAPTURE_3042.jpg",
+        "CAPTURE_3043.jpg",
+        "CAPTURE_3048.jpg",
+        "CAPTURE_3052.jpg",
+        "CAPTURE_3056.jpg",
+        "CAPTURE_3058.jpg",
+        "CAPTURE_3060-2.jpg",
+        "CAPTURE_3061.jpg",
+        "CAPTURE_3065.jpg",
+        "CAPTURE_3072.jpg",
+        "CAPTURE_3077.jpg",
+        "CAPTURE_3079.jpg",
+        "CAPTURE_3083-2.jpg",
+        "CAPTURE_3083.jpg",
+        "CAPTURE_3085.jpg",
+        "CAPTURE_3089.jpg",
+        "CAPTURE_3093.jpg",
+        "CAPTURE_3097.jpg",
+        "CAPTURE_3105.jpg",
+        "CAPTURE_3107.jpg",
+        "CAPTURE_3121.jpg",
+        "CAPTURE_3127.jpg",
+        "CAPTURE_3130.jpg",
+        "CAPTURE_3133.jpg",
+        "CAPTURE_3139-2.jpg",
+        "CAPTURE_3142.jpg",
+        "CAPTURE_3143.jpg",
+      ]
+    }
+    this.pickAnImage = this.pickAnImage.bind(this)
+  }
+  pickAnImage(){
+    console.log(this.state.images[Math.floor(Math.random()*this.state.images.length)])
+    return "static/img/capture/"+this.state.images[Math.floor(Math.random()*this.state.images.length)]
+  }
+  render(){
+    return(
 
-
-const Crank = () => (
-    <div class="wrapper">
-      <title>Crank Karaoke</title>
+      <div class="home">
+      <title>Chicken & Mumbo Sauce</title>
       <Navigation />
-       <div class="row">
-          <div class="lineup"> </div><br></br>
-        </div>
-        <img src="static/img/logocrank.png" class="flyerimage" />
-        <img src="static/img/cash.gif" class="cash"/>
+        {/* <img src="static/img/logocrank.png" class="flyerimage" /> */}
+        {/* <img src="static/img/cash.gif" class="cash"/> */}
         <div class="features"> 
-          <div class="item">LIVE BAND</div> 
+          {/* <div class="item">LIVE BAND</div>  */}
+          <img class="home-flag" src={this.pickAnImage()}></img>
+       
+          {/* <div class="item">GO-GO KARAKOKE </div>
           <img class="yellow-star" src="static/img/yellowstar.png"></img>
-          <div class="item">GO-GO KARAKOKE </div>
-          <img class="yellow-star" src="static/img/yellowstar.png"></img>
-          <div class="item">JAM SESSION</div>
+          <div class="item">JAM SESSION</div> */}
         </div>
-        <div class="row">
-          <div class="venue-title">HOWARD THEATRE</div><br></br>
-        </div>
-        <div class="row">
-          <div class="lineup-bigger">HOSTED BY: WALK LIKE WALT</div>
-        </div>
-        <div class="row">
-          <div class="lineup">DJ SETS: FILET MIGNON & MALCOLM XAVIER </div>
-        </div>
-        <div class="row">
-          <div class="date">FRI. JUNE 14th</div>
-        </div>
-        <div class="row">
-          <div class="date">9PM - 2AM</div>
-        </div>
-        <div class="row">
-          <div class="lineup">620 T ST NW DC 20001</div>
-        </div>
-        <div class="row">
         <br></br>
-        <form action="/tickets">
-            <input type="submit" value="TICKETS"/>
-          </form>
+        <div class="recap-box">
+          <div class="shows-header">CRANK KARAOKE FLICKS:</div>
+        <a href="/recap">
+            <button class="btn btn--right btn--tickets">IN THE BOOTH</button>
+          </a>
+          <a href="/recap2">
+            <button class="btn btn--right btn--tickets">IN THE FIELD PT. 1</button>
+          </a>
+          <a href="/recap3">
+            <button class="btn btn--right btn--tickets">IN THE FIELD PT. 2</button>
+          </a>
+        </div>
+        <br></br>
+        <br></br>
+        <div class="recap-box">
+        <div class="shows-header">UPCOMING SHOWS:</div>
+        <a href="/events">
+              <img src="static/img/mumbo930.png" />
+            </a>
+        </div>
+  
+        <br></br>
         <div class="row">
-          <div class="tickets"><img class="yellow-star" src="static/img/yellowstar.png"/>
-                THIS IS YOUR NIGHT 
-            TO BE LEAD MIC
-            <img class="yellow-star" src="static/img/yellowstar.png"/>
-          </div>
+            <div class="tickets">WANT MORE MUMBO? <br></br>STAY HIP TO NEXT EVENT</div><br></br>
         </div> 
-        <div class="row">
-          <div class="about">
-          Crank Karaoke is a one of a kind, improv jam session and open mic where the funky sounds of go-go collide with community to experience music together and express themselves freely. Featuring a live band of former go-go band musicians, look forward to a karaoke-inspired experience with a not-so-shy audience singing popular covers and renditions of culturally relevant songs. Essentially, it’s a party where beginners and experts can share the stage to learn and create together. We know the power of go-go music and we want to use it to restore the culture not exploit it.        </div>
-          <br></br>
-          <img src="static/img/karaokepooh.gif" class="gif" id="logos"/>	
-          {/* Its not a hit until a go-go band remakes it! */}
-        </div>
-        <br></br>
+          
+        <form action="https://chickenandmumbosauce.us13.list-manage.com/subscribe/post?u=ed6d4b4a06108687ea3bb3473&amp;id=a4855a812b" method="post" class="rsvp-form">
+            <div class="rsvp-form">
+                <label for="email">Email Address: </label><br></br>
+                <input class="signup-input" type="email" name="EMAIL" id="email" required/>
+            </div>
+            {/* <br></br> */}
+                <button class="btn btn--right btn--tickets">STAMP</button>
+            </form>
             <br></br>
-  
-      </div>
-  
+
+          <footer>
+            <Footer />
+            </footer>
+            <br></br>
+
+
     </div>
     )
-export default Crank;
+  }
+}
+
+export default Index;
   
