@@ -13,8 +13,6 @@ class Index extends Component {
         "CAPTURE_2949.jpg",
         "CAPTURE_2951.jpg",
         "CAPTURE_2959.jpg",
-        "CAPTURE_2961-2.jpg",
-        "CAPTURE_2964.jpg",
         "CAPTURE_2970.jpg",
         "CAPTURE_2974.jpg",
         "CAPTURE_2976.jpg",
