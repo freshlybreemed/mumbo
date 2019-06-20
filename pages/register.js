@@ -8,7 +8,7 @@ const Confirmation = () => {
     return (
     
     <div class>
-        <title>Crank Confirmation</title>
+        <title>Email List Confirmation</title>
         <Navigation />
         <img src="static/img/cash.gif" class="cash"/>
         <div class="tickets">Thanks for signing up!</div><br></br>
