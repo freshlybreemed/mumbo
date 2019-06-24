@@ -22,7 +22,8 @@ export default class MyDocument extends Document {
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
                 <meta charset="utf-8"/>
-                <meta name="desb cription" content="Through multiple genres of music, Chicken & Mumbo Sauce is the sweet spot where cultures converge."/>
+                <meta name="keywords" content="Mumbo Sauce, chicken and mumbo sauce, DMV music, chocolate city, DC maryland virginia, DC foodies"></meta>
+                <meta name="description" content="Changing lives through DMV inspired events, experiences and service."/>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <link rel="stylesheet" type="text/css" href="./css/style.css"/>
                 <link rel="home" href="https://chickenandmumbosauce.com/"/>

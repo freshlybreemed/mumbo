@@ -42,14 +42,18 @@ class Navigation extends Component {
                 </div>  */}
                 <div class="header">
                     <Link href="/"><img class="menu-logo" src="static/img/ChickenMumbo_LogoWords.png" /></Link>
-                    <div class="menu-item">
+                    {/* <div class="menu-item">
                     <Link href="/">HOME</Link>
-                    </div>
+                    </div> */}
+                       <div class="menu-item1">
+
+                        <Link href="/crank">CRANK</Link>
+                        </div>
                     <div class="menu-item1">
 
                     <Link href="/events">EVENTS</Link> 
                     </div>
-                    {/* <Link href="/experience">MUMBO</Link> */}
+                 
                     {/* <Link href="/crank">CRANK KARAOKE</Link> */}
                 </div>
         </div>

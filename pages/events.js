@@ -4,12 +4,25 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import Event from '../components/Event'
 
-
-const data = {
-    title: 'About',
-    header: "Hi, I'm Ebrima.",
-  };
-
+const data = [
+    "DSC_4656.jpg",
+    "DSC_5000.jpg",
+    "DSC_5001.jpg",
+    "IMG_9580.jpg",
+    "IMG_9702.jpg",
+    "IMG_9704.jpg",
+    "IMG_9787.jpg",
+    "IMG_9929.jpg",
+    "IMG_9934.jpg",
+    "IMG_9938.jpg",
+    "img_8192jpg_48075671086_o.jpg",
+    "img_8213jpg_48075676976_o.jpg"
+];
+const pickAnImage = (array) => {
+    var image = array[Math.floor(Math.random()*array.length)]
+    console.log(image)
+    return image
+  }
 const content = `
 Chicken & Mumbo Sauce is an event-based collective founded by 
 DJ Breemz and Hav Mercy that specializes in producing unique and 
@@ -17,6 +30,7 @@ authentic experiences and content that reflect the ever-growing
 creative community and culture of the DMV onto the world.`
 
 const Events = () => (
+    <div class="home">
         <div class="events">
             <title>Events</title>
             <Navigation />            
@@ -24,15 +38,15 @@ const Events = () => (
             <div class="events-wrapper">
             
                 <div class="media">
-                    <div class="asset-mumbo">
-                        {/* <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/12005/harbour1.jpg" alt="hot air balloons"/>     */}
+                    <div class="asset-mumbo" style={{backgroundImage:"url("+ "static/img/930/"+pickAnImage(data)+")"}}>
+                        {/* <img src={pickAnImage(data)} alt="Chicken & Mumbo Sauce"/>     */}
                     </div>
                     <div class="content">
                         <h2 class="event-list__item__text--title" itemprop="performer">Chicken & Mumbo Sauce</h2>          
                         <p class="event-list__item__text--support">Mista Selecta, Dylan The Gypsy, CCB & more</p>          
                         <p class="event-list__item__text--info"></p>      
                         <p>Fri. July 5<meta itemprop="doorTime" content="9:00PM"/> </p>                                
-                        <p>Doors @ 9:00pm<meta itemprop="doorTime" content="10:00PM"/> </p>                      
+                        <p>Doors @ 9:00pm<meta itemprop="doorTime" content="10:00PM"/> | $15</p>                      
                         <p><meta itemprop="location" content="The 9:30 Club"/>9:30 Club, Washington, DC<meta itemprop="addressLocality" content="Silver Spring, MD"/></p>
                         <a href="https://www.ticketfly.com/purchase/event/1868235" title="Tickets for Chicken & Mumbo Sauce" target="_blank">
                             <button class="btn btn--right btn--tickets">TICKETS</button>
@@ -42,10 +56,11 @@ const Events = () => (
             </div>
             <br></br>
             <br></br>
-            <footer>
+        </div>
+        <footer>
                 <Footer />
             </footer>
-        </div>
+    </div>
 )
 
 export default Events
