@@ -10,7 +10,7 @@ const data = [
   "DSC_5001.jpg",
   "IMG_9580.jpg",
   "IMG_9702.jpg",
-  "IMG_9704.jpg",
+  // "IMG_9704.jpg",
   "IMG_9787.jpg",
   "IMG_9929.jpg",
   "IMG_9934.jpg",
@@ -41,9 +41,10 @@ const Index = () => (
             <p class="event-list__item__text--info"></p>      
             <p>Fri. July 5<meta itemprop="doorTime" content="9:00PM"/> </p>                                
             <p>Doors @ 9:00pm<meta itemprop="doorTime" content="10:00PM"/> 18+ | $15</p>      
-            <p>Back at it again with a few friends and new energy!! We set up shop at the 9:30 Club and we’ve brought some heavy hitters in just to secure the vibe at all times. 
+            <p>9:30 Club DC<meta itemprop="doorTime" content="10:00PM"/></p>      
+            {/* <p>Back at it again with a few friends and new energy!! We set up shop at the 9:30 Club and we’ve brought some heavy hitters in just to secure the vibe at all times. 
               Our DJs will have you pop lock n droppin’ all night and not to mention DC's legendary CCB will be putting on one hella of a show. This night is nothing short of legendary and much more.         
-            </p>                
+            </p>                 */}
             <a href="https://www.ticketfly.com/purchase/event/1868235" title="Tickets for Chicken & Mumbo Sauce" target="_blank">
                 <button class="btn btn--right btn--tickets">TICKETS</button>
             </a>
@@ -51,6 +52,7 @@ const Index = () => (
       </div>
       <br></br>
     </div>
+    <img class="gif" src="static/gif/uwem.gif"/>
     <br></br>
     <br></br>
     <br></br>

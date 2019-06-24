@@ -78,7 +78,7 @@ html{
     font-size: 2em;
 }
 .home-flag {
-    width: 80%;
+    width: 60%;
     margin-left: 10%;
     margin-right: 10%;
 
@@ -343,7 +343,11 @@ input.quantity {
     border-radius: 5px;
     margin-bottom: 2em;
 }
-
+.gif {
+    display: block;
+    margin-left: 50%;
+    margin-right: 50%;
+}
 .media > * {
     flex: 1 1 250px;
     margin: 10px;

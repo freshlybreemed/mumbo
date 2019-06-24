@@ -30,13 +30,15 @@ export default class MyDocument extends Document {
                 <meta property="og:type" content="website"/>
                 <meta property="og:url" content="http://chickenandmumbosauce.com/"/>
                 <meta property="og:site_name" content="Chicken & Mumbo Sauce"/>
-                <meta property="og:description" content="Through multiple genres of music, Chicken & Mumbo Sauce is the sweet spot where cultures converge."/>
+                <meta property="og:title" content="Chicken & Mumbo Sauce"/>
+                <meta property="og:description" content="Changing lives through DMV inspired events, experiences and service."/>
                 <meta name="twitter:card" content="summary"/>
                 {/* <meta name="twitter:image" content="https://chickenandmumbosauce.com/img/android-chrome-192x192.png"/> */}
                 <meta name="twitter:site" content="@chickenNmumbo"/>
                 <meta name="twitter:title" content="Chicken & Mumbo Sauce"/>
                 <meta name="twitter:description" content="Through multiple genres of music, Chicken & Mumbo Sauce is the sweet spot where cultures converge."/>
                 <meta name="twitter:creator" content="@chickenandmumbosauce"/>
+                <meta property="fb:app_id" content="1334983689990834" />
                 <meta name="apple-mobile-web-app-title" content="Chicken & Mumbo Sauce"/>
                 <meta name="application-name" content="Chicken & Mumbo Sauce"/>
                 {/* <meta name="msapplication-TileColor" content="#e93d78"/> */}
