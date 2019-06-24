@@ -12,7 +12,6 @@ const data = [
     "IMG_9702.jpg",
     "IMG_9704.jpg",
     "IMG_9787.jpg",
-    "IMG_9929.jpg",
     "IMG_9934.jpg",
     "IMG_9938.jpg",
     "img_8192jpg_48075671086_o.jpg",
@@ -35,11 +34,9 @@ const Events = () => (
             <title>Events</title>
             <Navigation />            
             <div class="event-title">EVENTS</div>
-            <div class="events-wrapper">
-            
+            {/* <div class="events-wrapper">
                 <div class="media">
                     <div class="asset-mumbo" style={{backgroundImage:"url("+ "static/img/930/"+pickAnImage(data)+")"}}>
-                        {/* <img src={pickAnImage(data)} alt="Chicken & Mumbo Sauce"/>     */}
                     </div>
                     <div class="content">
                         <h2 class="event-list__item__text--title" itemprop="performer">Chicken & Mumbo Sauce</h2>          
@@ -53,10 +50,23 @@ const Events = () => (
                         </a>
                     </div>
                 </div>
-            </div>
+            </div> */}
+            There are no upcoming events at this time  :(
+            <br></br>
+            <br></br>
             <br></br>
             <br></br>
         </div>
+        <div class="row">
+        <div class="tickets">WANT MORE MUMBO? <br></br>STAY HIP TO NEXT EVENT</div><br></br>
+    </div> 
+    <form action="https://chickenandmumbosauce.us3.list-manage.com/subscribe/post?u=b930e7c77036dd2a9685eb47e&amp;id=02c06b1c6e" method="post" class="rsvp-form">
+        <div class="rsvp-form">
+            <label for="email">Email Address: </label><br></br>
+            <input class="signup-input" type="email" name="EMAIL" id="email" required/>
+        </div>
+            <button class="btn btn--right btn--tickets">STAMP</button>
+        </form>
         <footer>
                 <Footer />
             </footer>

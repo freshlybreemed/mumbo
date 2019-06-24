@@ -132,7 +132,7 @@ html{
     }
     .menu-item1 {
         float: right;
-        padding-right: 5%;
+        padding-right: 15%;
         display: inline-block;
     }
     .menu-item2 {
@@ -284,7 +284,7 @@ input.quantity {
     position: relative;
     font-family: 'Helvetica Neue LT Std';
     font-size: 6vw;
-    margin: 5%;
+    margin-bottom: 10%;
 }
 .event-list__item__text--title {
     text-transform: uppercase;
@@ -452,7 +452,7 @@ img.menu{
 
 .menu-item1 {
     float: right;
-    padding-right: 5%;
+    padding-right: 10%;
     padding-top: 3%;
 }
 .menu-logo {
@@ -750,7 +750,7 @@ input[type=submit]:hover {
     font-family: 'Helvetica Neue LT Std';
     text-align: center;
     font-size: 3vw;
-    margin-top: 3%
+    margin-top: 13%
 }
 .tickets-subheader {
     padding-inline-start: 10%;

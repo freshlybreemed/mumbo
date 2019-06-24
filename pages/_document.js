@@ -16,27 +16,27 @@ export default class MyDocument extends Document {
         return (
             <html lang="en">
               <Head>
-                <meta property="og:image" content="/static/img/graph.png" />
+                <meta property="og:image" content="https://chickenandmumbosauce.com/static/img/graph.png" />
                 <link rel="icon" type="image/x-icon" href="/static/img/mumbo.ico" />
                 <link rel="stylesheet" href="/static/css/styles.css" />
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
                 <meta charset="utf-8"/>
                 <meta name="keywords" content="Mumbo Sauce, chicken and mumbo sauce, DMV music, chocolate city, DC maryland virginia, DC foodies"></meta>
-                <meta name="description" content="Changing lives through DMV inspired events, experiences and service."/>
+                <meta name="description" content="Bridging the gap between DC culture, music and tech thru events, experiences and service."/>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-                <link rel="stylesheet" type="text/css" href="./css/style.css"/>
                 <link rel="home" href="https://chickenandmumbosauce.com/"/>
                 <meta property="og:type" content="website"/>
+                <meta property="og:image" content="https://chickenandmumbosauce.com/static/img/graph.png" />
                 <meta property="og:url" content="http://chickenandmumbosauce.com/"/>
                 <meta property="og:site_name" content="Chicken & Mumbo Sauce"/>
                 <meta property="og:title" content="Chicken & Mumbo Sauce"/>
-                <meta property="og:description" content="Changing lives through DMV inspired events, experiences and service."/>
+                <meta property="og:description" content="Bridging the gap between DC culture, music and tech thru events, experiences and service."/>
                 <meta name="twitter:card" content="summary"/>
-                {/* <meta name="twitter:image" content="https://chickenandmumbosauce.com/img/android-chrome-192x192.png"/> */}
+                <meta name="twitter:image" content="https://chickenandmumbosauce.com/static/img/graph.png"/>
                 <meta name="twitter:site" content="@chickenNmumbo"/>
                 <meta name="twitter:title" content="Chicken & Mumbo Sauce"/>
-                <meta name="twitter:description" content="Through multiple genres of music, Chicken & Mumbo Sauce is the sweet spot where cultures converge."/>
+                <meta name="twitter:description" content="Bridging the gap between DC culture, music and tech thru events, experiences and service."/>
                 <meta name="twitter:creator" content="@chickenandmumbosauce"/>
                 <meta property="fb:app_id" content="1334983689990834" />
                 <meta name="apple-mobile-web-app-title" content="Chicken & Mumbo Sauce"/>

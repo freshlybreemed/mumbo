@@ -45,7 +45,7 @@ class Navigation extends Component {
                     {/* <div class="menu-item">
                     <Link href="/">HOME</Link>
                     </div> */}
-                       <div class="menu-item1">
+                       <div class="menu-item">
 
                         <Link href="/crank">CRANK</Link>
                         </div>
