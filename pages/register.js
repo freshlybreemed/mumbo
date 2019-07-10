@@ -8,12 +8,12 @@ const Confirmation = () => {
     return (
     
     <div class>
-        <title>Crank Confirmation</title>
+        <title>Email List Confirmation</title>
         <Navigation />
         <img src="static/img/cash.gif" class="cash"/>
-        <div class="tickets">Your Crank Has Been Confirmed</div><br></br>
+        <div class="tickets">Thanks for signing up!</div><br></br>
         <div class="about">
-            Your ticket will be sent to {'undefined' !== typeof window ? window.location.search.substring(7) : 'your email' } shortly
+            {/* Your ticket will be sent to {'undefined' !== typeof window ? window.location.search.substring(7) : 'your email' } shortly */}
         </div>
         {/* <div class="ticketing-regular">SALE ENDS JUNE 14 </div> */}
 
