@@ -58,7 +58,7 @@ const Events = () => (
             <br></br>
         </div>
         <div class="row">
-        <div class="tickets">WANT MORE MUMBO? <br></br>STAY HIP TO NEXT EVENT</div><br></br>
+        <div class="tickets">WANT MORE MUMBO? <br></br>STAY HIP TO OUR NEXT EVENT</div><br></br>
     </div> 
     <form action="https://chickenandmumbosauce.us3.list-manage.com/subscribe/post?u=b930e7c77036dd2a9685eb47e&amp;id=02c06b1c6e" method="post" class="rsvp-form">
         <div class="rsvp-form">

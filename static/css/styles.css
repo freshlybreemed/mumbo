@@ -132,7 +132,7 @@ html{
     }
     .menu-item1 {
         float: right;
-        padding-right: 15%;
+        padding-right: 8%;
         display: inline-block;
     }
     .menu-item2 {
@@ -157,10 +157,7 @@ html{
     grid-column:  3/5;
 
 }
-.ticketing-ticket {
-    /* margin-bottom: 10%; */
-   
-}
+
 .ticketing-row {
     background: black;
     /* margin-top: 5%; */
@@ -357,18 +354,21 @@ p {
     text-align: left;
 }
 .btn--tickets-center {
-    margin-top: 2%;
-    text-align: center;
-  padding: 10px 15px;
-  border: 2px solid #fff;
-  color: #fff;
-  cursor: pointer;
-  -o-transition: .5s;
-  -ms-transition: .5s;
-  -moz-transition: .5s;
-  -webkit-transition: .5s;
-  transition: .5s; 
-  font-size: 2.5vw;
+    margin-top: 1%;
+    margin-bottom: 2%;
+    margin-left: auto;
+    margin-right:auto;
+    display: block;
+    padding: 10px 15px;
+    border: 2px solid #fff;
+    color: #fff;
+    cursor: pointer;
+    -o-transition: .5s;
+    -ms-transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    transition: .5s; 
+    font-size: 2.5vw;
 }
 .btn--tickets {
       margin-top: 2%;
@@ -446,19 +446,21 @@ img.menu{
   }
 .menu-item {
     float: right;
+    font-size: 2vw;
     padding-right: 10%;
     padding-top: 3%;
 }
 
 .menu-item1 {
     float: right;
-    padding-right: 10%;
+    font-size: 2vw;
+    padding-right: 5%;
     padding-top: 3%;
 }
 .menu-logo {
     width: 15%;
     float: left;
-    margin-left: 15%;
+    margin-left: 10%;
     display: inline-block;
     /* padding-left: 10%; */
     /* margin-top: 2%; */
@@ -743,6 +745,19 @@ input[type=submit]:hover {
     font-family: 'Helvetica Neue LT Std';
     text-align: center;
     font-size: 7vw;
+}
+.home-header {
+    color: #ffd800;
+    position: relative;
+    font-family: 'Helvetica Neue LT Std';
+    text-align: center;
+    font-size: 3vw;
+}
+.home-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
 }
 .tickets {
     color: #ffd800;
