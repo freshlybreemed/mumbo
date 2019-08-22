@@ -108,7 +108,7 @@ class SignUpForm extends Component {
         e.preventDefault();
         await axios({
           method: 'post',
-          url: '/signup',
+          url: '/create',
           data: {
             artist: this.state.ARTIST,
             song: this.state.SONG,
@@ -120,11 +120,11 @@ class SignUpForm extends Component {
           }
         }).then((res) => {
           console.log("RESPONSE RECEIVED: ", res);
-          window.location.href = "/songconfirm";
+          // window.location.href = "/songconfirm";
         })
         .catch((err) => {
           console.log("AXIOS ERROR: ", err);
-          window.location.href = "/signup";
+          // window.location.href = "/signup";
         })
       }
   

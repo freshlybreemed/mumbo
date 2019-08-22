@@ -269,6 +269,8 @@ input.quantity {
     overflow: hidden;
     /* background: url("../img/CRANK-event-2.png") no-repeat center;; */
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .ticket-content{
     float: right;
@@ -341,10 +343,34 @@ input.quantity {
     margin-bottom: 2em;
 }
 .gif {
+    width: 50%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
     display: block;
-    margin-left: 50%;
-    margin-right: 50%;
 }
+
+.zoom {
+    display: block;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding: 20px;
+    transition: transform .1s; /* Animation */
+    width: 70%;
+}
+/* .zoom {
+    padding: 50px;
+    background-color: green;
+    transition: transform .2s; /* Animation */
+    /* width: 200px;
+    height: 200px; */
+    /* margin: 0 auto; */
+  /* } */
+  .zoom:hover {
+    transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
 .media > * {
     flex: 1 1 250px;
     margin: 10px;
@@ -681,13 +707,7 @@ input[type=submit]:hover {
     margin-right: auto;
     display: block;
 }
-.gif {
-  width: 50%;
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-}
+
 .gif2 {
     width: 45%;
     height: auto;
@@ -765,7 +785,7 @@ input[type=submit]:hover {
     font-family: 'Helvetica Neue LT Std';
     text-align: center;
     font-size: 3vw;
-    margin-top: 13%
+    margin-top: 3%
 }
 .tickets-subheader {
     padding-inline-start: 10%;
@@ -874,7 +894,7 @@ table, th, td {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    font-size: 3vw;
+    font-size: 3.5vw;
     width: 70%;
     margin-bottom: 4%;
 }

@@ -34,24 +34,40 @@ const Events = () => (
             <title>Events</title>
             <Navigation />            
             <div class="event-title">EVENTS</div>
-            {/* <div class="events-wrapper">
-                <div class="media">
-                    <div class="asset-mumbo" style={{backgroundImage:"url("+ "static/img/930/"+pickAnImage(data)+")"}}>
+            <div class="events-wrapper">
+            <div class="media">
+                    <div class="asset-mumbo" style={{backgroundImage:"url("+ "static/img/CRANK-KARAOKE-FLYER-WIDE-NEW.png"}}>
+                        
                     </div>
                     <div class="content">
-                        <h2 class="event-list__item__text--title" itemprop="performer">Chicken & Mumbo Sauce</h2>          
-                        <p class="event-list__item__text--support">Mista Selecta, Dylan The Gypsy, CCB & more</p>          
+                        <h2 class="event-list__item__text--title" itemprop="performer">Crank Karaoke</h2>          
+                        <p class="event-list__item__text--support">Live Band, Go-Go Karaoke, Jam Session ft. Walk Like Walt, DJ Money & Special Guests</p>          
                         <p class="event-list__item__text--info"></p>      
-                        <p>Fri. July 5<meta itemprop="doorTime" content="9:00PM"/> </p>                                
-                        <p>Doors @ 9:00pm<meta itemprop="doorTime" content="10:00PM"/> | $15</p>                      
-                        <p><meta itemprop="location" content="The 9:30 Club"/>9:30 Club, Washington, DC<meta itemprop="addressLocality" content="Silver Spring, MD"/></p>
-                        <a href="https://www.ticketfly.com/purchase/event/1868235" title="Tickets for Chicken & Mumbo Sauce" target="_blank">
+                        <p>Fri. Sept 13<meta itemprop="doorTime" content="9:00PM"/> </p>                                
+                        <p>Doors @ 10:00pm<meta itemprop="doorTime" content="10:00PM"/> | $15</p>                      
+                        <p><meta itemprop="location" content="The 9:30 Club"/>9:30 Club, Washington, DC<meta itemprop="addressLocality" content="Washington, DC"/></p>
+                        <a href="https://www.ticketfly.com/purchase/event/1883490" title="Tickets for Crank Karaoke" target="_blank">
+                            <button class="btn btn--right btn--tickets">TICKETS</button>
+                        </a>
+                    </div>
+                </div> <div class="media">
+                    <div class="asset-mumbo" style={{backgroundImage:"url("+ "static/img/adobo-wide.png"}}>
+                        
+                    </div>
+                    <div class="content">
+                        <h2 class="event-list__item__text--title" itemprop="performer">Adomoe: Go-Go Pajama Jam</h2>          
+                        <p class="event-list__item__text--support">Moechella, Pedro Night, TCB  & more</p>          
+                        <p class="event-list__item__text--info"></p>      
+                        <p>Sat. Aug 24<meta itemprop="doorTime" content="9:00PM"/> </p>                                
+                        <p>Doors @ 10:00pm<meta itemprop="doorTime" content="10:00PM"/> | $20</p>                      
+                        <p><meta itemprop="location" content="The 9:30 Club"/>Eaton Hotel (Wild Days), Washington, DC<meta itemprop="addressLocality" content="Silver Spring, MD"/></p>
+                        <a href="https://www.eventbrite.com/e/adomoe-gogo-pajama-jam-presented-by-moechella-adobo-dmv-tickets-68283161775" title="Tickets for Adomoe" target="_blank">
                             <button class="btn btn--right btn--tickets">TICKETS</button>
                         </a>
                     </div>
                 </div>
-            </div> */}
-            There are no upcoming events at this time  :(
+            </div>
+            {/* There are no upcoming events at this time  :( */}
             <br></br>
             <br></br>
             <br></br>

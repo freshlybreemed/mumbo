@@ -108,7 +108,7 @@ class Crank extends Component {
         <div class="recap-box">
         <div class="shows-header">UPCOMING SHOWS:</div>
         <a href="/events">
-              <img src="static/img/mumbo930.png" />
+              <img class="asset-mumbo" src="static/img/adobo-wide.png" />
             </a>
         </div>
   
