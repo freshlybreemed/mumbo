@@ -2,7 +2,7 @@
 const url = require('url')
 const MongoClient = require('mongodb').MongoClient
 
-// Create cached connection variable
+// Create cach ed connection variable
 let cachedDb = null
 
 // A function for connecting to MongoDB,

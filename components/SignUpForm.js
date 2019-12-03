@@ -48,7 +48,7 @@ class SignUpForm extends Component {
         this.getSongs()
       }
       async getSongs(){
-        await axios.get('/songs').then((songs)=>{
+        await axios.get('/karaokesongs').then((songs)=>{
           console.log(songs)
           var karaokeSongs = songs.data.users
           karaokeSongs.sort(function(a, b) {
@@ -120,11 +120,11 @@ class SignUpForm extends Component {
           }
         }).then((res) => {
           console.log("RESPONSE RECEIVED: ", res);
-          // window.location.href = "/songconfirm";
+          window.location.href = "/songconfirm";
         })
         .catch((err) => {
           console.log("AXIOS ERROR: ", err);
-          // window.location.href = "/signup";
+          window.location.href = "/signup";
         })
       }
   
@@ -136,7 +136,7 @@ class SignUpForm extends Component {
       <div class="about">
       <form class="rsvp-form">
           <div class="rsvp-form" >
-            <label for="name">First Name: </label><br></br>
+            <label for="name">Name: </label><br></br>
             <input class="signup-input"type="text"  value={this.state.FNAME} onChange={this.handleChange} name="FNAME" id="name" required/>
           </div>
           <br></br>

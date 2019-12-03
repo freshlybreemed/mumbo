@@ -1,626 +1,205 @@
-import React from 'react'
-import { Component } from "react";
+import React from 'react';
+import { Component } from 'react';
 
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
-var images = [
-  "IMG_9572.jpg",
-  "IMG_9570.jpg",
-  "IMG_9563.jpg",
-  "IMG_9562.jpg",
-  "IMG_9527.jpg",
-  "IMG_9517.jpg",
-  "IMG_9501.jpg",
-  "IMG_9500.jpg",
-  "IMG_9495.jpg",
-  "IMG_9494.jpg",
-  "IMG_9491.jpg",
-  "IMG_9490.jpg",
-  "IMG_9478.jpg",
-  "IMG_9474.jpg",
-  "IMG_9473.jpg",
-  "IMG_9471.jpg",
-  "IMG_9470.jpg",
-  "IMG_9468.jpg",
-  "IMG_9448.jpg",
-  "IMG_9446.jpg",
-  "IMG_9430.jpg",
-  "IMG_9428.jpg",
-  "IMG_9427.jpg",
-  "IMG_9379.jpg",
-  "IMG_9356.jpg",
-  "IMG_9330.jpg",
-  "IMG_9319.jpg",
-  "IMG_9311.jpg",
-  "IMG_9310.jpg",
-  "IMG_9308.jpg",
-  "IMG_9307.jpg",
-  "IMG_9305.jpg",
-  "IMG_9297.jpg",
-  "IMG_9296.jpg",
-  "IMG_9294.jpg",
-  "IMG_9293.jpg",
-  "IMG_9290.jpg",
-  "IMG_9289.jpg",
-  "IMG_9279.jpg",
-  "IMG_9278.jpg",
-  "IMG_9274.jpg",
-  "IMG_9273.jpg",
-  "IMG_9268.jpg",
-  "IMG_9265.jpg",
-  "IMG_9264.jpg",
-  "IMG_9263.jpg",
-  "IMG_9262.jpg",
-  "IMG_9261.jpg",
-  "IMG_9239.jpg",
-  "IMG_9236.jpg",
-  "IMG_9235.jpg",
-  "IMG_9234.jpg",
-  "IMG_9212.jpg",
-  "IMG_9211.jpg",
-  "IMG_9170.jpg",
-  "IMG_9164.jpg",
-  "IMG_9149.jpg",
-  "IMG_9143.jpg",
-  "IMG_9141.jpg",
-  "IMG_9139.jpg",
-  "IMG_9132.jpg",
-  "IMG_9126.jpg",
-  "IMG_9117.jpg",
-  "IMG_9116.jpg",
-  "IMG_9115.jpg",
-  "IMG_9114.jpg",
-  "IMG_9084.jpg",
-  "IMG_9082.jpg",
-  "IMG_9081.jpg",
-  "IMG_9080.jpg",
-  "IMG_9072.jpg",
-  "IMG_9049.jpg",
-  "IMG_9048.jpg",
-  "IMG_9042.jpg",
-  "IMG_9030.jpg",
-  "IMG_9025.jpg",
-  "IMG_9024.jpg",
-  "IMG_8999.jpg",
-  "IMG_8994.jpg",
-  "IMG_8993.jpg",
-  "IMG_8990.jpg",
-  "IMG_8983.jpg",
-  "IMG_8981.jpg",
-  "IMG_8977.jpg",
-  "IMG_8974.jpg",
-  "IMG_8968.jpg",
-  "IMG_8967.jpg",
-  "IMG_8958.jpg",
-  "IMG_8944.jpg",
-  "IMG_8943.jpg",
-  "IMG_8942.jpg",
-  "IMG_8941.jpg",
-  "IMG_8937.jpg",
-  "IMG_8936.jpg",
-  "IMG_8935.jpg",
-  "IMG_8931.jpg",
-  "IMG_8930.jpg",
-  "IMG_8929.jpg",
-  "IMG_8924.jpg",
-  "IMG_8923.jpg",
-  "IMG_8921.jpg",
-  "IMG_8908.jpg",
-  "IMG_8905.jpg",
-  "IMG_8904.jpg",
-  "IMG_8898.jpg",
-  "IMG_8894.jpg",
-  "IMG_8888.jpg",
-  "IMG_8885.jpg",
-  "IMG_8881.jpg",
-  "IMG_8877.jpg",
-  "IMG_8875.jpg",
-  "IMG_8874.jpg",
-  "IMG_8872.jpg",
-  "IMG_8832.jpg",
-  "IMG_8817.jpg",
-  "IMG_8808.jpg",
-  "IMG_8807.jpg",
-  "IMG_8803.jpg",
-  "IMG_8796.jpg",
-  "IMG_8791.jpg",
-  "IMG_8772.jpg",
-  "IMG_8767.jpg",
-  "IMG_8753.jpg",
-  "IMG_8749.jpg",
-  "IMG_8748.jpg",
-  "IMG_8745.jpg",
-  "IMG_8743.jpg",
-  "IMG_8741.jpg",
-  "IMG_8738.jpg",
-  "IMG_8726.jpg",
-  "IMG_8705.jpg",
-  "IMG_8702.jpg",
-  "IMG_8688.jpg",
-  "IMG_8681.jpg",
-  "IMG_8680.jpg",
-  "IMG_8677.jpg",
-  "IMG_8664.jpg",
-  "IMG_8663.jpg",
-  "IMG_8661.jpg",
-  "IMG_8645.jpg",
-  "IMG_8644.jpg",
-  "IMG_8643.jpg",
-  "IMG_8635.jpg",
-  "IMG_8634.jpg",
-  "IMG_8618.jpg",
-  "IMG_8599.jpg",
-  "IMG_8598.jpg",
-  "IMG_8596.jpg",
-  "IMG_8595.jpg",
-  "IMG_8588.jpg",
-  "IMG_8582.jpg",
-  "IMG_8580.jpg",
-  "IMG_8572.jpg",
-  "IMG_8568.jpg",
-  "IMG_8564.jpg",
-  "IMG_8555.jpg",
-  "IMG_8554.jpg",
-  "IMG_8551.jpg",
-  "IMG_8549.jpg",
-  "IMG_8548.jpg",
-  "IMG_8546.jpg",
-  "IMG_8543.jpg",
-  "IMG_8533.jpg",
-  "IMG_8527.jpg",
-  "IMG_8525.jpg",
-  "IMG_8523.jpg",
-  "IMG_8521.jpg",
-  "IMG_8518.jpg",
-  "IMG_8515.jpg",
-  "IMG_8508.jpg",
-  "IMG_8500.jpg",
-  "IMG_8498.jpg",
-  "IMG_8496.jpg",
-  "IMG_8493.jpg",
-  "IMG_8490.jpg",
-  "IMG_8489.jpg",
-  "IMG_8486.jpg",
-  "IMG_8485.jpg",
-  "IMG_8476.jpg",
-  "IMG_8473.jpg",
-  "IMG_8467.jpg",
-  "IMG_8444.jpg",
-  "IMG_8419.jpg",
-  "IMG_8418.jpg",
-  "IMG_8417.jpg",
-  "IMG_8415.jpg",
-  "IMG_8414.jpg",
-  "IMG_8413.jpg",
-  "IMG_8404.jpg",
-  "IMG_8403.jpg",
-  "IMG_8401.jpg",
-  "IMG_8398.jpg",
-  "IMG_8380.jpg",
-  "IMG_8378.jpg",
-  "IMG_8372.jpg",
-  "IMG_8370.jpg",
-  "IMG_8368.jpg",
-  "IMG_8367.jpg",
-  "IMG_8358.jpg",
-  "IMG_8356.jpg",
-  "IMG_8352.jpg",
-  "IMG_8349.jpg",
-  "IMG_8348.jpg",
-  "IMG_8347.jpg",
-  "IMG_8345.jpg",
-  "IMG_8343.jpg",
-  "IMG_8341.jpg",
-  "IMG_8338.jpg",
-  "IMG_8337.jpg",
-  "IMG_8333.jpg",
-  "IMG_8320.jpg",
-  "IMG_8319.jpg",
-  "IMG_8315.jpg",
-  "IMG_8309.jpg",
-  "IMG_8305.jpg",
-  "IMG_8297.jpg",
-  "IMG_8295.jpg",
-  "IMG_8289.jpg",
-  "IMG_8287.jpg",
-  "IMG_8285.jpg",
-  "IMG_8283.jpg",
-  "IMG_8281.jpg",
-  "IMG_8279.jpg",
-  "IMG_8277.jpg",
-  "IMG_8275.jpg",
-  "IMG_8262.jpg",
-  "IMG_8259.jpg",
-  "IMG_8258.jpg",
-  "IMG_8255.jpg",
-  "IMG_8254.jpg",
-  "IMG_8253.jpg",
-  "IMG_8247.jpg",
-  "IMG_8243.jpg",
-  "IMG_8241.jpg",
-  "IMG_8239.jpg",
-  "IMG_8237.jpg",
-  "IMG_8235.jpg",
-  "IMG_8233.jpg",
-  "IMG_8231.jpg",
-  "IMG_8228.jpg",
-  "IMG_8227.jpg",
-  "IMG_8225.jpg",
-  "IMG_8223.jpg",
-  "IMG_8222.jpg",
-  "IMG_8220.jpg",
-  "IMG_8219.jpg",
-  "IMG_8216.jpg",
-  "IMG_8214.jpg",
-  "IMG_8212.jpg",
-  "IMG_8172.jpg",
-  "IMG_8169.jpg",
-  "IMG_8168.jpg",
-  "IMG_8166.jpg",
-  "IMG_8165.jpg",
-  "IMG_8164.jpg",
-  "IMG_8163.jpg",
-  "IMG_8155.jpg",
-  "IMG_8150.jpg",
-  "IMG_8146.jpg",
-  "IMG_8145.jpg",
-  "IMG_8143.jpg",
-  "IMG_8141.jpg",
-  "IMG_8139.jpg",
-  "IMG_8136.jpg",
-  "IMG_8132.jpg",
-  "IMG_8130.jpg",
-  "IMG_8127.jpg",
-  "IMG_8121.jpg",
-  "IMG_8117.jpg",
-  "IMG_8116.jpg",
-  "IMG_8112.jpg",
-  "IMG_8111.jpg",
-  "IMG_8109.jpg",
-  "IMG_8106.jpg",
-  "IMG_8104.jpg",
-  "IMG_8101.jpg",
-  "IMG_8099.jpg",
-  "IMG_8097.jpg",
-  "IMG_8083.jpg",
-  "IMG_8081.jpg",
-  "IMG_8079.jpg",
-  "IMG_8078.jpg",
-  "IMG_8076.jpg",
-  "IMG_8075.jpg",
-  "IMG_8072.jpg",
-  "IMG_8068.jpg",
-  "IMG_8056.jpg",
-  "IMG_8053.jpg",
-  "IMG_8029.jpg",
-  "IMG_8020.jpg",
-  "IMG_8017.jpg",
-  "IMG_8015.jpg",
-  "IMG_8014.jpg",
-  "IMG_8013.jpg",
-  "IMG_8012.jpg",
-  "IMG_8011.jpg",
-  "IMG_8010.jpg",
-  "IMG_8007.jpg",
-  "IMG_8005.jpg",
-  "IMG_8001.jpg",
-  "IMG_8000.jpg",
-  "IMG_7997.jpg",
-  "IMG_7995.jpg",
-  "IMG_7991.jpg",
-  "IMG_7989.jpg",
-  "IMG_7987.jpg",
-  "IMG_7985.jpg",
-  "IMG_7984.jpg",
-  "IMG_7982.jpg",
-  "IMG_7978.jpg",
-  "IMG_7965.jpg",
-  "IMG_7964.jpg",
-  "IMG_7963.jpg",
-  "IMG_7961.jpg",
-  "IMG_7960.jpg",
-  "IMG_7959.jpg",
-  "IMG_7957.jpg",
-  "IMG_7955.jpg",
-  "IMG_7953.jpg",
-  "IMG_7951.jpg",
-  "IMG_7950.jpg",
-  "IMG_7944.jpg",
-  "IMG_7943.jpg",
-  "IMG_7940.jpg",
-  "IMG_7936.jpg",
-  "IMG_7932.jpg",
-  "IMG_7927.jpg",
-  "IMG_7925.jpg",
-  "IMG_7923.jpg",
-  "IMG_7922.jpg",
-  "IMG_7917.jpg",
-  "IMG_7916.jpg",
-  "IMG_7914.jpg",
-  "IMG_7912.jpg",
-  "IMG_7910.jpg",
-  "IMG_7909.jpg",
-  "IMG_7908.jpg",
-  "IMG_7906.jpg",
-  "IMG_7905.jpg",
-  "IMG_7904.jpg",
-  "IMG_7903.jpg",
-  "IMG_7896.jpg",
-  "IMG_7894.jpg",
-  "IMG_7893.jpg",
-  "IMG_7892.jpg",
-  "IMG_7886.jpg",
-  "IMG_7885.jpg",
-  "IMG_7880.jpg",
-  "IMG_7876.jpg",
-  "IMG_7873.jpg",
-  "IMG_7872.jpg",
-  "IMG_7871.jpg",
-  "IMG_7866.jpg",
-  "IMG_7858.jpg",
-  "IMG_7854.jpg",
-  "IMG_4337.jpg",
-  "IMG_4336.jpg",
-  "IMG_4335.jpg",
-  "IMG_4334.jpg",
-  "IMG_4333.jpg",
-  "IMG_4332.jpg",
-  "IMG_4331.jpg",
-  "IMG_4330.jpg",
-  "IMG_4329.jpg",
-  "IMG_4327.jpg",
-  "IMG_4326.jpg",
-  "IMG_4319.jpg"
-]
+let crank = [
+  <img src="static/img/cap-930-compressed/untitled-10.jpg" class="recap" />,
+  <img src="static/img/cap-930-compressed/untitled-11.jpg" class="recap" />,
+  <img src="static/img/cap-930-compressed/untitled-13.jpg" class="recap" />,
+  <img src="static/img/cap-930-compressed/untitled-14.jpg" class="recap" />,
+  <img src="static/img/cap-930-compressed/untitled-19.jpg" class="recap" />,
+  <img src="static/img/cap-930-compressed/untitled-20.jpg" class="recap" />,
+  <img src="static/img/cap-930-compressed/untitled-21.jpg" class="recap" />,
+  <img src="static/img/cap-930-compressed/untitled-22.jpg" class="recap" />,
+  <img src="static/img/cap-930-compressed/untitled-24.jpg" class="recap" />,
+  <img src="static/img/cap-930-compressed/untitled-25.jpg" class="recap" />,
+  <img src="static/img/cap-930-compressed/untitled-27.jpg" class="recap" />,
+  <img src="static/img/cap-930-compressed/untitled-28.jpg" class="recap" />,
+  <img src="static/img/cap-930-compressed/untitled-29.jpg" class="recap" />,
+  <img src="static/img/cap-930-compressed/untitled-3.jpg" class="recap" />,
+  <img src="static/img/cap-930-compressed/untitled-31.jpg" class="recap" />,
+  <img src="static/img/cap-930-compressed/untitled-33.jpg" class="recap" />,
+  <img src="static/img/cap-930-compressed/untitled-6.jpg" class="recap" />,
+  <img src="static/img/cap-930-compressed/untitled-7.jpg" class="recap" />,
+  <img src="static/img/cap-930-compressed/untitled-8.jpg" class="recap" />,
+  <img src="static/img/cap-930-compressed/untitled.jpg" class="recap" />,
+  <img src="static/img/capture/CAPTURE_3065.jpg" class="recap" />,
+  <img src="static/img/capture/CAPTURE_3029-2.jpg" class="recap" />,
+  <img src="static/img/capture/CAPTURE_3072.jpg" class="recap" />,
+  <img src="static/img/capture/CAPTURE_3048.jpg" class="recap" />,
+  <img src="static/img/capture/CAPTURE_2976.jpg" class="recap" />,
+  <img src="static/img/capture/CAPTURE_3079.jpg" class="recap" />,
+  <img src="static/img/capture/CAPTURE_3043.jpg" class="recap" />,
+  <img src="static/img/capture/CAPTURE_2982.jpg" class="recap" />,
+  <img src="static/img/capture/CAPTURE_3030.jpg" class="recap" />,
+  <img src="static/img/capture/CAPTURE_3060-2.jpg" class="recap" />,
+  <img src="static/img/capture/CAPTURE_2970.jpg" class="recap" />,
+  <img src="static/img/capture/CAPTURE_2974.jpg" class="recap" />,
+  <img src="static/img/capture/CAPTURE_3061.jpg" class="recap" />,
+  <img src="static/img/capture/CAPTURE_2946.jpg" class="recap" />,
+  <img src="static/img/capture/CAPTURE_3019.jpg" class="recap" />,
+  <img src="static/img/capture/CAPTURE_3042.jpg" class="recap" />,
+  <img src="static/img/capture/CAPTURE_2949.jpg" class="recap" />,
+  <img src="static/img/capture/CAPTURE_2951.jpg" class="recap" />,
+  <img src="static/img/capture/CAPTURE_3143.jpg" class="recap" />,
+  <img src="static/img/capture/CAPTURE_2989.jpg" class="recap" />,
+  <img src="static/img/capture/CAPTURE_3093.jpg" class="recap" />,
+  <img src="static/img/capture/CAPTURE_3058.jpg" class="recap" />,
+  <img src="static/img/capture/CAPTURE_3142.jpg" class="recap" />,
+  <img src="static/img/capture/CAPTURE_3089.jpg" class="recap" />,
+  <img src="static/img/capture/CAPTURE_2999.jpg" class="recap" />,
+  <img src="static/img/capture/CAPTURE_2987.jpg" class="recap" />,
+  <img src="static/img/capture/CAPTURE_3022.jpg" class="recap" />,
+  <img src="static/img/capture/CAPTURE_3133.jpg" class="recap" />,
+  <img src="static/img/capture/CAPTURE_3012.jpg" class="recap" />,
+  <img src="static/img/capture/CAPTURE_2998.jpg" class="recap" />,
+  <img src="static/img/capture/CAPTURE_3105.jpg" class="recap" />,
+  <img src="static/img/capture/CAPTURE_3014-2.jpg" class="recap" />,
+  <img src="static/img/capture/CAPTURE_2985.jpg" class="recap" />,
+  <img src="static/img/capture/CAPTURE_2995.jpg" class="recap" />,
+  <img src="static/img/capture/CAPTURE_3052.jpg" class="recap" />,
+  <img src="static/img/capture/CAPTURE_3097.jpg" class="recap" />,
+  <img src="static/img/capture/CAPTURE_2959.jpg" class="recap" />,
+  <img src="static/img/capture/CAPTURE_3056.jpg" class="recap" />,
+  <img src="static/img/capture/CAPTURE_3033.jpg" class="recap" />,
+  <img src="static/img/capture/CAPTURE_2983.jpg" class="recap" />,
+  <img src="static/img/capture/CAPTURE_3016.jpg" class="recap" />,
+  <img src="static/img/capture/CAPTURE_3083.jpg" class="recap" />,
+  <img src="static/img/capture/CAPTURE_3077.jpg" class="recap" />,
+  <img src="static/img/capture/CAPTURE_3139-2.jpg" class="recap" />,
+  <img src="static/img/capture/CAPTURE_3038.jpg" class="recap" />,
+  <img src="static/img/capture/CAPTURE_3121.jpg" class="recap" />,
+  <img src="static/img/capture/CAPTURE_3008.jpg" class="recap" />,
+  <img src="static/img/capture/CAPTURE_3002.jpg" class="recap" />,
+  <img src="static/img/capture/CAPTURE_3026.jpg" class="recap" />,
+  <img src="static/img/capture/CAPTURE_2944.jpg" class="recap" />,
+  <img src="static/img/capture/CAPTURE_3107.jpg" class="recap" />,
+  <img src="static/img/capture/CAPTURE_3130.jpg" class="recap" />,
+  <img src="static/img/capture/CAPTURE_3028.jpg" class="recap" />,
+  <img src="static/img/capture/CAPTURE_3006.jpg" class="recap" />,
+  <img src="static/img/capture/CAPTURE_3083-2.jpg" class="recap" />,
+  <img src="static/img/capture/CAPTURE_3035.jpg" class="recap" />,
+  <img src="static/img/capture/CAPTURE_3085.jpg" class="recap" />,
+  <img src="static/img/cap-crank2-compressed/untitled-10.jpg" class="recap" />,
+  <img src="static/img/cap-crank2-compressed/untitled-11.jpg" class="recap" />,
+  <img src="static/img/cap-crank2-compressed/untitled-12.jpg" class="recap" />,
+  <img src="static/img/cap-crank2-compressed/untitled-13.jpg" class="recap" />,
+  <img src="static/img/cap-crank2-compressed/untitled-14.jpg" class="recap" />,
+  <img src="static/img/cap-crank2-compressed/untitled-15.jpg" class="recap" />,
+  <img src="static/img/cap-crank2-compressed/untitled-16.jpg" class="recap" />,
+  <img src="static/img/cap-crank2-compressed/untitled-17.jpg" class="recap" />,
+  <img src="static/img/cap-crank2-compressed/untitled-18.jpg" class="recap" />,
+  <img src="static/img/cap-crank2-compressed/untitled-19.jpg" class="recap" />,
+  <img src="static/img/cap-crank2-compressed/untitled-2.jpg" class="recap" />,
+  <img src="static/img/cap-crank2-compressed/untitled-20.jpg" class="recap" />,
+  <img src="static/img/cap-crank2-compressed/untitled-21.jpg" class="recap" />,
+  <img src="static/img/cap-crank2-compressed/untitled-22.jpg" class="recap" />,
+  <img src="static/img/cap-crank2-compressed/untitled-23.jpg" class="recap" />,
+  <img src="static/img/cap-crank2-compressed/untitled-24.jpg" class="recap" />,
+  <img src="static/img/cap-crank2-compressed/untitled-25.jpg" class="recap" />,
+  <img src="static/img/cap-crank2-compressed/untitled-26.jpg" class="recap" />,
+  <img src="static/img/cap-crank2-compressed/untitled-27.jpg" class="recap" />,
+  <img src="static/img/cap-crank2-compressed/untitled-28.jpg" class="recap" />,
+  <img src="static/img/cap-crank2-compressed/untitled-29.jpg" class="recap" />,
+  <img src="static/img/cap-crank2-compressed/untitled-3.jpg" class="recap" />,
+  <img src="static/img/cap-crank2-compressed/untitled-31.jpg" class="recap" />,
+  <img src="static/img/cap-crank2-compressed/untitled-32.jpg" class="recap" />,
+  <img src="static/img/cap-crank2-compressed/untitled-33.jpg" class="recap" />,
+  <img src="static/img/cap-crank2-compressed/untitled-34.jpg" class="recap" />,
+  <img src="static/img/cap-crank2-compressed/untitled-35.jpg" class="recap" />,
+  <img src="static/img/cap-crank2-compressed/untitled-36.jpg" class="recap" />,
+  <img src="static/img/cap-crank2-compressed/untitled-37.jpg" class="recap" />,
+  <img src="static/img/cap-crank2-compressed/untitled-38.jpg" class="recap" />,
+  <img src="static/img/cap-crank2-compressed/untitled-39.jpg" class="recap" />,
+  <img src="static/img/cap-crank2-compressed/untitled-4.jpg" class="recap" />,
+  <img src="static/img/cap-crank2-compressed/untitled-40.jpg" class="recap" />,
+  <img src="static/img/cap-crank2-compressed/untitled-41.jpg" class="recap" />,
+  <img src="static/img/cap-crank2-compressed/untitled-42.jpg" class="recap" />,
+  <img src="static/img/cap-crank2-compressed/untitled-43.jpg" class="recap" />,
+  <img src="static/img/cap-crank2-compressed/untitled-44.jpg" class="recap" />,
+  <img src="static/img/cap-crank2-compressed/untitled-5.jpg" class="recap" />,
+  <img src="static/img/cap-crank2-compressed/untitled-6.jpg" class="recap" />,
+  <img src="static/img/cap-crank2-compressed/untitled-7.jpg" class="recap" />,
+  <img src="static/img/cap-crank2-compressed/untitled-8.jpg" class="recap" />,
+  <img src="static/img/cap-crank2-compressed/untitled-9.jpg" class="recap" />,
+  <img src="static/img/cap-crank2-compressed/untitled.jpg" class="recap" />,
+];
 
-let crank =[
-  <img src="static/img/josef/img_7683jpg_48075616996_o.jpg" class="home-image"/>,   
-  <img src="static/img/josef/img_7352jpg_48075703172_o.jpg" class="home-image"/>,   
-  <img src="static/img/josef/img_7600jpg_48075716462_o.jpg" class="home-image"/>,   
-  <img src="static/img/josef/img_7554jpg_48075605111_o.jpg" class="home-image"/>,   
-  <img src="static/img/josef/img_7436jpg_48075639108_o.jpg" class="home-image"/>,   
-  <img src="static/img/josef/img_7778jpg_48075728477_o.jpg" class="home-image"/>,   
-  <img src="static/img/josef/img_7407jpg_48075705492_o.jpg" class="home-image"/>,   
-  <img src="static/img/josef/img_7940jpg_48075646406_o.jpg" class="home-image"/>,   
-  <img src="static/img/josef/img_7813jpg_48075628356_o.jpg" class="home-image"/>,   
-  <img src="static/img/josef/img_7975jpg_48075754552_o.jpg" class="home-image"/>,   
-  <img src="static/img/josef/img_8140jpg_48075704398_o.jpg" class="home-image"/>,
-  <img src="static/img/josef/img_7831jpg_48075669178_o.jpg" class="home-image"/>,   
-  <img src="static/img/josef/img_8109jpg_48075663571_o.jpg" class="home-image"/>,
-  <img src="static/img/josef/img_7642jpg_48075654063_o.jpg" class="home-image"/>,   
-  <img src="static/img/josef/img_8033jpg_48075694413_o.jpg" class="home-image"/>,
-  <img src="static/img/josef/img_7620jpg_48075719102_o.jpg" class="home-image"/>,   
-  <img src="static/img/josef/img_7907jpg_48075640636_o.jpg" class="home-image"/>,   
-  <img src="static/img/josef/img_7764jpg_48075727292_o.jpg" class="home-image"/>,   
-  <img src="static/img/josef/img_7919jpg_48075642761_o.jpg" class="home-image"/>,   
-  <img src="static/img/josef/img_7514jpg_48075707062_o.jpg" class="home-image"/>,   
-  <img src="static/img/josef/img_8064jpg_48075699008_o.jpg" class="home-image"/>,
-  <img src="static/img/josef/img_8011jpg_48075653926_o.jpg" class="home-image"/>,
-  <img src="static/img/josef/img_7822jpg_48075667818_o.jpg" class="home-image"/>,   
-  <img src="static/img/josef/img_8102jpg_48075767052_o.jpg" class="home-image"/>,
-  <img src="static/img/josef/img_8207jpg_48075713823_o.jpg" class="home-image"/>,
-  <img src="static/img/josef/img_7933jpg_48075750217_o.jpg" class="home-image"/>,   
-  <img src="static/img/josef/img_7788jpg_48075625761_o.jpg" class="home-image"/>,   
-  <img src="static/img/josef/img_7889jpg_48075676573_o.jpg" class="home-image"/>,   
-  <img src="static/img/josef/img_8156jpg_48075705783_o.jpg" class="home-image"/>,
-  <img src="static/img/josef/img_7880jpg_48075673998_o.jpg" class="home-image"/>,   
-  <img src="static/img/josef/img_7875jpg_48075739542_o.jpg" class="home-image"/>,   
-  <img src="static/img/josef/img_8210jpg_48075780857_o.jpg" class="home-image"/>,
-  <img src="static/img/josef/img_7676jpg_48075615711_o.jpg" class="home-image"/>,   
-  <img src="static/img/josef/img_7916jpg_48075642281_o.jpg" class="home-image"/>,   
-  <img src="static/img/josef/img_7911jpg_48075640941_o.jpg" class="home-image"/>,   
-  <img src="static/img/josef/img_8135jpg_48075770372_o.jpg" class="home-image"/>,
-  <img src="static/img/josef/img_7949jpg_48075647756_o.jpg" class="home-image"/>,   
-  <img src="static/img/josef/img_7395jpg_48075704257_o.jpg" class="home-image"/>,   
-  <img src="static/img/josef/img_8203jpg_48075674081_o.jpg" class="home-image"/>,
-  <img src="static/img/josef/img_7979jpg_48075689108_o.jpg" class="home-image"/>,   
-  <img src="static/img/josef/img_7893jpg_48075743317_o.jpg" class="home-image"/>,   
-  <img src="static/img/josef/img_7965jpg_48075685843_o.jpg" class="home-image"/>,   
-  <img src="static/img/josef/img_8225jpg_48075678551_o.jpg" class="home-image"/>,
-  <img src="static/img/josef/img_8149jpg_48075667231_o.jpg" class="home-image"/>,
-  <img src="static/img/josef/img_7708jpg_48075723832_o.jpg" class="home-image"/>,   
-  <img src="static/img/josef/img_7537jpg_48075710057_o.jpg" class="home-image"/>,   
-  <img src="static/img/josef/img_8243jpg_48075719158_o.jpg" class="home-image"/>,
-  <img src="static/img/josef/img_7544jpg_48075635893_o.jpg" class="home-image"/>,   
-  <img src="static/img/josef/img_7724jpg_48075659058_o.jpg" class="home-image"/>,   
-  <img src="static/img/josef/img_7628jpg_48075652978_o.jpg" class="home-image"/>,   
-  <img src="static/img/josef/img_8111jpg_48075768442_o.jpg" class="home-image"/>,
-  <img src="static/img/josef/img_8052jpg_48075658236_o.jpg" class="home-image"/>,
-  <img src="static/img/josef/img_7782jpg_48075662423_o.jpg" class="home-image"/>,   
-  <img src="static/img/josef/img_8192jpg_48075671086_o.jpg" class="home-image"/>,
-  <img src="static/img/josef/img_8221jpg_48075677306_o.jpg" class="home-image"/>,
-  <img src="static/img/josef/img_7596jpg_48075649538_o.jpg" class="home-image"/>,   
-  <img src="static/img/josef/img_7493jpg_48075601721_o.jpg" class="home-image"/>,   
-  <img src="static/img/josef/img_8042jpg_48075694863_o.jpg" class="home-image"/>,
-  <img src="static/img/josef/img_7993jpg_48075652211_o.jpg" class="home-image"/>,   
-  <img src="static/img/josef/img_8239jpg_48075785217_o.jpg" class="home-image"/>,
-  <img src="static/img/josef/img_7611jpg_48075651413_o.jpg" class="home-image"/>,   
-  <img src="static/img/josef/img_8197jpg_48075778192_o.jpg" class="home-image"/>,
-  <img src="static/img/josef/img_7743jpg_48075659818_o.jpg" class="home-image"/>,   
-  <img src="static/img/josef/img_7533jpg_48075642338_o.jpg" class="home-image"/>,   
-  <img src="static/img/josef/img_7606jpg_48075612376_o.jpg" class="home-image"/>,   
-  <img src="static/img/josef/img_8213jpg_48075676976_o.jpg" class="home-image"/>,
-  <img src="static/img/josef/img_7793jpg_48075626631_o.jpg" class="home-image"/>,   
-  <img src="static/img/josef/img_8130jpg_48075703388_o.jpg" class="home-image"/>,
-  <img src="static/img/josef/img_8188jpg_48075708818_o.jpg" class="home-image"/>,
-  <img src="static/img/josef/img_7870jpg_48075739152_o.jpg" class="home-image"/>,   
-  <img src="static/img/josef/img_7806jpg_48075665733_o.jpg" class="home-image"/>,   
-  <img src="static/img/josef/img_8166jpg_48075707203_o.jpg" class="home-image"/>,
-  <img src="static/img/josef/img_7358jpg_48075599051_o.jpg" class="home-image"/>,   
-  <img src="static/img/josef/img_7927jpg_48075644396_o.jpg" class="home-image"/>,   
-  <img src="static/img/josef/img_7840jpg_48075631831_o.jpg" class="home-image"/>,   
-  <img src="static/img/josef/img_7720jpg_48075657698_o.jpg" class="home-image"/>,   
-  <img src="static/img/josef/img_7694jpg_48075722227_o.jpg" class="home-image"/>,   
-  <img src="static/img/josef/img_8003jpg_48075690728_o.jpg" class="home-image"/>,   
-  <img src="static/img/josef/img_7525jpg_48075603231_o.jpg" class="home-image"/>,   
-  <img src="static/img/josef/img_7931jpg_48075749017_o.jpg" class="home-image"/>,   
-  <img src="static/img/josef/img_7347jpg_48075636308_o.jpg" class="home-image"/>,
-  <img src="static/img/josef/img_7563jpg_48075606401_o.jpg" class="home-image"/>,   
-  <img src="static/img/josef/img_7816jpg_48075667398_o.jpg" class="home-image"/>,   
-  <img src="static/img/josef/img_7775jpg_48075622971_o.jpg" class="home-image"/>,   
-  <img src="static/img/josef/img_8223jpg_48075717258_o.jpg" class="home-image"/>,
-  <img src="static/img/josef/img_8057jpg_48075697238_o.jpg" class="home-image"/>,
-  <img src="static/img/josef/img_8022jpg_48075758577_o.jpg" class="home-image"/>,
-  <img src="static/img/josef/img_8116jpg_48075664556_o.jpg" class="home-image"/>,
-  <img src="static/img/josef/img_7856jpg_48075670508_o.jpg" class="home-image"/>,   
-  <img src="static/img/josef/img_7897jpg_48075678033_o.jpg" class="home-image"/>,   
-  <img src="static/img/josef/img_7865jpg_48075633116_o.jpg" class="home-image"/>,   
-  <img src="static/img/josef/img_8185jpg_48075669056_o.jpg" class="home-image"/>,
-  <img src="static/img/josef/img_7574jpg_48075606891_o.jpg" class="home-image"/>,   
-  <img src="static/img/josef/img_8076jpg_48075700358_o.jpg" class="home-image"/>,
-  <img src="static/img/josef/img_8069jpg_48075660751_o.jpg" class="home-image"/>,
-  <img src="static/img/josef/img_8069jpg_48075660751_o.jpg" class="home-image"/>,
-  <img src="static/img/capture/CAPTURE_2946.jpg" class="home-image"/>,
-  <img src="static/img/capture/CAPTURE_2946.jpg" class="home-image"/>,
-  <img src="static/img/capture/CAPTURE_2944.jpg" class="home-image"/>,
-  <img src="static/img/capture/CAPTURE_2949.jpg" class="home-image"/>,
-  <img src="static/img/capture/CAPTURE_2951.jpg" class="home-image"/>,
-  <img src="static/img/capture/CAPTURE_2959.jpg" class="home-image"/>,
-  <img src="static/img/capture/CAPTURE_2970.jpg" class="home-image"/>,
-  <img src="static/img/capture/CAPTURE_2974.jpg" class="home-image"/>,
-  <img src="static/img/capture/CAPTURE_2976.jpg" class="home-image"/>,
-  <img src="static/img/capture/CAPTURE_2982.jpg" class="home-image"/>,
-  <img src="static/img/capture/CAPTURE_2983.jpg" class="home-image"/>,
-  <img src="static/img/capture/CAPTURE_2985.jpg" class="home-image"/>,
-  <img src="static/img/capture/CAPTURE_2987.jpg" class="home-image"/>,
-  <img src="static/img/capture/CAPTURE_2989.jpg" class="home-image"/>,
-  <img src="static/img/capture/CAPTURE_2995.jpg" class="home-image"/>,
-  <img src="static/img/capture/CAPTURE_2998.jpg" class="home-image"/>,
-  <img src="static/img/capture/CAPTURE_2999.jpg" class="home-image"/>,
-  <img src="static/img/capture/CAPTURE_3002.jpg" class="home-image"/>,
-  <img src="static/img/capture/CAPTURE_3006.jpg" class="home-image"/>,
-  <img src="static/img/capture/CAPTURE_3008.jpg" class="home-image"/>,
-  <img src="static/img/capture/CAPTURE_3012.jpg" class="home-image"/>,
-  <img src="static/img/capture/CAPTURE_3014-2.jpg" class="home-image"/>,
-  <img src="static/img/capture/CAPTURE_3016.jpg" class="home-image"/>,
-  <img src="static/img/capture/CAPTURE_3019.jpg" class="home-image"/>,
-  <img src="static/img/capture/CAPTURE_3022.jpg" class="home-image"/>,
-  <img src="static/img/capture/CAPTURE_3026.jpg" class="home-image"/>,
-  <img src="static/img/capture/CAPTURE_3028.jpg" class="home-image"/>,
-  <img src="static/img/capture/CAPTURE_3029-2.jpg" class="home-image"/>,
-  <img src="static/img/capture/CAPTURE_3030.jpg" class="home-image"/>,
-  <img src="static/img/capture/CAPTURE_3033.jpg" class="home-image"/>,
-  <img src="static/img/capture/CAPTURE_3035.jpg" class="home-image"/>,
-  <img src="static/img/capture/CAPTURE_3038.jpg" class="home-image"/>,
-  <img src="static/img/capture/CAPTURE_3042.jpg" class="home-image"/>,
-  <img src="static/img/capture/CAPTURE_3043.jpg" class="home-image"/>,
-  <img src="static/img/capture/CAPTURE_3048.jpg" class="home-image"/>,
-  <img src="static/img/capture/CAPTURE_3052.jpg" class="home-image"/>,
-  <img src="static/img/capture/CAPTURE_3056.jpg" class="home-image"/>,
-  <img src="static/img/capture/CAPTURE_3058.jpg" class="home-image"/>,
-  <img src="static/img/capture/CAPTURE_3060-2.jpg" class="home-image"/>,
-  <img src="static/img/capture/CAPTURE_3061.jpg" class="home-image"/>,
-  <img src="static/img/capture/CAPTURE_3065.jpg" class="home-image"/>,
-  <img src="static/img/capture/CAPTURE_3072.jpg" class="home-image"/>,
-  <img src="static/img/capture/CAPTURE_3077.jpg" class="home-image"/>,
-  <img src="static/img/capture/CAPTURE_3079.jpg" class="home-image"/>,
-  <img src="static/img/capture/CAPTURE_3083-2.jpg" class="home-image"/>,
-  <img src="static/img/capture/CAPTURE_3083.jpg" class="home-image"/>,
-  <img src="static/img/capture/CAPTURE_3085.jpg" class="home-image"/>,
-  <img src="static/img/capture/CAPTURE_3089.jpg" class="home-image"/>,
-  <img src="static/img/capture/CAPTURE_3093.jpg" class="home-image"/>,
-  <img src="static/img/capture/CAPTURE_3097.jpg" class="home-image"/>,
-  <img src="static/img/capture/CAPTURE_3105.jpg" class="home-image"/>,
-  <img src="static/img/capture/CAPTURE_3107.jpg" class="home-image"/>,
-  <img src="static/img/capture/CAPTURE_3121.jpg" class="home-image"/>,
-  <img src="static/img/capture/CAPTURE_3127.jpg" class="home-image"/>,
-  <img src="static/img/capture/CAPTURE_3130.jpg" class="home-image"/>,
-  <img src="static/img/capture/CAPTURE_3133.jpg" class="home-image"/>,
-  <img src="static/img/capture/CAPTURE_3139-2.jpg" class="home-image"/>,
-  <img src="static/img/capture/CAPTURE_3142.jpg" class="home-image"/>,
-  <img src="static/img/capture/CAPTURE_3143.jpg" class="home-image"/>
-]
-const pickAnImage = (array) => {
-  var image = array[Math.floor(Math.random()*array.length)]
-  console.log(image)
-  return "static/img/930-recap/"+image
-}
-
-const randomize = (array) => {
-  var image = array[Math.floor(Math.random()*array.length)]
-  return image
-}
+const randomize = array => {
+  var image = array[Math.floor(Math.random() * array.length)];
+  return image;
+};
 
 const Index = () => (
   <div class="wrapper">
-    <title>Chicken & Mumbo Sauce</title>
+    <title>Crank Karaoke</title>
     <Navigation />
     <div class="row">
-          <div class="venue-title">CRANK KARAOKE<br></br></div>
-    </div> 
-
-
-    <br></br>
-    {randomize(crank)}
-    <br></br>
-    <div class="row">
-      {/* <img src="static/img/logocrank-2.png" class="flyerimage" /> */}
-
-        <div class="venue-title">9:30 CLUB</div>
-        <div class="date">FRI. SEPT 13th</div>
-      </div>
-      <div class="row">
-        <div class="date">10PM - 3AM</div>
-      </div>
-      <div class="row">
-        <div class="lineup">815 V ST NW DC 20001</div>
-      </div>
-      <div class="row">
+      <div class="lineup"> </div>
       <br></br>
-      <form action="https://www.ticketfly.com/purchase/event/1883490">
-          <input type="submit" value="TICKETS"/>
-        </form>
-      <div class="row">
-        <div class="tickets"><img class="yellow-star" src="static/img/yellowstar.png"/>
-              THIS IS YOUR NIGHT 
-          TO BE LEAD MIC
-          <img class="yellow-star" src="static/img/yellowstar.png"/>
-        </div>
-        <br />
-        <div class="about"> Crank Karaoke, a one of a kind, improv jam session & open mic where the funky sounds of go-go collide with community. Look forward to experiencing impromptu karaoke moments and creative expression in a safe space with no judgement! Featuring a live band of former go-go band musicians, party where beginners and experts can share the stage to learn and create together and restore the culture and power of go-go.
-        <br /><br />List drops Monday 9/9!
-      </div>
-      </div> 
     </div>
-    <br></br>    
-    <div class="features"> 
-      <img class="home-flag" src="static/img/CRANK-KARAOKE-FLYER.png"></img>
-
+    <img src="static/img/crank-christmas.png" class="flyerimage" />
+    <img src="static/img/cash.gif" class="cash" />
+    <div class="features">
+      <div class="item">LIVE BAND</div>
+      <img class="yellow-star" src="static/img/yellowstar.png"></img>
+      <div class="item">GO-GO KARAKOKE </div>
+      <img class="yellow-star" src="static/img/yellowstar.png"></img>
+      <div class="item">JAM SESSION</div>
     </div>
-    {/* <a href="/930-recap">
-      <button class="btn--tickets-center">930 RECAP PHOTOS</button>
-      </a> */}
-          <br></br>
-
-        <div class="row">
-          <br></br>
-          <div class="home-header">HERE'S WHAT HAPPENED LAST TIME</div>
-            <a target="_blank" href="https://www.instagram.com/p/By-7c85hYOz/"><img class="zoom" src="static/img/crank-flick.png" /></a>
-          </div> 
-    <div class="recap-box">
-  
-
-
-    </div>
-
     <div class="row">
-        <div class="tickets">WANT MORE MUMBO? </div><br></br>
-    </div> 
-      
-    <form action="https://chickenandmumbosauce.us3.list-manage.com/subscribe/post?u=b930e7c77036dd2a9685eb47e&amp;id=02c06b1c6e" method="post" class="rsvp-form">
-        <div class="rsvp-form">
-            <label for="email">Email Address: </label><br></br>
-            <input class="signup-input" type="email" name="EMAIL" id="email" required/>
+      <div class="venue-title">U ST. MUSIC HALL</div>
+      <br></br>
+    </div>
+    <div class="row">
+      <div class="lineup-bigger">HOSTED BY: WALK LIKE WALT</div>
+    </div>
+    <div class="row">
+      {/* <div class="lineup">DJ SETS: FILET MIGNON & MALCOLM XAVIER </div> */}
+    </div>
+    <div class="row">
+      <div class="date">THURS. DEC 26th</div>
+    </div>
+    <div class="row">
+      <div class="date">9PM - 2AM</div>
+    </div>
+    <div class="row">
+      <div class="lineup">1115A U ST NW DC</div>
+    </div>
+    <div class="row">
+      <br></br>
+      <form action="https://www.bigneon.com/tickets/crank-karaoke-washington">
+        <input type="submit" value="TICKETS" />
+      </form>
+      <div class="row">
+        <div class="tickets">
+          <img class="yellow-star" src="static/img/yellowstar.png" />
+          THIS IS YOUR NIGHT TO BE LEAD MIC
+          <img class="yellow-star" src="static/img/yellowstar.png" />
         </div>
-            <button class="btn btn--right btn--tickets">STAMP</button>
-        </form>
-        <br></br>
-      <footer><Footer /></footer>
+      </div>
+      <div class="row">
+        {/* <div class="about">
+          Crank Karaoke is a one of a kind, improv jam session and open mic
+          where the funky sounds of go-go collide with community to experience
+          music together and express themselves freely. Featuring a live band of
+          former go-go band musicians, look forward to a karaoke-inspired
+          experience with a not-so-shy audience singing popular covers and
+          renditions of culturally relevant songs. Essentially, it’s a party
+          where beginners and experts can share the stage to learn and create
+          together. We know the power of go-go music and we want to use it to
+          restore the culture not exploit it.{' '}
+        </div>
+        <br></br> */}
+        <img src="static/img/onstage.gif" class="gif" id="logos" />
+        {/* Its not a hit until a go-go band remakes it! */}
+      </div>
+      <br></br>
+      <br></br>
+    </div>
   </div>
-  )
-
-
+);
 
 export default Index;
-  

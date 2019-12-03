@@ -7,9 +7,7 @@ const Crank = () => (
     <div class="row">
       <title>Crank Karaoke List</title>
       <img src="static/img/logocrank.png" class="flyerimage" />
-
       <Karaoke />
-    {/* <Stripe /> */}
     </div>
 )
 export default Crank
