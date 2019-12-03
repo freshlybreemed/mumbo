@@ -48,7 +48,7 @@ class SignUpForm extends Component {
         this.getSongs()
       }
       async getSongs(){
-        await axios.get('/songs').then((songs)=>{
+        await axios.get('/karaokesongs').then((songs)=>{
           console.log(songs)
           var karaokeSongs = songs.data.users
           karaokeSongs.sort(function(a, b) {
@@ -108,7 +108,7 @@ class SignUpForm extends Component {
         e.preventDefault();
         await axios({
           method: 'post',
-          url: '/signup',
+          url: '/create',
           data: {
             artist: this.state.ARTIST,
             song: this.state.SONG,
@@ -136,7 +136,7 @@ class SignUpForm extends Component {
       <div class="about">
       <form class="rsvp-form">
           <div class="rsvp-form" >
-            <label for="name">First Name: </label><br></br>
+            <label for="name">Name: </label><br></br>
             <input class="signup-input"type="text"  value={this.state.FNAME} onChange={this.handleChange} name="FNAME" id="name" required/>
           </div>
           <br></br>

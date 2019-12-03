@@ -1,123 +1,866 @@
-import React from 'react'
-import Footer from '../components/Footer'
-import Navigation from '../components/Navigation'
-import withPost from 'nextein/post'
+import React from 'react';
+import Footer from '../components/Footer';
+import Navigation from '../components/Navigation';
+import withPost from 'nextein/post';
 
 const Recap = () => {
-    return(
-        <div class="wrapper">
-            <title>Recap</title>
-            <Navigation />
-            <div class="row"> 
-                <img src="static/img/logocrank.png" class="cash"/>
-                {/* <div class="row">
-                    <div class="lineup">4-11-19 @ BIG CHIEF</div><br></br>
+  return (
+    <div class="wrapper">
+      <title>Recap</title>
+      <Navigation />
+      <div class="row">
+        <img src="static/img/logocrank.png" class="cash" />
+        {/* <div class="row">
+                    <div class="lineup">9-13-19 @ 9:30 CLUB</div><br></br>
                 </div>  */}
-                <div class="row">
-                    <div class="lineup">PHOTOS BY <a class="instalink" href="http://www.instagram.com/thatmanztyy">@THATMANZTYY</a></div><br></br>
-                </div>
-                    <img src="static/img/josef/img_7683jpg_48075616996_o.jpg" class="recap"/>   
-                    <img src="static/img/josef/img_7352jpg_48075703172_o.jpg" class="recap"/>   
-                    <img src="static/img/josef/img_7600jpg_48075716462_o.jpg" class="recap"/>   
-                    <img src="static/img/josef/img_7554jpg_48075605111_o.jpg" class="recap"/>   
-                    <img src="static/img/josef/img_7436jpg_48075639108_o.jpg" class="recap"/>   
-                    <img src="static/img/josef/img_7778jpg_48075728477_o.jpg" class="recap"/>   
-                    <img src="static/img/josef/img_7407jpg_48075705492_o.jpg" class="recap"/>   
-                    <img src="static/img/josef/img_7940jpg_48075646406_o.jpg" class="recap"/>   
-                    <img src="static/img/josef/img_7813jpg_48075628356_o.jpg" class="recap"/>   
-                    <img src="static/img/josef/img_7975jpg_48075754552_o.jpg" class="recap"/>   
-                    <img src="static/img/josef/img_8140jpg_48075704398_o.jpg" class="recap"/>
-                    <img src="static/img/josef/img_7831jpg_48075669178_o.jpg" class="recap"/>   
-                    <img src="static/img/josef/img_8109jpg_48075663571_o.jpg" class="recap"/>
-                    <img src="static/img/josef/img_7642jpg_48075654063_o.jpg" class="recap"/>   
-                    <img src="static/img/josef/img_8033jpg_48075694413_o.jpg" class="recap"/>
-                    <img src="static/img/josef/img_7620jpg_48075719102_o.jpg" class="recap"/>   
-                    <img src="static/img/josef/img_7907jpg_48075640636_o.jpg" class="recap"/>   
-                    <img src="static/img/josef/img_7764jpg_48075727292_o.jpg" class="recap"/>   
-                    <img src="static/img/josef/img_7919jpg_48075642761_o.jpg" class="recap"/>   
-                    <img src="static/img/josef/img_7514jpg_48075707062_o.jpg" class="recap"/>   
-                    <img src="static/img/josef/img_8064jpg_48075699008_o.jpg" class="recap"/>
-                    <img src="static/img/josef/img_8011jpg_48075653926_o.jpg" class="recap"/>
-                    <img src="static/img/josef/img_7822jpg_48075667818_o.jpg" class="recap"/>   
-                    <img src="static/img/josef/img_8102jpg_48075767052_o.jpg" class="recap"/>
-                    <img src="static/img/josef/img_8207jpg_48075713823_o.jpg" class="recap"/>
-                    <img src="static/img/josef/img_7933jpg_48075750217_o.jpg" class="recap"/>   
-                    <img src="static/img/josef/img_7788jpg_48075625761_o.jpg" class="recap"/>   
-                    <img src="static/img/josef/img_7889jpg_48075676573_o.jpg" class="recap"/>   
-                    <img src="static/img/josef/img_8156jpg_48075705783_o.jpg" class="recap"/>
-                    <img src="static/img/josef/img_7880jpg_48075673998_o.jpg" class="recap"/>   
-                    <img src="static/img/josef/img_7875jpg_48075739542_o.jpg" class="recap"/>   
-                    <img src="static/img/josef/img_8210jpg_48075780857_o.jpg" class="recap"/>
-                    <img src="static/img/josef/img_7676jpg_48075615711_o.jpg" class="recap"/>   
-                    <img src="static/img/josef/img_7916jpg_48075642281_o.jpg" class="recap"/>   
-                    <img src="static/img/josef/img_7911jpg_48075640941_o.jpg" class="recap"/>   
-                    <img src="static/img/josef/img_8135jpg_48075770372_o.jpg" class="recap"/>
-                    <img src="static/img/josef/img_7949jpg_48075647756_o.jpg" class="recap"/>   
-                    <img src="static/img/josef/img_7395jpg_48075704257_o.jpg" class="recap"/>   
-                    <img src="static/img/josef/img_8203jpg_48075674081_o.jpg" class="recap"/>
-                    <img src="static/img/josef/img_7979jpg_48075689108_o.jpg" class="recap"/>   
-                    <img src="static/img/josef/img_7893jpg_48075743317_o.jpg" class="recap"/>   
-                    <img src="static/img/josef/img_7965jpg_48075685843_o.jpg" class="recap"/>   
-                    <img src="static/img/josef/img_8225jpg_48075678551_o.jpg" class="recap"/>
-                    <img src="static/img/josef/img_8149jpg_48075667231_o.jpg" class="recap"/>
-                    <img src="static/img/josef/img_7708jpg_48075723832_o.jpg" class="recap"/>   
-                    <img src="static/img/josef/img_7537jpg_48075710057_o.jpg" class="recap"/>   
-                    <img src="static/img/josef/img_8243jpg_48075719158_o.jpg" class="recap"/>
-                    <img src="static/img/josef/img_7544jpg_48075635893_o.jpg" class="recap"/>   
-                    <img src="static/img/josef/img_7724jpg_48075659058_o.jpg" class="recap"/>   
-                    <img src="static/img/josef/img_7628jpg_48075652978_o.jpg" class="recap"/>   
-                    <img src="static/img/josef/img_8111jpg_48075768442_o.jpg" class="recap"/>
-                    <img src="static/img/josef/img_8052jpg_48075658236_o.jpg" class="recap"/>
-                    <img src="static/img/josef/img_7782jpg_48075662423_o.jpg" class="recap"/>   
-                    <img src="static/img/josef/img_8192jpg_48075671086_o.jpg" class="recap"/>
-                    <img src="static/img/josef/img_8221jpg_48075677306_o.jpg" class="recap"/>
-                    <img src="static/img/josef/img_7596jpg_48075649538_o.jpg" class="recap"/>   
-                    <img src="static/img/josef/img_7493jpg_48075601721_o.jpg" class="recap"/>   
-                    <img src="static/img/josef/img_8042jpg_48075694863_o.jpg" class="recap"/>
-                    <img src="static/img/josef/img_7993jpg_48075652211_o.jpg" class="recap"/>   
-                    <img src="static/img/josef/img_8239jpg_48075785217_o.jpg" class="recap"/>
-                    <img src="static/img/josef/img_7611jpg_48075651413_o.jpg" class="recap"/>   
-                    <img src="static/img/josef/img_8197jpg_48075778192_o.jpg" class="recap"/>
-                    <img src="static/img/josef/img_7743jpg_48075659818_o.jpg" class="recap"/>   
-                    <img src="static/img/josef/img_7533jpg_48075642338_o.jpg" class="recap"/>   
-                    <img src="static/img/josef/img_7606jpg_48075612376_o.jpg" class="recap"/>   
-                    <img src="static/img/josef/img_8213jpg_48075676976_o.jpg" class="recap"/>
-                    <img src="static/img/josef/img_7793jpg_48075626631_o.jpg" class="recap"/>   
-                    <img src="static/img/josef/img_8130jpg_48075703388_o.jpg" class="recap"/>
-                    <img src="static/img/josef/img_8188jpg_48075708818_o.jpg" class="recap"/>
-                    <img src="static/img/josef/img_7870jpg_48075739152_o.jpg" class="recap"/>   
-                    <img src="static/img/josef/img_7806jpg_48075665733_o.jpg" class="recap"/>   
-                    <img src="static/img/josef/img_8166jpg_48075707203_o.jpg" class="recap"/>
-                    <img src="static/img/josef/img_7358jpg_48075599051_o.jpg" class="recap"/>   
-                    <img src="static/img/josef/img_7927jpg_48075644396_o.jpg" class="recap"/>   
-                    <img src="static/img/josef/img_7840jpg_48075631831_o.jpg" class="recap"/>   
-                    <img src="static/img/josef/img_7720jpg_48075657698_o.jpg" class="recap"/>   
-                    <img src="static/img/josef/img_7694jpg_48075722227_o.jpg" class="recap"/>   
-                    <img src="static/img/josef/img_8003jpg_48075690728_o.jpg" class="recap"/>   
-                    <img src="static/img/josef/img_7525jpg_48075603231_o.jpg" class="recap"/>   
-                    <img src="static/img/josef/img_7931jpg_48075749017_o.jpg" class="recap"/>   
-                    <img src="static/img/josef/img_7347jpg_48075636308_o.jpg" class="recap"/>   
+        <div class="row">
+          <div class="lineup">
+            PHOTOS BY{' '}
+            <a class="instalink" href="http://www.instagram.com/thatmanztyy">
+              @THATMANZTYY
+            </a>{' '}
+            +{' '}
+            <a class="instalink" href="http://www.instagram.com/jadaimanim">
+              @JADAIMANIM
+            </a>
+          </div>
+          <br></br>
+        </div>
+        <img
+          src="static/img/jada-crank2-compressed/700A0396.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0384.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0260.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0277.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0229.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0451.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0522.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0642.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0327.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0235.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0230.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0187.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0349.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0239.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0482.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0167.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0639.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0265.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0572.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0253.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0515.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0345.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0603.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0322.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0564.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0195.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0232.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0532.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0607.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0386.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0513.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0554.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0471.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0596.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0348.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0625.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0611.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0436.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0478.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0180.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0185.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0186.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0174.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0233.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0622.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0135.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0601.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0151.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0330.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0584.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0462.jpg"
+          class="recap"
+        />
 
-                    <img src="static/img/josef/img_7563jpg_48075606401_o.jpg" class="recap"/>   
-                    <img src="static/img/josef/img_7816jpg_48075667398_o.jpg" class="recap"/>   
-                    <img src="static/img/josef/img_7775jpg_48075622971_o.jpg" class="recap"/>   
-                    <img src="static/img/josef/img_8223jpg_48075717258_o.jpg" class="recap"/>
-                    <img src="static/img/josef/img_8057jpg_48075697238_o.jpg" class="recap"/>
-                    <img src="static/img/josef/img_8022jpg_48075758577_o.jpg" class="recap"/>
+        <img
+          src="static/img/jada-crank2-compressed/700A0240.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1277jpg_48752605352_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0347.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0530.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1512jpg_48762088806_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1519jpg_48762090396_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0499.jpg"
+          class="recap"
+        />
 
-                    <img src="static/img/josef/img_8116jpg_48075664556_o.jpg" class="recap"/>
-                    <img src="static/img/josef/img_7856jpg_48075670508_o.jpg" class="recap"/>   
-                    <img src="static/img/josef/img_7897jpg_48075678033_o.jpg" class="recap"/>   
-                    <img src="static/img/josef/img_7865jpg_48075633116_o.jpg" class="recap"/>   
-                    <img src="static/img/josef/img_8185jpg_48075669056_o.jpg" class="recap"/>
-                    <img src="static/img/josef/img_7574jpg_48075606891_o.jpg" class="recap"/>   
-                    <img src="static/img/josef/img_8076jpg_48075700358_o.jpg" class="recap"/>
-                    <img src="static/img/josef/img_8069jpg_48075660751_o.jpg" class="recap"/>
+        <img
+          src="static/img/josef-crank-compressed/img_1037jpg_48740782096_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0529.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0237.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1157jpg_48752378846_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1011jpg_48740965142_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0215.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1069jpg_48740970147_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1177jpg_48752572302_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_0923jpg_48740960492_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_0847jpg_48740772276_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0502.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0383.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1046jpg_48740455113_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1582jpg_48761775913_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1467jpg_48762087541_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1139jpg_48740975932_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1562jpg_48762279337_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0619.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1465jpg_48762274607_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0318.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0505.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0208.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0487.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1062jpg_48740457288_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1218jpg_48752073463_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1284jpg_48752095143_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1125jpg_48740463023_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0313.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1577jpg_48762279972_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0374.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1461jpg_48762273757_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0498.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0583.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0527.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0190.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0408.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0287.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1355jpg_48752235313_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_0950jpg_48740448033_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0389.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0343.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0334.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1393jpg_48752754712_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0286.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0594.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0131.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1213jpg_48752072008_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0244.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1428jpg_48761767303_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_0857jpg_48740957802_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0225.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0403.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0145.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0172.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0181.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0171.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1146jpg_48740976327_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0364.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0241.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_0909jpg_48740774496_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0143.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0246.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1506jpg_48762088011_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0342.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0420.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0147.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_0984jpg_48740778716_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0375.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1337jpg_48752558726_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1086jpg_48740970767_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1122jpg_48740790001_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1099jpg_48740460388_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0362.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1110jpg_48740788816_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1273jpg_48752090003_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1033jpg_48740453718_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1509jpg_48761771013_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1247jpg_48752083393_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1266jpg_48752601927_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1288jpg_48752096248_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_0915jpg_48740774886_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0547.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0257.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1095jpg_48740460023_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1434jpg_48762085016_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_0881jpg_48740445653_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_0987jpg_48740451198_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0405.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0221.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0496.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1159jpg_48752568672_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1208jpg_48752394926_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1328jpg_48752745137_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1349jpg_48752231498_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1004jpg_48740964852_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1108jpg_48740460923_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0474.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0574.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1411jpg_48762271342_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0326.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0563.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1383jpg_48752236993_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1299jpg_48752739197_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0392.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0429.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1243jpg_48752597632_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1203jpg_48752391026_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0394.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1270jpg_48752414126_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0585.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_0970jpg_48740962842_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_0961jpg_48740448983_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0382.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1451jpg_48762272942_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1052jpg_48740968067_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1317jpg_48752227618_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1112jpg_48740789156_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_0874jpg_48740958157_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0447.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1199jpg_48752058123_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1373jpg_48752236638_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1219jpg_48752077418_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0581.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0139.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0138.jpg"
+          class="recap"
+        />
 
-                <Footer />
-            </div>
-         </div>
-    )
-    
-}
+        <img
+          src="static/img/josef-crank-compressed/img_1396jpg_48761765703_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1132jpg_48740975612_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1547jpg_48761773883_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1114jpg_48740789506_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1236jpg_48752593557_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1557jpg_48761774163_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1343jpg_48752231083_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_0958jpg_48740961482_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1525jpg_48762278327_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0629.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0346.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0459.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1092jpg_48740459043_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_0982jpg_48740778311_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0295.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0251.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1182jpg_48752384601_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1567jpg_48762092001_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0360.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0352.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/jada-crank2-compressed/700A0494.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1543jpg_48762278577_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1402jpg_48761766203_o.jpg"
+          class="recap"
+        />
+        <img
+          src="static/img/josef-crank-compressed/img_1263jpg_48752410861_o.jpg"
+          class="recap"
+        />
+
+        <Footer />
+      </div>
+    </div>
+  );
+};
 export default Recap;
