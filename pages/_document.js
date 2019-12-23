@@ -20,7 +20,7 @@ export default class MyDocument extends Document {
           <link rel="stylesheet" href="/static/css/styles.css" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-          <meta charset="utf-8" />
+          <meta charSet="utf-8" />
           <meta
             name="keywords"
             content="Mumbo Sauce, chicken and mumbo sauce, DMV music, chocolate city, DC maryland virginia, DC foodies"

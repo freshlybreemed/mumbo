@@ -48,7 +48,7 @@ const Events = () => (
               Crank Karaoke
             </h2>
             <p class="event-list__item__text--support">
-              Hosted by Walk Like Walt
+              Hosted by Walk Like Walt + DJ Alizay
             </p>
             <p class="event-list__item__text--info"></p>
             <p>
