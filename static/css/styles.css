@@ -562,7 +562,7 @@ a.button:hover {
 
 button {
   padding: 10px 15px;
-  background-color: #000;
+  background-color: transparent;
   border: 2px solid #fff;
   color: #fff;
   cursor: pointer;
@@ -670,7 +670,6 @@ input[type='email'] {
   /* border: 2px solid #fff; */
   color: #fff;
   font: size 12vw;
-  width: 60%;
 }
 
 input[type='submit']:hover {
@@ -952,7 +951,7 @@ th {
 
 .button:hover {
   background-color: #4caf50; /* Green */
-  color: white;
+  color: black;
 }
 
 @font-face {

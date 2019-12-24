@@ -157,7 +157,7 @@ const Index = () => (
       <div class="lineup-bigger">HOSTED BY: WALK LIKE WALT</div>
     </div>
     <div class="row">
-      {/* <div class="lineup">DJ SETS: FILET MIGNON & MALCOLM XAVIER </div> */}
+      <div class="lineup">FEAT. DJ ALIZAY AND SPECIAL GUESTS </div>
     </div>
     <div class="row">
       <div class="date">THURS. DEC 26th</div>
@@ -172,6 +172,9 @@ const Index = () => (
       <br></br>
       <form action="https://www.bigneon.com/tickets/crank-karaoke-washington">
         <input type="submit" value="TICKETS" />
+      </form>
+      <form action="/signup">
+        <input type="submit" value="SIGN-UP" />
       </form>
       <div class="row">
         <div class="tickets">
@@ -193,7 +196,7 @@ const Index = () => (
           restore the culture not exploit it.{' '}
         </div>
         <br></br> */}
-        <img src="static/img/onstage.gif" class="gif" id="logos" />
+        <img src="static/gif/space.gif" class="gif" id="logos" />
         {/* Its not a hit until a go-go band remakes it! */}
       </div>
       <br></br>
