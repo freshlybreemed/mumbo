@@ -34,8 +34,8 @@ const Events = () => (
       <title>Events</title>
       <Navigation />
       <div class="event-title">EVENTS</div>
-      <div class="events-wrapper">
-        <div class="media">
+      {/* <div class="events-wrapper"> */}
+      {/* <div class="media">
           <div
             class="asset-mumbo"
             style={{
@@ -73,8 +73,8 @@ const Events = () => (
             </a>
           </div>
         </div>
-      </div>
-      {/* There are no upcoming events at this time  :( */}
+      </div> */}
+      There are no upcoming events at this time :(
       <br></br>
       <br></br>
       <br></br>

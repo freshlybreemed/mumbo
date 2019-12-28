@@ -49,12 +49,12 @@ class Navigation extends Component {
           {/* <div class="menu-item">
                     <Link href="/">HOME</Link>
                     </div> */}
-          <div class="menu-item">
+          {/* <div class="menu-item">
             <Link href="/crank">CRANK CONTENT</Link>
-          </div>
-          <div class="menu-item1">
+          </div> */}
+          {/* <div class="menu-item1">
             <Link href="/events">EVENTS</Link>
-          </div>
+          </div> */}
 
           {/* <Link href="/crank">CRANK KARAOKE</Link> */}
         </div>
