@@ -19,7 +19,7 @@
   "dependencies": {
     "@barba/core": "^2.3.9",
     "@sendgrid/mail": "^6.4.0",
-    "async": "^3.0.1",
+    "async": "^3.2.2",
     "axios": "^0.18.1",
     "chai": "^4.2.0",
     "chai-http": "^4.3.0",
